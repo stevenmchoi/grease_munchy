@@ -13,3 +13,54 @@
 # 403: Forbidden: need to be logged_in
 # 404: Not Found: route doesn't exist
 # 422: Unprocessable Entity: Bad fields for signup
+
+## Test
+# getState()
+
+# dispatch(login({
+# 		username: 'user1',
+# 		email: 'email1',
+# 		password: 'password'
+# 	}))
+
+# dispatch(signup({
+# 		username: 'user1',
+# 		email: 'email1',
+# 		password: 'password'
+# 	}))
+
+# last signup: 
+
+## State Shape
+# default:
+# {
+#   session: {
+#     currentUser: null,
+#   },
+#   errors: {
+#     session: []
+#   }
+# }
+
+# {
+#   session: {
+#     currentUser: null,
+#   },
+#   errors: {
+#     session: ["Invalid credentials"]
+#   }
+# }
+
+# or this:
+
+# {
+#   session: {
+#     currentUser: {
+#       id: 1,
+#       username: 'breakfast'
+#     }
+#   },
+#   errors: {
+#     session: []
+#   }
+# }
