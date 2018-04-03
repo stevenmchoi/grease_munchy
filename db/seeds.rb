@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# NOTE:
+# Status codes: https://en.wikipedia.org/wiki/List_of_HTTP_status_codes
+# 401: Unauthorized; failing auth
+# 402: Payment required; can't manage meals
+# 403: Forbidden: need to be logged_in
+# 404: Not Found: route doesn't exist
+# 422: Unprocessable Entity: Bad fields for signup
