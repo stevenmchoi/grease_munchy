@@ -16,6 +16,8 @@
 
 ## Test
 
+# last user created: 1
+
 # $.ajax({
 # 	method: 'POST',
 # 	url: 'api/users',
@@ -34,7 +36,6 @@
 # 	data: {
 # 		user: {
 # 			username: 'user1',
-# 			email: 'email1',
 # 			password: 'password'
 # 		}
 # 	}
