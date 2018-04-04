@@ -15,12 +15,44 @@
 # 422: Unprocessable Entity: Bad fields for signup
 
 ## Test
+
+# $.ajax({
+# 	method: 'POST',
+# 	url: 'api/users',
+# 	data: {
+# 		user: {
+# 			username: 'user1',
+# 			email: 'email1',
+# 			password: 'password'
+# 		}
+# 	}
+# });
+
+# $.ajax({
+# 	method: 'POST',
+# 	url: 'api/session',
+# 	data: {
+# 		user: {
+# 			username: 'user1',
+# 			email: 'email1',
+# 			password: 'password'
+# 		}
+# 	}
+# });
+
+# $.ajax({
+# 	method: 'DELETE',
+# 	url: 'api/session'
+# });
+
+# last signup:
+
 # getState()
 
-# dispatch(login({
-# 		username: 'user1',
-# 		email: 'email1',
-# 		password: 'password'
+# # dispatch(login({
+		# username: 'user1',
+		# email: 'email1',
+		# password: 'password'
 # 	}))
 
 # dispatch(signup({
@@ -28,8 +60,6 @@
 # 		email: 'email1',
 # 		password: 'password'
 # 	}))
-
-# last signup: 
 
 ## State Shape
 # default:
