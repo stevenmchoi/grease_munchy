@@ -18,18 +18,18 @@
 
 # last user created: 19
 
-# signup({
+# dispatch(signup({
 # 	username: 'user1',
 # 	email: 'email1',
 # 	password: 'password'
-# });
+# }));
 
-# login({
+# dispatch(login({
 # 	username: 'user1',
 # 	password: 'password'
-# });
+# }));
 
-# logout();
+# dispatch(logout());
 
 # getState()
 
