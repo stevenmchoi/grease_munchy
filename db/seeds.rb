@@ -18,49 +18,20 @@
 
 # last user created: 1
 
-# $.ajax({
-# 	method: 'POST',
-# 	url: 'api/users',
-# 	data: {
-# 		user: {
-# 			username: 'user1',
-# 			email: 'email1',
-# 			password: 'password'
-# 		}
-# 	}
+# signup({
+# 	username: 'user1',
+# 	email: 'email1',
+# 	password: 'password'
 # });
 
-# $.ajax({
-# 	method: 'POST',
-# 	url: 'api/session',
-# 	data: {
-# 		user: {
-# 			username: 'user1',
-# 			password: 'password'
-# 		}
-# 	}
+# login({
+# 	username: 'user1',
+# 	password: 'password'
 # });
 
-# $.ajax({
-# 	method: 'DELETE',
-# 	url: 'api/session'
-# });
-
-# last signup:
+# logout();
 
 # getState()
-
-# # dispatch(login({
-		# username: 'user1',
-		# email: 'email1',
-		# password: 'password'
-# 	}))
-
-# dispatch(signup({
-# 		username: 'user1',
-# 		email: 'email1',
-# 		password: 'password'
-# 	}))
 
 ## State Shape
 # default:
