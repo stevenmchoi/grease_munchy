@@ -1,11 +1,11 @@
-if user
-    json.array! user.errors.full_messages
+if user.errors.full_messages.empty?
+  json.array! []
 else
-    json.array! []
-    # TODO: 
-    # if @current_user
-    #     json.array! ["Invalid credentials"]
-    # else
-    #     json.array! ['Not logged in!']
-    # end
+  json.array! user.errors.full_messages
+  # TODO: 
+  # if @current_user
+  #     json.array! ["Invalid credentials"]
+  # else
+  #     json.array! ['Not logged in!']
+  # end
 end

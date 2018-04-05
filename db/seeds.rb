@@ -35,6 +35,7 @@
 
 ## State Shape
 # default:
+# (proper logout)
 # {
 #   session: {
 #     currentUser: null,
@@ -44,25 +45,27 @@
 #   }
 # }
 
+# (improper login)
 # {
-#   session: {
-#     currentUser: null,
-#   },
 #   errors: {
 #     session: ["Invalid credentials"]
+#   },
+#   session: {
+#     currentUser: null,
 #   }
 # }
 
 # or this:
 
+# (proper login)
 # {
+#   errors: {
+#     session: []
+#   },
 #   session: {
 #     currentUser: {
 #       id: 1,
 #       username: 'breakfast'
 #     }
-#   },
-#   errors: {
-#     session: []
 #   }
 # }
