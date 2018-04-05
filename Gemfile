@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+gem 'jquery-rails'
+
 gem 'rails_12factor'
 
 # Use Capistrano for deployment
@@ -41,7 +43,6 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
-  gem 'jquery-rails'
   gem 'pry-rails'
   gem 'selenium-webdriver'
 end
