@@ -44,14 +44,16 @@ dispatch(login({
 # }
 
 dispatch(signup({
-	username: 'user1',
-	email: 'email1',
+	username: '',
+	email: '',
 	password: ''
 }));
 # 3) (improper signup, blank password)
 # {
 # 	errors: {
 # 		session: [
+# 			"Username can't be blank",
+# 			"Email can't be blank",
 # 			"Password can't be blank",
 # 			"Password is too short \
 # 				(minimum is 6 characters)"
