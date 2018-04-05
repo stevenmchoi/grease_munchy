@@ -16,32 +16,127 @@
 
 ## Test
 
-# last user created: 19
+# last user created: 1
 
-# dispatch(signup({
-# 	username: 'user1',
-# 	email: 'email1',
-# 	password: 'password'
-# }));
+dispatch(logout());
+# 1) (improper logout)
+# {
+#   errors: {
+#     session: ["Not logged in!"]
+#   },
+#   session: {
+#     currentUser: null
+#   }
+# }
 
-# dispatch(login({
-# 	username: 'user1',
-# 	password: 'password'
-# }));
+dispatch(login({
+	username: 'user1',
+	password: 'password'
+}));
+# 2) (improper login)
+# {
+#   errors: {
+#     session: ["Invalid credentials"]
+#   },
+#   session: {
+#     currentUser: null
+#   }
+# }
 
-# dispatch(logout());
+dispatch(signup({
+	username: 'user1',
+	email: 'email1',
+	password: ''
+}));
+# 3) (improper signup, blank password)
+# {
+# 	errors: {
+# 		session: [
+# 			"Password can't be blank",
+# 			"Password is too short \
+# 				(minimum is 6 characters)"
+# 		]
+# 	},
+# 	session: {
+# 		currentUser: null
+# 	}
+# }
+
+dispatch(signup({
+	username: 'user1',
+	email: '',
+	password: 'password'
+}));
+# 4) (improper signup, blank password)
+# {
+# 	errors: {
+# 		session: [
+# 			"Email can't be blank"
+# 		]
+# 	},
+# 	session: {
+# 		currentUser: null
+# 	}
+# }
+
+dispatch(signup({
+	username: 'user1',
+	email: 'email1',
+	password: 'password'
+}));
+# 5) (proper signup)
+# {
+#   errors: {
+#     session: []
+#   },
+#   session: {
+#     currentUser: {
+#       id: 1,
+#       username: 'user1'
+#     }
+#   }
+# }
+
+dispatch(logout());
+# 6) (proper logout)
+# {
+#   errors: {
+#     session: []
+#   },
+#   session: {
+#     currentUser: null
+#   }
+# }
+
+dispatch(login({
+	username: 'user1',
+	password: 'password'
+}));
+# 7) (proper login)
+# {
+#   errors: {
+#     session: []
+#   },
+#   session: {
+#     currentUser: {
+#       id: 1,
+#       username: 'user1'
+#     }
+#   }
+# }
 
 # getState()
 
 ## State Shape
+
 # default:
 # (proper logout)
 # {
-#   session: {
-#     currentUser: null,
-#   },
 #   errors: {
 #     session: []
+#   },
+#   session: {
+#     currentUser: null,
 #   }
 # }
 

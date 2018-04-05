@@ -1,11 +1,7 @@
-if user.errors.full_messages.empty?
-  json.array! []
+if status_code === 401
+  json.array! ["Invalid credentials"]
+elsif status_code === 404
+  json.array! ['Not logged in!']
 else
-  json.array! user.errors.full_messages
-  # TODO: 
-  # if @current_user
-  #     json.array! ["Invalid credentials"]
-  # else
-  #     json.array! ['Not logged in!']
-  # end
+  json.array! []
 end

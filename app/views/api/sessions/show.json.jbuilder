@@ -1,11 +1,5 @@
-# json.session do
-if current_user # session.currentUser = { id, username }
-  # json.currentUser do
-  #   json.partial! 'api/users/user', user: @user
-  # end
-  #   else # errors.session = []
-  json.partial! 'api/sessions/session', user: @user
-  #   end
+if @user
+  json.partial! 'api/users/user', user: @user
 else
-  json.array! []
+  json.partial! 'api/sessions/session', status_code: @status_code
 end
