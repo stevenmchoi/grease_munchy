@@ -11,6 +11,10 @@ import Main from './main/main';
 //   Warning: Hash history cannot PUSH the same path;
 //     a new entry will not be added to the history stack
 
+// TODO: Get rid of error:
+//   Warning: Hash history cannot PUSH the same path;
+//     a new entry will not be added to the history stack
+
 const App = () => (
 	<div>
 		<Route path="/" component={NavBarContainer} />
