@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './logo';
+import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 
 const NavBar = ({ currentUser, logout }) => {
 	const sessionButtons = currentUser ? (
