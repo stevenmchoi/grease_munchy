@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Link } from 'react-router-dom';
+import Logo from './logo';
 
 const NavBar = ({ currentUser, logout }) => {
 	const sessionButtons = currentUser ? (
@@ -11,24 +12,20 @@ const NavBar = ({ currentUser, logout }) => {
 		</span>
 	) : (
 		<span>
-			<Link to="/login">Log In</Link>
-			<Link to="/signup">Sign Up</Link>
+			<Link to="/login"> Log In </Link>
+
+			<button>
+				<Link to="/signup">Sign Up</Link>
+			</button>
 		</span>
 	);
+
 	return (
 		<header>
-			<a href="/">
-				<img
-					src="https://fontmeme.com/permalink/180401/ebd8cc51ec8f24ef053f3daebd6b9506.png"
-					alt="blue-apron-logo-font"
-					border="0"
-				/>
-			</a>
-			{/* <!-- Logo from Font Meme:
-			https://fontmeme.com/blue-apron-logo-font/ --> */}
-
+			<Link to="/">
+				<Logo />
+			</Link>
 			<h1>Grease Munchy...why not?</h1>
-
 			{sessionButtons}
 		</header>
 	);
