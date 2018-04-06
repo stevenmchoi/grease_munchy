@@ -1,8 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 
-const Main = () => {
+const Account = ({ currentUser }) => {
 	return (
 		<main>
 			<Switch>
@@ -13,8 +12,7 @@ const Main = () => {
 				{/* <Route path='/recipes/' component={RecipesIndexSearchContainer} */}
 				{/* <Route path='/recipes/:recipeId' component={RecipeShowContainer} */}
 
-				{/* <Route exact path="/" component={SplashContainer} /> */}
-				{/* <ProtectedRoute
+				{/* <Route
 					exact
 					path="/account#current"
 					component={CurrentContainer}
@@ -24,4 +22,4 @@ const Main = () => {
 	);
 };
 
-export default Main;
+export default Account;
