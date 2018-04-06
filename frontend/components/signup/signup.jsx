@@ -25,24 +25,36 @@ class Signup extends React.Component {
 
 	render() {
 		const { username, email, password } = this.state;
+
 		return (
 			<form onSubmit={this.handleSubmit}>
-				<label>Username</label>
-				<input
-					type="text"
-					value={`${username}`}
-					onChange={this.handleChange('username')}
-				/>
-				<input
-					type="email"
-					value={`${email}`}
-					onChange={this.handleChange('email')}
-				/>
-				<input
-					type="password"
-					value={`${password}`}
-					onChange={this.handleChange('password')}
-				/>
+				<label>
+					Username:
+					<input
+						type="text"
+						value={`${username}`}
+						onChange={this.handleChange('username')}
+					/>
+				</label>
+
+				<label>
+					Email:
+					<input
+						type="email"
+						value={`${email}`}
+						onChange={this.handleChange('email')}
+					/>
+				</label>
+
+				<label>
+					Password:
+					<input
+						type="password"
+						value={`${password}`}
+						onChange={this.handleChange('password')}
+					/>
+				</label>
+
 				<button type="submit">Sign Up</button>
 			</form>
 		);
