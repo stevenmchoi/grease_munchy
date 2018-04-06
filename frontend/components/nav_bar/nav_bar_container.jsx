@@ -11,4 +11,4 @@ const mapDispatchToProps = (dispatch) => ({
 	logout: (formUser) => dispatch(logout(formUser)),
 });
 
-export default connect(null, mapDispatchToProps)(NavBar);
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
