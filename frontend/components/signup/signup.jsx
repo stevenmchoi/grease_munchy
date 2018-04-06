@@ -29,20 +29,20 @@ class Signup extends React.Component {
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<label>
-					Username:
-					<input
-						type="text"
-						value={`${username}`}
-						onChange={this.handleChange('username')}
-					/>
-				</label>
-
-				<label>
 					Email:
 					<input
 						type="email"
 						value={`${email}`}
 						onChange={this.handleChange('email')}
+					/>
+				</label>
+
+				<label>
+					Username:
+					<input
+						type="text"
+						value={`${username}`}
+						onChange={this.handleChange('username')}
 					/>
 				</label>
 
