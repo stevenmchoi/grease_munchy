@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import NavBarContainer from './nav_bar/nav_bar_container';
 import SignupContainer from './signup/signup_container';
 import LoginContainer from './login/login_container';
@@ -10,8 +11,8 @@ const App = () => (
 
 		{/* <MainContainer> */}
 		{/* <Switch> */}
-		<Route path="/signup" component={SignupContainer} />
-		<Route path="/login" component={LoginContainer} />
+		<AuthRoute path="/signup" component={SignupContainer} />
+		<AuthRoute path="/login" component={LoginContainer} />
 
 		{/* <Route exact path='/' component={SplashContainer} /> // logged out */}
 		{/* <Route exact path='/account' component={SplashContainer} /> // logged in */}
