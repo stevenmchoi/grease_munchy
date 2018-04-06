@@ -26,7 +26,6 @@ const NavBar = ({ currentUser, logout }) => {
 			<Link to="/">
 				<Logo />
 			</Link>
-			<h1>Grease Munchy...why not?</h1>
 			{sessionButtons}
 		</header>
 	);
