@@ -8,14 +8,32 @@ const Main = () => {
 		<main>
 			<h1>Welcome to Grease Munchy!</h1>
 			<Switch>
-				{/* <Route path="/pages/sample-recipes" component={MenuContainer} /> */}
-				{/* <Route path="/account#upcoming" component={MenuContainer} /> */}
+				{/* <Route
+					path="/pages/sample-recipes"
+					component={MenuContainer}
+				/> */}
+				{/* <Route
+					path="/account#upcoming"
+					component={MenuContainer}
+				/> */}
 
-				{/* <AuthRoute path="/pages/pricing#plan-selector" component={CreateMealPlanContainer} /> */}
-				{/* <AuthRoute path="/pages/pricing" component={CreateMealPlanContainer} /> */}
+				{/* <AuthRoute
+					path="/pages/pricing#plan-selector"
+					component={CreateMealPlanContainer}
+				/> */}
+				{/* <AuthRoute
+					path="/pages/pricing"
+					component={CreateMealPlanContainer}
+				/> */}
 
-				{/* <Route path='/recipes/' component={RecipesIndexSearchContainer} */}
-				{/* <Route path='/recipes/:recipeId' component={RecipeShowContainer} */}
+				{/* <Route
+					path="/recipes/"
+					component={RecipesIndexSearchContainer}
+				/> */}
+				{/* <Route
+					path="/recipes/:recipeId"
+					component={RecipeShowContainer}
+				/> */}
 
 				<ProtectedRoute path="/account" component={AccountContainer} />
 				{/* <Route component={SplashContainer} /> */}

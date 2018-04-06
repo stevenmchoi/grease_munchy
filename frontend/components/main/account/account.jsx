@@ -6,8 +6,14 @@ const Account = ({ currentUser }) => {
 		<main>
 			<h2>No more drive-thru, {currentUser.username}!</h2>
 			<Switch>
-				{/* <Route path="/pages/pricing#plan-selector" component={ManageMealPlanContainer} /> */}
-				{/* <Route path="/pages/pricing" component={ManageMealPlanContainer} /> */}
+				{/* <Route
+					path="/pages/pricing#plan-selector"
+					component={ManageMealPlanContainer}
+				/> */}
+				{/* <Route
+					path="/pages/pricing"
+					component={ManageMealPlanContainer}
+				/> */}
 
 				{/* <Route
 					exact
