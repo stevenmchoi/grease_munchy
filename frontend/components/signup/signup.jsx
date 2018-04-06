@@ -31,20 +31,22 @@ class Signup extends React.Component {
 				<input
 					type="text"
 					value={`${username}`}
-					handleChange={this.handleChange('username')}
+					onChange={this.handleChange('username')}
 				/>
 				<input
 					type="email"
 					value={`${email}`}
-					handleChange={this.handleChange('email')}
+					onChange={this.handleChange('email')}
 				/>
 				<input
 					type="password"
 					value={`${password}`}
-					handleChange={this.handleChange('password')}
+					onChange={this.handleChange('password')}
 				/>
 				<button type="submit">Sign Up</button>
 			</form>
 		);
 	}
 }
+
+export default Signup;
