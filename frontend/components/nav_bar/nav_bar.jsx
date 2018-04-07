@@ -22,7 +22,7 @@ const NavBar = ({ currentUser, logout }) => {
 	);
 
 	return (
-		<header>
+		<header className="nav-bar">
 			<Link to="/">
 				<Logo />
 			</Link>
