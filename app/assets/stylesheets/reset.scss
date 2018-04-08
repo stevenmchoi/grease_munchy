@@ -35,38 +35,3 @@ header {
 	display: block;
 	height: 80px;
 }
-
-.session-buttons {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin: 0 10px;
-}
-
-.logo {
-	height: 45px;
-}
-
-a, a:visited {
-	color: gray;
-}
-
-a, a:visited, button {
-	background: none;
-	border: none;
-	text-decoration: none;
-	font-size: 15px;
-}
-
-.button, .button:visited {
-	font-weight: 500;
-	background-color: orange;
-	color: white;
-	border-radius: 5px;
-	padding: 10px 20px;
-}
-
-input {
-	text-align: left;
-	position: center;
-}
