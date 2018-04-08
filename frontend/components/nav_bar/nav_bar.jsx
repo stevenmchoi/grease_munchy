@@ -7,9 +7,9 @@ const NavBar = ({ currentUser, logout }) => {
 	const sessionButtons = currentUser ? (
 		<span className="session-buttons">
 			<p>{currentUser.username}</p>
-			<input className="button" type="submit" onClick={logout}>
+			<button className="button" onClick={logout}>
 				Log Out
-			</input>
+			</button>
 		</span>
 	) : (
 		<span className="session-buttons">
