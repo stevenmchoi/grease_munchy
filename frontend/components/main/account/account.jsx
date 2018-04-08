@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-const Account = ({ currentUser }) => {
+const AccountMain = ({ currentUser }) => {
 	return (
 		<section>
 			<h2>No more drive-thru, {currentUser.username}!</h2>
@@ -25,4 +25,4 @@ const Account = ({ currentUser }) => {
 	);
 };
 
-export default Account;
+export default AccountMain;
