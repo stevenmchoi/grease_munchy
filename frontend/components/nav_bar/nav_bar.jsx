@@ -13,20 +13,21 @@ const NavBar = ({ currentUser, logout }) => {
 		</span>
 	) : (
 		<span>
-			<Link to="/login"> Log In </Link>
-
-			<button>
-				<Link to="/signup">Sign Up</Link>
-			</button>
+			<Link to="/login">Log In</Link>
+			<Link className="button" to="/signup">
+				Sign Up
+			</Link>
 		</span>
 	);
 
 	return (
-		<header className="nav-bar">
-			<Link to="/">
-				<Logo />
-			</Link>
-			{sessionButtons}
+		<header>
+			<nav className="nav-bar">
+				<Link to="/">
+					<Logo />
+				</Link>
+				{sessionButtons}
+			</nav>
 		</header>
 	);
 };
