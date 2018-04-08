@@ -11,12 +11,6 @@ const App = () => (
 		<Route component={Main} />
 
 		{/* <Route path='/' component={FooterContainer} /> */}
-
-		{/* <Switch>
-			<AuthRoute path="/signup" component={SignupContainer} />
-			<AuthRoute path="/login" component={LoginContainer} />
-			<Route component={Main} />
-		</Switch> */}
 	</div>
 );
 

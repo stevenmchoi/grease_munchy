@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 const Account = ({ currentUser }) => {
 	return (
-		<main>
+		<section>
 			<h2>No more drive-thru, {currentUser.username}!</h2>
 			<Switch>
 				{/* <Route
@@ -21,7 +21,7 @@ const Account = ({ currentUser }) => {
 					component={CurrentContainer}
 				/> */}
 			</Switch>
-		</main>
+		</section>
 	);
 };
 
