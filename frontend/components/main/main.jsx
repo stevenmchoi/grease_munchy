@@ -8,7 +8,7 @@ import AccountContainer from './account/account_container';
 
 const Main = () => {
 	return (
-		<main className="main-section">
+		<div className="main-wrapper">
 			<div className="spacer-behind-nav" />
 
 			<h1>Welcome to Grease Munchy!</h1>
@@ -64,7 +64,7 @@ const Main = () => {
 			<p>jiw fowj oefjoie f jbfhjwlkej,</p>
 			<p>wjrjgne,rjg n, rg oefijwoiehiuwhy48hi384y3984yo</p>
 			<p>34o8 t3o 4to387 4 34to83 4</p>
-		</main>
+		</div>
 	);
 };
 
