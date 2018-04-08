@@ -5,14 +5,14 @@ import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 
 const NavBar = ({ currentUser, logout }) => {
 	const sessionButtons = currentUser ? (
-		<span>
+		<span className="session-buttons">
 			<p>{currentUser.username}</p>
-			<button type="submit" onClick={logout}>
+			<input className="button" type="submit" onClick={logout}>
 				Log Out
-			</button>
+			</input>
 		</span>
 	) : (
-		<span>
+		<span className="session-buttons">
 			<Link to="/login">Log In</Link>
 			<Link className="button" to="/signup">
 				Sign Up
