@@ -13,17 +13,3 @@
  *= require_tree .
  *= require_self
  */
-html, body, div {
-	padding: 0;
-	margin: 0;
-	font-family: "HelveticaNeue", sans-serif;
-}
-
-.nav-bar {
-	border-bottom: 1px solid lightgray;
-	color: lightgray
-}
-
-.logo {
-	height: 100px;
-}
