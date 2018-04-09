@@ -1,4 +1,5 @@
 import React from 'react';
+import Slide from 'react-reveal/Slide';
 
 class Signup extends React.Component {
 	constructor(props) {
@@ -31,40 +32,42 @@ class Signup extends React.Component {
 		const { username, email, password } = this.state;
 
 		return (
-			<form>
-				<h1>Sign Up</h1>
+			<Slide top>
+				<form>
+					<h1>Sign Up</h1>
 
-				<label>
-					Email:
-					<input
-						type="email"
-						value={`${email}`}
-						onChange={this.handleChange('email')}
-					/>
-				</label>
+					<label>
+						Email:
+						<input
+							type="email"
+							value={`${email}`}
+							onChange={this.handleChange('email')}
+						/>
+					</label>
 
-				<label>
-					Username:
-					<input
-						type="text"
-						value={`${username}`}
-						onChange={this.handleChange('username')}
-					/>
-				</label>
+					<label>
+						Username:
+						<input
+							type="text"
+							value={`${username}`}
+							onChange={this.handleChange('username')}
+						/>
+					</label>
 
-				<label>
-					Password:
-					<input
-						type="password"
-						value={`${password}`}
-						onChange={this.handleChange('password')}
-					/>
-				</label>
+					<label>
+						Password:
+						<input
+							type="password"
+							value={`${password}`}
+							onChange={this.handleChange('password')}
+						/>
+					</label>
 
-				<button className="button" onSubmit={this.handleSubmit}>
-					Sign Up
-				</button>
-			</form>
+					<button className="button" onSubmit={this.handleSubmit}>
+						Sign Up
+					</button>
+				</form>
+			</Slide>
 		);
 	}
 }
