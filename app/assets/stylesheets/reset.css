@@ -126,4 +126,11 @@ form > .button {
 form > .button:hover {
   background-color: #00214C; }
 
+.content-header {
+  position: relative;
+  height: 300px;
+  width: 100%;
+  background: url("../");
+  background-size: cover; }
+
 /*# sourceMappingURL=reset.css.map */
