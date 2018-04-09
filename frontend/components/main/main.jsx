@@ -46,22 +46,6 @@ const Main = () => {
 
 				{/* <Route component={SplashContainer} />  // default container */}
 			</Switch>
-
-			<p>
-				owiejf owiejfweofjo<br />
-				woiejfowiejfoiwejfwoei woiejfoiwejfoniwnofiej
-				<br />owiej
-			</p>
-			<p>oiwjeoifjowiejf owjeof iwjeo fwoe fowiejfowje</p>
-			<p>iwewoeijfo iowijef orijfowiejfowiefoifo</p>
-			<p>soidufoiwjfowjefjwo owie</p>
-			<p>
-				foiej woiefo we fowieofiw eoifowe fiw efi woiejfowiejfoiwejfwoei
-				oi
-			</p>
-			<p>jiw fowj oefjoie f jbfhjwlkej,</p>
-			<p>wjrjgne,rjg n, rg oefijwoiehiuwhy48hi384y3984yo</p>
-			<p>34o8 t3o 4to387 4 34to83 4</p>
 		</div>
 	);
 };
