@@ -31,7 +31,7 @@ class Signup extends React.Component {
 		const { username, email, password } = this.state;
 
 		return (
-			<form onSubmit={this.handleSubmit}>
+			<form>
 				<h1>Sign Up</h1>
 
 				<label>
@@ -61,7 +61,7 @@ class Signup extends React.Component {
 					/>
 				</label>
 
-				<button className="button" type="submit">
+				<button className="demoButton" onSubmit={this.handleSubmit}>
 					Sign Up
 				</button>
 			</form>
