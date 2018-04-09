@@ -96,6 +96,7 @@ a, .button {
 	background-color: orange;
 	color: white;
 	border-radius: 5px;
+	margin: 5px 0px;
 	padding: 10px 20px;
 }
 
@@ -123,11 +124,20 @@ form {
 label {
 	text-align: left;
 	width: 100%;
-	margin: 0 auto;
+	margin: 10px auto;
 }
 
 input {
 	text-align: left;
 	width: 100%;
 	margin: 0 auto;
+	padding: 10px;
+	font-size: 1.3em;
+}
+
+form > .button {
+	width: 100%;
+	font-weight: 550;
+	background-color: #112E61;
+	padding: 15px;
 }
