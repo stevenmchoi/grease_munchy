@@ -9,8 +9,20 @@
 	margin: 0 10px;
 }
 
+.logo-wrapper {
+	display: block;
+}
+
 .logo {
-	height: 45px;
+	font-family: 'Signika';
+	font-weight: 700;
+	color: #112E61;
+	height: 20px;
+	width: 120px;
+
+	text-align: left;
+
+	// height: 45px;
 }
 
 a, a:visited {

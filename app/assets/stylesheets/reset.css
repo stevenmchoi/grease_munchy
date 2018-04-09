@@ -29,6 +29,7 @@ header {
 
 .spacer-behind-nav {
   display: block;
-  height: 80px; }
+  height: 80px;
+  margin: 10px; }
 
 /*# sourceMappingURL=reset.css.map */
