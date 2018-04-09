@@ -30,6 +30,8 @@ class Signup extends React.Component {
 
 		return (
 			<form onSubmit={this.handleSubmit}>
+				<h1>Sign Up</h1>
+
 				<label>
 					Email:
 					<input

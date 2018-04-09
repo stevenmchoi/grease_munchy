@@ -29,6 +29,8 @@ class Login extends React.Component {
 
 		return (
 			<form onSubmit={this.handleSubmit}>
+				<h1>Log In</h1>
+
 				<label>
 					Username:
 					<input

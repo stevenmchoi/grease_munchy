@@ -2,16 +2,14 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 
-import SignupContainer from '../signup/signup_container';
-import LoginContainer from '../login/login_container';
+import SignupContainer from './signup/signup_container';
+import LoginContainer from './login/login_container';
 import AccountContainer from './account/account_container';
 
 const Main = () => {
 	return (
 		<div className="main-wrapper">
 			<div className="spacer-behind-nav" />
-
-			<h1>Welcome to Grease Munchy!</h1>
 
 			<Switch>
 				<AuthRoute path="/signup" component={SignupContainer} />
