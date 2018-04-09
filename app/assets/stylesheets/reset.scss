@@ -33,18 +33,6 @@ header {
 	width: 100%;
 }
 
-.nav-bar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	position: center;
-	padding: 15px 20px;
-
-	width: 100%;
-	max-width: 900px;
-	margin: 0 auto;
-}
-
 .spacer-behind-nav {
 	display: block;
 	height: 80px;
@@ -87,17 +75,38 @@ a, .button {
 	font-size: 15px;
 }
 
-a {
-	color: gray;
-}
+.nav-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: center;
+	padding: 15px 20px;
 
-.button {
-	font-weight: 500;
-	background-color: orange;
-	color: white;
-	border-radius: 5px;
-	margin: 5px 10px;
-	padding: 10px 20px;
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
+
+	a {
+		color: gray;
+	}
+
+	a:hover {
+		color: #112E61;
+	}
+
+	.button {
+		font-weight: 500;
+		background-color: orange;
+		color: white;
+		border-radius: 5px;
+		margin: 5px 10px;
+		padding: 10px 20px;
+	}
+
+	.button:hover {
+		color: white;
+		background-color: darkorange;
+	}
 }
 
 // TODO: move to users.scss;
@@ -118,6 +127,7 @@ form {
 	margin-bottom: 20px;
 	padding: 10px 15px;
 
+	color: #112E61;
 	background-color: white;
 	box-shadow: 0 0 2px gray;
 	border-radius: 10px;
@@ -140,6 +150,7 @@ input {
 form > .button {
 	width: 100%;
 	font-weight: 550;
+	color: white;
 	background-color: #112E61;
 	padding: 15px;
 }
