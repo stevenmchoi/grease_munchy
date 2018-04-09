@@ -6,7 +6,9 @@ import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 const NavBar = ({ currentUser, logout }) => {
 	const sessionButtons = currentUser ? (
 		<span className="session-buttons">
-			<p>{currentUser.username}</p>
+			<p className="welcome-user">{`Welcome, ${
+				currentUser.username
+			}!`}</p>
 			<button className="button" onClick={logout}>
 				Log Out
 			</button>

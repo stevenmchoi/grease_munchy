@@ -76,12 +76,8 @@ header {
 	text-align: left;
 }
 
-.nav-link, .button {
+.welcome-user, .nav-link {
 	margin: 0 10px;
-}
-
-a {
-	color: gray;
 }
 
 a, .button {
@@ -91,12 +87,16 @@ a, .button {
 	font-size: 15px;
 }
 
+a {
+	color: gray;
+}
+
 .button {
 	font-weight: 500;
 	background-color: orange;
 	color: white;
 	border-radius: 5px;
-	margin: 5px 0px;
+	margin: 5px 10px;
 	padding: 10px 20px;
 }
 
@@ -115,6 +115,7 @@ form {
 	align-items: center;
 	height: auto;
 	width: 365px;
+	margin-bottom: 20px;
 	padding: 10px 15px;
 
 	background-color: white;
