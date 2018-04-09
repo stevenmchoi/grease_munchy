@@ -122,6 +122,10 @@ a, .button {
 	align-items: center;
 }
 
+.err-msg {
+	color: red;
+}
+
 form {
 	display: flex;
 	flex-direction: column;

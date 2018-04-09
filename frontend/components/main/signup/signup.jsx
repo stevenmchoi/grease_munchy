@@ -13,6 +13,12 @@ class Signup extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+	handleErrors() {
+		return this.props.session.map((errStr, idx) => (
+			<li key={`err-${idx}`}>{errStr}</li>
+		));
+	}
+
 	handleChange(field) {
 		return (e) => {
 			this.setState({ [field]: e.target.value });
@@ -29,6 +35,8 @@ class Signup extends React.Component {
 
 		return (
 			<Slide top>
+				<ul className="err-msg">{this.handleErrors()}</ul>
+
 				<form onSubmit={this.handleSubmit}>
 					<h1>Sign Up</h1>
 
