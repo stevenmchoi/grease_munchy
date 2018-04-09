@@ -167,10 +167,9 @@ form > .button:hover {
 
 .content-header {
 	position: relative;
-	height: 300px;
 	width: 100vw;
-	// background: url("../");
-	// background: url("https://www.videvo.net/videvo_files/converted/2013_11/preview/Clip4271013Videvo.mov90234.webm");
-	background-color: pink;
-	background-size: cover;
+}
+
+video {
+	width: 100%;
 }

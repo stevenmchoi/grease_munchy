@@ -128,9 +128,9 @@ form > .button:hover {
 
 .content-header {
   position: relative;
-  height: 300px;
-  width: 100vw;
-  background-color: pink;
-  background-size: cover; }
+  width: 100vw; }
+
+video {
+  width: 100%; }
 
 /*# sourceMappingURL=reset.css.map */
