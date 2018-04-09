@@ -33,7 +33,7 @@ class Signup extends React.Component {
 
 		return (
 			<Slide top>
-				<form>
+				<form onSubmit={this.handleSubmit}>
 					<h1>Sign Up</h1>
 
 					<label>
@@ -63,9 +63,7 @@ class Signup extends React.Component {
 						/>
 					</label>
 
-					<button className="button" onSubmit={this.handleSubmit}>
-						Sign Up
-					</button>
+					<button className="button">Sign Up</button>
 				</form>
 			</Slide>
 		);
