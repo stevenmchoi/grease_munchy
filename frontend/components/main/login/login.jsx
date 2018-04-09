@@ -19,9 +19,11 @@ class Login extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		this.props.login(this.state).then(() => this.props.history.push('/'));
+		this.props
+			.login(this.state)
+			.then(() => this.props.history.push('/account'));
 		// QUESTION: Since AuthRoute automatically Redirects currentUser,
-		//   better to remove or keep 'history.push('/')?
+		//   better to remove or keep 'history.push('/account')?
 	}
 
 	render() {
