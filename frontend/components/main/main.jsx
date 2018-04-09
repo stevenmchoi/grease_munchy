@@ -5,6 +5,7 @@ import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 import SignupContainer from './signup/signup_container';
 import LoginContainer from './login/login_container';
 import AccountContainer from './account/account_container';
+import Splash from './splash';
 
 const Main = () => {
 	return (
@@ -44,7 +45,7 @@ const Main = () => {
 
 				<ProtectedRoute path="/account" component={AccountContainer} />
 
-				{/* <AuthRoute component={SplashContainer} />  // default container */}
+				<AuthRoute path="/" component={Splash} />
 			</Switch>
 		</div>
 	);
