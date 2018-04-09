@@ -61,7 +61,7 @@ class Signup extends React.Component {
 					/>
 				</label>
 
-				<button className="demoButton" onSubmit={this.handleSubmit}>
+				<button className="button" onSubmit={this.handleSubmit}>
 					Sign Up
 				</button>
 			</form>

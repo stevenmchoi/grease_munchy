@@ -44,6 +44,7 @@ class Login extends React.Component {
 				<form onSubmit={this.handleDemoSubmit}>
 					<button className="button">Demo</button>
 				</form>
+
 				<form onSubmit={this.handleSubmit}>
 					<h1>Log In</h1>
 
