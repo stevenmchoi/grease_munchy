@@ -83,6 +83,9 @@ a, .button {
     color: white;
     background-color: darkorange; }
 
+.nav-buttons {
+  display: flex; }
+
 .main-wrapper {
   display: flex;
   flex-direction: column;

@@ -44,7 +44,7 @@ const Main = () => {
 
 				<ProtectedRoute path="/account" component={AccountContainer} />
 
-				{/* <Route component={SplashContainer} />  // default container */}
+				{/* <AuthRoute component={SplashContainer} />  // default container */}
 			</Switch>
 		</div>
 	);

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import Logo from './logo';
 import { AuthRoute, ProtectedRoute } from '../../util/route_util';
+import NavButtonsContainer from './nav_buttons/nav_buttons_container';
 
 const NavBar = ({ currentUser, logout }) => {
 	const sessionButtons = currentUser ? (
@@ -30,6 +31,7 @@ const NavBar = ({ currentUser, logout }) => {
 				<Link to="/">
 					<Logo />
 				</Link>
+				<Route component={NavButtonsContainer} />
 				{sessionButtons}
 			</nav>
 		</header>
