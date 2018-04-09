@@ -21,3 +21,5 @@ bundle.js*
 .byebug_history
 .DS_Store
 npm-debug.log
+*.scss
+*.css.map
