@@ -7,19 +7,28 @@ ul, li, button, section, form, fieldset, label, input, textarea {
 	display: block;
 	position: relative;
 	text-align: center;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+
+	background-color: #f9f9fc;
 }
 
 .app-wrapper {
 	width: 100%;
-	margin: 0 auto;
 }
 
 header {
 	position: fixed;
 	z-index: 2;
-	width: 100%;
 	color: lightgray;
 	background-color: white;
+	border-bottom: 1px solid lightgray;
+
+	width: 100%;
 }
 
 .nav-bar {
@@ -27,8 +36,11 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	position: center;
-	padding: 17px;
-	border-bottom: 1px solid lightgray;
+	padding: 20px;
+
+	width: 100%;
+	max-width: 900px;
+	margin: 0 auto;
 }
 
 .spacer-behind-nav {
