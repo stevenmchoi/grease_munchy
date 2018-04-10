@@ -15,9 +15,7 @@
 	"scripts": {
 		"server": "rails s",
 		"frontend": "webpack --watch",
-		"sass": "sass --watch .",
-		"dev":
-			"concurrently concurrently \"npm run server\" \"npm run frontend\" \"npm run sass\"",
+		"dev": "concurrently \"npm run server\" \"npm run frontend\"",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"postinstall": "webpack"
 	},
