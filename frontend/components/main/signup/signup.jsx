@@ -9,6 +9,7 @@ class Signup extends React.Component {
 			email: '',
 			password: '',
 		};
+		this.triggerErr = false;
 
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
@@ -21,12 +22,13 @@ class Signup extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
+		this.triggerErr = true;
 		this.props.signup(this.state);
 	}
 
 	handleErrors() {
 		return (
-			<Slide left>
+			<Slide left when={this.triggerErr}>
 				<ul className="err-msg">
 					{this.props.session.map((errStr, idx) => (
 						<li key={`err-${idx}`}>{errStr}</li>
@@ -76,7 +78,7 @@ class Signup extends React.Component {
 					</form>
 				</Slide>
 
-				{this.handleErrors()}
+				{this.handleErrors}
 			</div>
 		);
 	}

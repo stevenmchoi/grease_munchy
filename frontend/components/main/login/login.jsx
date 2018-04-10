@@ -8,6 +8,7 @@ class Login extends React.Component {
 			username: '',
 			password: '',
 		};
+		this.triggerErr = false;
 
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
@@ -21,6 +22,7 @@ class Login extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
+		this.triggerErr = true;
 		this.props.login(this.state);
 	}
 
@@ -31,7 +33,7 @@ class Login extends React.Component {
 
 	handleErrors() {
 		return (
-			<Slide left>
+			<Slide left when={this.triggerErr}>
 				<ul className="err-msg">
 					{this.props.session.map((errStr, idx) => (
 						<li key={`err-${idx}`}>{errStr}</li>
@@ -78,7 +80,7 @@ class Login extends React.Component {
 					</form>
 				</Slide>
 
-				{this.handleErrors()}
+				{this.handleErrors}
 			</div>
 		);
 	}
