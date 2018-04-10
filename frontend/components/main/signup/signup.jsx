@@ -78,7 +78,7 @@ class Signup extends React.Component {
 					</form>
 				</Slide>
 
-				{this.handleErrors}
+				{this.handleErrors()}
 			</div>
 		);
 	}
