@@ -13,12 +13,6 @@ class Signup extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	handleErrors() {
-		return this.props.session.map((errStr, idx) => (
-			<li key={`err-${idx}`}>{errStr}</li>
-		));
-	}
-
 	handleChange(field) {
 		return (e) => {
 			this.setState({ [field]: e.target.value });
@@ -30,46 +24,60 @@ class Signup extends React.Component {
 		this.props.signup(this.state);
 	}
 
+	handleErrors() {
+		return (
+			<Slide left>
+				<ul className="err-msg">
+					{this.props.session.map((errStr, idx) => (
+						<li key={`err-${idx}`}>{errStr}</li>
+					))}
+				</ul>
+			</Slide>
+		);
+	}
+
 	render() {
 		const { username, email, password } = this.state;
 
 		return (
-			<Slide top>
-				<ul className="err-msg">{this.handleErrors()}</ul>
+			<div>
+				<Slide top>
+					<form onSubmit={this.handleSubmit}>
+						<h1>Sign Up</h1>
 
-				<form onSubmit={this.handleSubmit}>
-					<h1>Sign Up</h1>
+						<label>
+							Email:
+							<input
+								type="email"
+								value={`${email}`}
+								onChange={this.handleChange('email')}
+							/>
+						</label>
 
-					<label>
-						Email:
-						<input
-							type="email"
-							value={`${email}`}
-							onChange={this.handleChange('email')}
-						/>
-					</label>
+						<label>
+							Username:
+							<input
+								type="text"
+								value={`${username}`}
+								onChange={this.handleChange('username')}
+							/>
+						</label>
 
-					<label>
-						Username:
-						<input
-							type="text"
-							value={`${username}`}
-							onChange={this.handleChange('username')}
-						/>
-					</label>
+						<label>
+							Password:
+							<input
+								type="password"
+								value={`${password}`}
+								onChange={this.handleChange('password')}
+							/>
+						</label>
 
-					<label>
-						Password:
-						<input
-							type="password"
-							value={`${password}`}
-							onChange={this.handleChange('password')}
-						/>
-					</label>
+						<button className="button">Sign Up</button>
+					</form>
+				</Slide>
 
-					<button className="button">Sign Up</button>
-				</form>
-			</Slide>
+				{this.handleErrors()}
+			</div>
 		);
 	}
 }

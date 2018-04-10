@@ -13,12 +13,6 @@ class Login extends React.Component {
 		this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
 	}
 
-	handleErrors() {
-		return this.props.session.map((errStr, idx) => (
-			<li key={`err-${idx}`}>{errStr}</li>
-		));
-	}
-
 	handleChange(field) {
 		return (e) => {
 			this.setState({ [field]: e.target.value });
@@ -35,17 +29,27 @@ class Login extends React.Component {
 		this.props.login({ username: 'demo', password: 'password' });
 	}
 
+	handleErrors() {
+		return (
+			<Slide left>
+				<ul className="err-msg">
+					{this.props.session.map((errStr, idx) => (
+						<li key={`err-${idx}`}>{errStr}</li>
+					))}
+				</ul>
+			</Slide>
+		);
+	}
+
 	render() {
 		const { username, password } = this.state;
 
 		return (
-			<Slide top>
-				<div>
+			<div>
+				<Slide top>
 					<form onSubmit={this.handleDemoSubmit}>
 						<button className="button">Demo</button>
 					</form>
-
-					<ul className="err-msg">{this.handleErrors()}</ul>
 
 					<form onSubmit={this.handleSubmit}>
 						<h1>Log In</h1>
@@ -72,8 +76,10 @@ class Login extends React.Component {
 							Log in
 						</button>
 					</form>
-				</div>
-			</Slide>
+				</Slide>
+
+				{this.handleErrors()}
+			</div>
 		);
 	}
 }
