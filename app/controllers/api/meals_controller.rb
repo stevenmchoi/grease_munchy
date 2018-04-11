@@ -4,6 +4,12 @@ class Api::MealsController < ApplicationController
 	end
 
 	def show
-		@meal = Meal.find(params[:id])
+		@meal = Meal.find(meals_params)
+	end
+
+	private
+
+	def meals_params
+		params.require(:meal).permit(:name, :restaurant)
 	end
 end
