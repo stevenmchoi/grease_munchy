@@ -15,7 +15,7 @@ const mealsReducer = (oldEntities = { meals: {} }, action) => {
 			newEntities[meal.id] = meal;
 			return newEntities;
 		default:
-			return oldEntities.meals;
+			return oldEntities;
 	}
 };
 
