@@ -14,8 +14,9 @@ const receiveMealOrder = (mealOrder) => ({
 	mealOrder,
 });
 
-const removeMealOrder = () => ({
+const removeMealOrder = (mealOrderId) => ({
 	type: REMOVE_MEAL_ORDER,
+	mealOrderId,
 });
 
 export const fetchMealOrders = () => (dispatch) =>
@@ -30,5 +31,5 @@ export const createMealOrder = (newMealOrder) => (dispatch) =>
 
 export const deleteMealOrder = (mealOrderId) => (dispatch) =>
 	MealOrdersApiUtil.deleteMealOrder(mealOrderId).then((mealOrder) =>
-		dispatch(removeMealOrder())
+		dispatch(removeMealOrder(mealOrderId))
 	);

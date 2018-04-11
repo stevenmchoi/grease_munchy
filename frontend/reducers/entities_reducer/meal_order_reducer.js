@@ -1,6 +1,7 @@
 import {
 	RECEIVE_ALL_MEAL_ORDERS,
 	RECEIVE_MEAL_ORDER,
+	REMOVE_MEAL_ORDER,
 } from '../../actions/meal_orders_actions';
 import merge from 'lodash/merge';
 
@@ -15,6 +16,9 @@ const mealOrderReducer = (oldState = {}, action) => {
 			return newState;
 		case RECEIVE_MEAL_ORDER:
 			return action.mealOrder;
+		case REMOVE_MEAL_ORDER:
+			delete newState[action.mealOrderId];
+			return newState;
 		default:
 			return oldState;
 	}
