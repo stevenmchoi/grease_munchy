@@ -15,7 +15,9 @@ const mealOrderReducer = (oldState = {}, action) => {
 			// Should already be filtered out in 'view/index.json.jbuilder'
 			return newState;
 		case RECEIVE_MEAL_ORDER:
-			return action.mealOrder;
+			return merge({}, oldState, {
+				[action.mealOrder.id]: action.mealOrder,
+			});
 		case REMOVE_MEAL_ORDER:
 			delete newState[action.mealOrderId];
 			return newState;
