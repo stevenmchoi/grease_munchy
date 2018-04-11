@@ -10,10 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180403190149) do
+ActiveRecord::Schema.define(version: 20180410224238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "meal_orders", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "meal_id"
+    t.string "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["date"], name: "index_meal_orders_on_date"
+    t.index ["meal_id"], name: "index_meal_orders_on_meal_id"
+    t.index ["user_id", "meal_id", "date"], name: "index_meal_orders_on_user_id_and_meal_id_and_date", unique: true
+    t.index ["user_id"], name: "index_meal_orders_on_user_id"
+  end
+
+  create_table "meals", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "description"
+    t.string "imageUrl"
+    t.string "restaurant", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name", "restaurant"], name: "index_meals_on_name_and_restaurant", unique: true
+    t.index ["name"], name: "index_meals_on_name"
+    t.index ["restaurant"], name: "index_meals_on_restaurant"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "username", null: false
