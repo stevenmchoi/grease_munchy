@@ -5,7 +5,7 @@ import {
 } from '../../actions/meal_orders_actions';
 import merge from 'lodash/merge';
 
-const mealOrderReducer = (oldState = {}, action) => {
+const mealOrdersReducer = (oldState = {}, action) => {
 	Object.freeze(oldState);
 	let newState = merge({}, oldState);
 
@@ -26,4 +26,4 @@ const mealOrderReducer = (oldState = {}, action) => {
 	}
 };
 
-export default mealOrderReducer;
+export default mealOrdersReducer;
