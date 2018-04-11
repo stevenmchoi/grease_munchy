@@ -12,6 +12,7 @@ const receiveMeal = (meal) => ({
 	type: RECEIVE_MEAL,
 	meal,
 });
+
 export const fetchAllMeals = () => (dispatch) =>
 	MealsApiUtil.fetchAllMeals().then((meals) =>
 		dispatch(receiveAllMeals(meals))
