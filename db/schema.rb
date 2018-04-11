@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180410224238) do
+ActiveRecord::Schema.define(version: 20180411022303) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "meal_orders", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "meal_id"
-    t.string "date"
+    t.integer "user_id", null: false
+    t.integer "meal_id", null: false
+    t.string "date", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["date"], name: "index_meal_orders_on_date"
