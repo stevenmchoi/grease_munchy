@@ -21,4 +21,10 @@
 
 @import 'splash.scss';
 
-@import 'meal_index/meal_index.scss';
+// 'meals'
+
+@import 'meals/meal_orders.scss'; // create/manage meal plan
+
+@import 'meals/meal_index.scss'; // /recipes "Cookbook"
+
+@import 'meals/meals.scss'; // /recipes/:recipeId
