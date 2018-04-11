@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Test fetchMeal after finishing RecipesIndex, to make RecipeShow
 	window.dispatch = store.dispatch;
 	window.fetchMeal = fetchMeal;
+	window.fetchAllMeals = fetchAllMeals;
 
 	ReactDOM.render(<Root store={store} />, root);
 });
