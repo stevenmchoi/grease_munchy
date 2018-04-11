@@ -6,6 +6,8 @@ import SignupContainer from './signup/signup_container';
 import LoginContainer from './login/login_container';
 import AccountContainer from './account/account_container';
 import SplashContainer from './splash/splash_container';
+import RecipesIndexSearchContainer from './recipes/recipes_index/recipes_index_container';
+import RecipeShowContainer from './recipes/recipe_show/recipe_container';
 
 const Main = () => {
 	return (
@@ -34,14 +36,14 @@ const Main = () => {
 					component={CreateMealPlanContainer}
 				/> */}
 
-				{/* <Route
+				<Route
 					path="/recipes/"
 					component={RecipesIndexSearchContainer}
-				/> */}
-				{/* <Route
+				/>
+				<Route
 					path="/recipes/:recipeId"
 					component={RecipeShowContainer}
-				/> */}
+				/>
 
 				<ProtectedRoute path="/account" component={AccountContainer} />
 
