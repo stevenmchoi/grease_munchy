@@ -4,7 +4,7 @@ import { fetchAllMeals } from '../../../../actions/meals_actions';
 import RecipesIndex from './recipes_index';
 
 const mapStateToProps = ({ entities: { meals } }, ownProps) => ({
-	meals,
+	meals: Object.values(meals),
 });
 
 const mapDispatchToProps = (dispatch) => ({
