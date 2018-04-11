@@ -3,8 +3,14 @@ class User < ApplicationRecord
   validates :password_digest, :session_token, presence: true
   validates :password, presence: true, allow_nil: true, length: { minimum: 6 }
 
-  has_many :meals
-  has_many :meal_orders
+  has_many :meal_orders,
+		class_name: :MealOrder,
+		foreign_key: :user_id,
+    primary_key: :id
+
+  has_many :meals,
+		through: :meal_orders,
+		source: :meal
 
   attr_reader :password
 
