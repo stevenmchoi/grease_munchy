@@ -1,4 +1,4 @@
-export const fetchMeals = () =>
+export const fetchAllMeals = () =>
 	$.ajax({
 		method: 'GET',
 		url: 'api/meals',
