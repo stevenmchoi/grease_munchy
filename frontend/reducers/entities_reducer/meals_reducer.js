@@ -1,18 +1,21 @@
 import { RECEIVE_ALL_MEALS, RECEIVE_MEAL } from '../../actions/meals_actions';
 import merge from 'lodash/merge';
 
-const mealsReducer = (oldState = { meals: {} }, action) => {
-	Object.freeze(oldState);
-	let newState = merge({}, oldState);
+const mealsReducer = (oldEntities = { meals: {} }, action) => {
+	Object.freeze(oldEntities);
+
+	let newEntities = merge({}, oldEntities);
 
 	switch (action.type) {
 		case RECEIVE_ALL_MEALS:
-			return action.meals;
-		// Test fetchMeal after finishing RecipesIndex, to make RecipeShow
+			newEntities = merge(newEntities, { meals: action.meals });
+			return newEntities.meals;
 		case RECEIVE_MEAL:
-			return merge(newState, { [action.meal.id]: action.meal });
+			const meal = action.meal;
+			newEntities[meal.id] = meal;
+			return newEntities;
 		default:
-			return oldState.meals;
+			return oldEntities.meals;
 	}
 };
 

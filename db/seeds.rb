@@ -65,8 +65,3 @@ MealOrder.create([{ user_id: 2, meal_id: 5, date: "2018-04-14" }])
 MealOrder.create([{ user_id: 2, meal_id: 2, date: "2018-04-19" }])
 MealOrder.create([{ user_id: 2, meal_id: 1, date: "2018-04-19" }])
 MealOrder.create([{ user_id: 2, meal_id: 1, date: "2018-04-26" }])
-
-# $.ajax({
-# 	method: 'GET',
-# 	url: `api/meals/${mealId}`,
-# });

@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const store = configureStore(preloadedState);
 
-	// Test fetchMeal after finishing RecipesIndex, to make RecipeShow
+	// Test fetchAllMeals after fetchMeal, replacing saved info
 	window.dispatch = store.dispatch;
 	window.fetchMeal = fetchMeal;
 	window.fetchAllMeals = fetchAllMeals;
