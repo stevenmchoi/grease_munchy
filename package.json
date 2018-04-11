@@ -15,7 +15,9 @@
 	"scripts": {
 		"server": "rails s",
 		"frontend": "webpack --watch",
-		"dev": "concurrently \"npm run server\" \"npm run frontend\"",
+		"livereload": "bundle exec guard -P livereload",
+		"dev":
+			"concurrently concurrently \"npm run server\" \"npm run frontend\" \"npm run livereload\"",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"postinstall": "webpack"
 	},
