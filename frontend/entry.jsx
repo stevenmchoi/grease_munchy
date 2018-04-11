@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchAllMeals, fetchMeal } from './util/meals_api_util';
+import { fetchAllMeals, fetchMeal } from './actions/meals_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const root = document.getElementById('root');
@@ -16,11 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		};
 	}
 
+	const store = configureStore(preloadedState);
+
 	// Test meals
+	window.dispatch = store.dispatch;
 	window.fetchAllMeals = fetchAllMeals;
 	window.fetchMeal = fetchMeal;
-
-	const store = configureStore(preloadedState);
 
 	ReactDOM.render(<Root store={store} />, root);
 });
