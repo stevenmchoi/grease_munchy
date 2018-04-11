@@ -2,15 +2,20 @@ import * as MealOrdersApiUtil from '../util/meal_orders_api_util';
 
 export const RECEIVE_ALL_MEAL_ORDERS = 'RECEIVE_ALL_MEAL_ORDERS';
 export const RECEIVE_MEAL_ORDER = 'RECEIVE_MEAL_ORDER';
+export const REMOVE_MEAL_ORDER = 'REMOVE_MEAL_ORDER';
 
 const receiveAllMealOrders = (mealOrders) => ({
 	type: RECEIVE_ALL_MEAL_ORDERS,
 	mealOrders,
 });
 
-const receiveMealOrder = (mealOrders) => ({
+const receiveMealOrder = (mealOrder) => ({
 	type: RECEIVE_MEAL_ORDER,
-	mealOrders,
+	mealOrder,
+});
+
+const removeMealOrder = () => ({
+	type: REMOVE_MEAL_ORDER,
 });
 
 export const fetchMealOrders = () => (dispatch) =>
@@ -25,5 +30,5 @@ export const createMealOrder = (newMealOrder) => (dispatch) =>
 
 export const deleteMealOrder = (mealOrderId) => (dispatch) =>
 	MealOrdersApiUtil.deleteMealOrder(mealOrderId).then((mealOrder) =>
-		dispatch(receiveMealOrder(null))
+		dispatch(removeMealOrder())
 	);
