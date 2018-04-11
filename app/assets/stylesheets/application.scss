@@ -13,10 +13,12 @@
  *= require_self
  */
 
- @import 'reset.scss';
+@import 'reset.scss';
 
- @import 'header.scss';
+@import 'header.scss';
 
- @import 'session.scss';
+@import 'session.scss';
 
- @import 'splash.scss';
+@import 'splash.scss';
+
+@import 'meal_index/meal_index.scss';
