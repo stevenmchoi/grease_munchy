@@ -3,6 +3,9 @@ class User < ApplicationRecord
   validates :password_digest, :session_token, presence: true
   validates :password, presence: true, allow_nil: true, length: { minimum: 6 }
 
+  has_many :meals
+  has_many :meal_orders
+
   attr_reader :password
 
   after_initialize :ensure_session_token
@@ -42,5 +45,7 @@ class User < ApplicationRecord
   #   while User.find_by(session_token: self.session_token)
   #     self.session_token = new_session_token
   #   end
+  #
+  #   self.save     # I think we do this too?
   # end
 end
