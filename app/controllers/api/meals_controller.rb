@@ -4,6 +4,6 @@ class Api::MealsController < ApplicationController
 	end
 
 	def show
-		@post = Post.find(params[:id])
+		@meal = Meal.find(params[:id])
 	end
 end
