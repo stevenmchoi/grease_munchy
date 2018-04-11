@@ -18,9 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const store = configureStore(preloadedState);
 
-	// Test meals
+	// Test fetchMeal after finishing RecipesIndex, to make RecipeShow
 	window.dispatch = store.dispatch;
-	window.fetchAllMeals = fetchAllMeals;
 	window.fetchMeal = fetchMeal;
 
 	ReactDOM.render(<Root store={store} />, root);

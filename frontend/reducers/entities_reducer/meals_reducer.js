@@ -8,6 +8,7 @@ const mealsReducer = (oldState = { meals: {} }, action) => {
 	switch (action.type) {
 		case RECEIVE_ALL_MEALS:
 			return action.meals;
+		// Test fetchMeal after finishing RecipesIndex, to make RecipeShow
 		case RECEIVE_MEAL:
 			return merge(newState, { [action.meal.id]: action.meal });
 		default:
