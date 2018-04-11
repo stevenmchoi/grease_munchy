@@ -14,7 +14,7 @@ class Api::MealOrdersController < ApplicationController
 	end
 
 	def destroy
-		@meal_order = MealOrder.find_by(meal_order)
+		@meal_order = MealOrder.find_by(meal_order_params)
 
 		if @meal_order.destroy
 			render :index
@@ -26,6 +26,6 @@ class Api::MealOrdersController < ApplicationController
 	private
 
 	def meal_order_params
-		params.require(:meal_order).permit(:id)
+		params.require(:meal_order).permit(:user_id, :meal_id, :date)
 	end
 end
