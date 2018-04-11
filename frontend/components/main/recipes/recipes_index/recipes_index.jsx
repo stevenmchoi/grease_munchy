@@ -26,8 +26,8 @@ class RecipesIndex extends React.Component {
 }
 
 // import RecipeShowContainer from '../recipe_show/recipe_container';
-{
-	/* <Route path="/recipes/:recipeId" component={RecipeShowContainer} />; */
-}
+// {
+// 	/* <Route path="/recipes/:recipeId" component={RecipeShowContainer} />; */
+// }
 
 export default RecipesIndex;
