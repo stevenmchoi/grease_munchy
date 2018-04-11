@@ -18,41 +18,65 @@ User.create([{ username: 'user1', email: 'user1@user1', password: 'password' }])
 User.create([{ username: 'user2', email: 'user2@user2', password: 'password' }])
 User.create([{ username: 'demo', email: 'demo@demo', password: 'password' }])
 
+# Ideas for seeding RecipeShow
 Meal.create([{
 	name: "Big Mac",
 	description: "Tasty!",
 	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_02_Videvo.mov63142.webm",
-	restaurant: "McDonald's"
-}])
-Meal.create([{
+	restaurant: "McDonald's",
+	# ingredients: ["salt and stuff"],
+	# instructions: [],
+	# servings: 4,
+},
+
+{
 	name: "Large Fries",
 	description: "Nowhere else!",
 	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_03_Videvo.mov69703.webm",
-	restaurant: "McDonald's"
-}])
-Meal.create([{
+	restaurant: "McDonald's",
+	# ingredients: ["salt and stuff"],
+	# instructions: [],
+	# servings: 4,
+},
+
+{
 	name: "McFlurry",
 	description: "Jason Wu!",
 	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_02_Videvo.mov63142.webm",
-	restaurant: "McDonald's"
-}])
-Meal.create([{
+	restaurant: "McDonald's",
+	# ingredients: ["salt and stuff"],
+	# instructions: [],
+	# servings: 4,
+},
+
+{
 	name: "Dave's Double",
 	description: "I'm getting hungry now...but we're in SF",
 	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_03_Videvo.mov69703.webm",
-	restaurant: "Wendy's"
-}])
-Meal.create([{
+	restaurant: "Wendy's",
+	# ingredients: ["salt and stuff"],
+	# instructions: [],
+	# servings: 4,
+},
+
+{
 	name: "Two-Piece Combo",
 	description: "Someone add Popeyes!",
 	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_02_Videvo.mov63142.webm",
-	restaurant: "KFC"
-}])
-Meal.create([{
+	restaurant: "KFC",
+	# ingredients: ["salt and stuff"],
+	# instructions: [],
+	# servings: 4,
+},
+
+{
 	name: "Classic Buttery Jack",
 	description: "How many times did I eat this at 12am?",
 	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_03_Videvo.mov69703.webm",
-	restaurant: "Jack In The Box"
+	restaurant: "Jack In The Box",
+	# ingredients: ["salt and stuff"],
+	# instructions: [],
+	# servings: 4,
 }])
 
 MealOrder.create([{ user_id: 1, meal_id: 1, date: "2018-04-14" }])
