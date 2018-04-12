@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const RecipeShow = ({ meal, mealId, fetchMeal }) => {
-	if (!meal || !meal.servings) {
+	if (!meal || meal.instructions === undefined) {
 		fetchMeal(mealId);
 		return null;
 	} else {
