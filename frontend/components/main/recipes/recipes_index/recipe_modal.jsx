@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 
 const RecipeModal = ({ meal, idx }) => {
 	return (
-		<Link to={`/recipes/${meal.name}`}>
+		<Link className="recipe-modal-link" to={`/recipes/${meal.name}`}>
 			<li className="recipe-modal">
-				{meal.name}
+				<h3>{meal.name}</h3>
 				<img className="recipe-img" src={meal.imageUrl} />
+				<p>{meal.restaurant}</p>
 			</li>
 		</Link>
 	);
