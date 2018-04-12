@@ -16,8 +16,12 @@ class RecipesIndex extends React.Component {
 		return (
 			// <Slide bottom cascade>
 			<ul className="recipes-list">
-				{meals.map((meal, idx) => (
-					<RecipeModal key={`recipe-${idx}`} meal={meal} idx={idx} />
+				{meals.map((meal) => (
+					<RecipeModal
+						key={`recipe-${meal.id}`}
+						meal={meal}
+						id={meal.id}
+					/>
 				))}
 			</ul>
 			// </Slide>

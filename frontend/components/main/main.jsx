@@ -35,11 +35,11 @@ const Main = () => {
 					component={CreateMealPlanContainer}
 				/> */}
 
-				<Route path="/recipes" component={RecipesIndexContainer} />
 				<Route
-					path="/recipes/:recipeName"
+					path="/recipes/:recipeNameId"
 					component={RecipeShowContainer}
 				/>
+				<Route path="/recipes" component={RecipesIndexContainer} />
 
 				<ProtectedRoute path="/account" component={AccountContainer} />
 				<AuthRoute path="/" component={SplashContainer} />
