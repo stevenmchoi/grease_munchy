@@ -8,6 +8,8 @@ const RecipeShow = ({ meal, mealId, fetchMeal }) => {
 	} else {
 		return (
 			<div className="recipe-show">
+				<Link to="/recipes">{`< Back`}</Link>
+
 				<ul className="recipe">
 					<h3>{meal.name}</h3>
 					<li>Description: {meal.description}</li>
@@ -17,8 +19,6 @@ const RecipeShow = ({ meal, mealId, fetchMeal }) => {
 					<li>Instructions: {meal.instructions}</li>
 					<li>Servings: {meal.servings}</li>
 				</ul>
-
-				<Link to="/recipes">{`< Back`}</Link>
 			</div>
 		);
 	}
