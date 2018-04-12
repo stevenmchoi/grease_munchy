@@ -7,6 +7,7 @@ import LoginContainer from './login/login_container';
 import AccountContainer from './account/account_container';
 import SplashContainer from './splash/splash_container';
 import RecipesIndexContainer from './recipes/recipes_index/recipes_index_container';
+import RecipeShowContainer from './recipes/recipe_show/recipe_show_container';
 
 const Main = () => {
 	return (
@@ -16,7 +17,6 @@ const Main = () => {
 			<Switch>
 				<AuthRoute path="/signup" component={SignupContainer} />
 				<AuthRoute path="/login" component={LoginContainer} />
-
 				{/* <Route
 					path="/pages/sample-recipes"
 					component={MenuContainer}
@@ -25,7 +25,6 @@ const Main = () => {
 					path="/account#upcoming"
 					component={MenuContainer}
 				/> */}
-
 				{/* <AuthRoute
 					path="/pages/pricing#plan-selector"
 					component={CreateMealPlanContainer}
@@ -34,11 +33,14 @@ const Main = () => {
 					path="/pages/pricing"
 					component={CreateMealPlanContainer}
 				/> */}
-
 				<Route path="/recipes" component={RecipesIndexContainer} />
 
-				<ProtectedRoute path="/account" component={AccountContainer} />
+				<Route
+					path="/recipes/:recipeName"
+					component={RecipeShowContainer}
+				/>
 
+				<ProtectedRoute path="/account" component={AccountContainer} />
 				<AuthRoute path="/" component={SplashContainer} />
 			</Switch>
 		</div>
