@@ -1,7 +1,7 @@
 import { RECEIVE_ALL_MEALS, RECEIVE_MEAL } from '../../actions/meals_actions';
 import merge from 'lodash/merge';
 
-const mealsReducer = (oldEntities = { meals: {} }, action) => {
+const mealsReducer = (oldEntities = {}, action) => {
 	Object.freeze(oldEntities);
 
 	let newEntities = merge({}, oldEntities);
@@ -9,6 +9,7 @@ const mealsReducer = (oldEntities = { meals: {} }, action) => {
 	switch (action.type) {
 		case RECEIVE_ALL_MEALS:
 			newEntities = merge(newEntities, { meals: action.meals });
+			console.log(newEntities);
 			return newEntities.meals;
 		case RECEIVE_MEAL:
 			const meal = action.meal;
