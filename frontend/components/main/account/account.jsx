@@ -3,24 +3,15 @@ import { Switch, Route } from 'react-router-dom';
 
 const AccountMain = ({ currentUser }) => {
 	return (
-		<section>
-			<h2>No more drive-thru, {currentUser.username}!</h2>
-			<Switch>
-				{/* <Route
-					path="/pages/pricing#plan-selector"
-					component={ManageMealPlanContainer}
-				/> */}
-				{/* <Route
-					path="/pages/pricing"
-					component={ManageMealPlanContainer}
-				/> */}
-
-				{/* <Route
-					exact
-					path="/account#current"
-					component={CurrentContainer}
-				/> */}
-			</Switch>
+		<section className="content-header">
+			<h1>Get your fast food faster, {currentUser.username}!</h1>
+			<video
+				preload="auto"
+				autoPlay
+				loop
+				src="https://www.videvo.net/videvo_files/converted/2013_11/preview/Clip4271013Videvo.mov90234.webm"
+				type="video/webm"
+			/>
 		</section>
 	);
 };

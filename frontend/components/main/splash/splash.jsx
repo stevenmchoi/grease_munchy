@@ -2,12 +2,14 @@ import React from 'react';
 
 const Splash = () => (
 	<div className="content-header">
-		<video preload="auto" autoPlay loop>
-			<source
-				src="https://www.videvo.net/videvo_files/converted/2013_11/preview/Clip4271013Videvo.mov90234.webm"
-				type="video/webm"
-			/>
-		</video>
+		<h1>Your house is the drive-thru</h1>
+		<video
+			preload="auto"
+			autoPlay
+			loop
+			src="https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_03_Videvo.mov69703.webm"
+			type="video/webm"
+		/>
 	</div>
 );
 
