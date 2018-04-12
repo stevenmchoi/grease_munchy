@@ -11,7 +11,7 @@ const NavButtons = ({ currentUser }) => {
 					Create Meal Plan
 				</Link>,
 				<Link key="recipes" to="/recipes">
-					Cookbook
+					Recipes
 				</Link>,
 		  ]
 		: [
@@ -19,7 +19,7 @@ const NavButtons = ({ currentUser }) => {
 					On The Menu
 				</Link>,
 				<Link key="recipes" to="/recipes">
-					Cookbook
+					Recipes
 				</Link>,
 		  ];
 };
