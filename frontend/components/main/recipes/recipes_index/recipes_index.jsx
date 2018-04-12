@@ -3,6 +3,7 @@ import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 import RecipeModal from './recipe_modal';
 
+// TODO: Doesn't refresh when reached from meal show page
 const RecipesIndex = ({ meals, fetchAllMeals }) => {
 	if (meals.length == 0) {
 		fetchAllMeals();
