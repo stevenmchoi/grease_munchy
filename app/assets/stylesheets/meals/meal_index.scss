@@ -2,12 +2,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-
-	.recipe-modal-link {
-		color: inherit;
-		text-decoration: inherit;
-		margin: 10px;
-	}
 }
 
 .recipe-modal {
@@ -15,6 +9,9 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
+	color: inherit;
+	text-decoration: inherit;
+	margin: 10px;
 	height: 250px;
 	width: 200px;
 	border: 1px solid lightgray;

@@ -3,30 +3,22 @@ import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 import RecipeModal from './recipe_modal';
 
-class RecipesIndex extends React.Component {
-	componentDidMount() {
-		if (this.props.meals.length == 0) {
-			this.props.fetchAllMeals();
-		}
+const RecipesIndex = ({ meals, fetchAllMeals }) => {
+	if (meals.length == 0) {
+		fetchAllMeals();
 	}
 
-	render() {
-		const meals = this.props.meals;
-
-		return (
-			// <Slide bottom cascade>
+	return (
+		<Fade bottom cascade>
 			<ul className="recipes-list">
 				{meals.map((meal) => (
-					<RecipeModal
-						key={`recipe-${meal.id}`}
-						meal={meal}
-						id={meal.id}
-					/>
+					<li key={`recipe-${meal.id}`}>
+						<RecipeModal meal={meal} id={meal.id} />
+					</li>
 				))}
 			</ul>
-			// </Slide>
-		);
-	}
-}
+		</Fade>
+	);
+};
 
 export default RecipesIndex;
