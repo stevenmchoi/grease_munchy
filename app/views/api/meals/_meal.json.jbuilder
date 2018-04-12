@@ -1,1 +1,1 @@
-json.extract! meal, :id, :name, :restaurant
+json.extract! meal, :id, :name, :imageUrl, :restaurant

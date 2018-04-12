@@ -17,6 +17,7 @@ const Main = () => {
 			<Switch>
 				<AuthRoute path="/signup" component={SignupContainer} />
 				<AuthRoute path="/login" component={LoginContainer} />
+
 				{/* <Route
 					path="/pages/sample-recipes"
 					component={MenuContainer}
@@ -33,8 +34,8 @@ const Main = () => {
 					path="/pages/pricing"
 					component={CreateMealPlanContainer}
 				/> */}
-				<Route path="/recipes" component={RecipesIndexContainer} />
 
+				<Route path="/recipes" component={RecipesIndexContainer} />
 				<Route
 					path="/recipes/:recipeName"
 					component={RecipeShowContainer}

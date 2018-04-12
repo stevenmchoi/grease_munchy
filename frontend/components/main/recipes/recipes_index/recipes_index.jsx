@@ -1,5 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal/Fade';
+import RecipeModal from './recipe_modal';
 
 class RecipesIndex extends React.Component {
 	componentDidMount() {
@@ -8,16 +9,17 @@ class RecipesIndex extends React.Component {
 
 	render() {
 		const meals = this.props.meals;
-		console.log(meals);
 
 		return (
 			<div>
 				<Fade bottom cascade>
 					<ul className="recipes-list">
 						{meals.map((meal, idx) => (
-							<li className="recipe-modal" key={`recipe-${idx}`}>
-								{meal.name}
-							</li>
+							<RecipeModal
+								key={`recipe-${idx}`}
+								meal={meal}
+								idx={idx}
+							/>
 						))}
 					</ul>
 				</Fade>
@@ -25,10 +27,5 @@ class RecipesIndex extends React.Component {
 		);
 	}
 }
-
-// import RecipeShowContainer from '../recipe_show/recipe_container';
-// {
-// 	/* <Route path="/recipes/:recipeId" component={RecipeShowContainer} />; */
-// }
 
 export default RecipesIndex;
