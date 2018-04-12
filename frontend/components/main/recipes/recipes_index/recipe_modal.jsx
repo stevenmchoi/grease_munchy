@@ -6,14 +6,7 @@ const RecipeModal = ({ meal, idx }) => {
 		<Link to={`/recipes/${meal.name}`}>
 			<li className="recipe-modal">
 				{meal.name}
-				<video
-					className="index-video"
-					preload="auto"
-					autoPlay
-					loop
-					src={meal.imageUrl}
-					type="video/webm"
-				/>
+				<img className="recipe-img" src={meal.imageUrl} />
 			</li>
 		</Link>
 	);

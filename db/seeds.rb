@@ -22,7 +22,7 @@ User.create([{ username: 'demo', email: 'demo@demo', password: 'password' }])
 Meal.create([{
 	name: "Big Mac",
 	description: "Tasty!",
-	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_02_Videvo.mov63142.webm",
+	imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Big_Mac_hamburger_-_Japan_%282%29.jpg",
 	restaurant: "McDonald's",
 	# ingredients: ["salt and stuff"],
 	# instructions: [],
@@ -32,7 +32,7 @@ Meal.create([{
 {
 	name: "Large Fries",
 	description: "Nowhere else!",
-	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_03_Videvo.mov69703.webm",
+	imageUrl: "https://farm4.staticflickr.com/3136/2701003490_ae17df256a_o.jpg",
 	restaurant: "McDonald's",
 	# ingredients: ["salt and stuff"],
 	# instructions: [],
@@ -42,7 +42,7 @@ Meal.create([{
 {
 	name: "McFlurry",
 	description: "Jason Wu!",
-	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_02_Videvo.mov63142.webm",
+	imageUrl: "https://farm8.staticflickr.com/7680/17910269142_8b6648b457_o.jpg",
 	restaurant: "McDonald's",
 	# ingredients: ["salt and stuff"],
 	# instructions: [],
@@ -52,7 +52,7 @@ Meal.create([{
 {
 	name: "Dave's Double",
 	description: "I'm getting hungry now...but we're in SF",
-	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_03_Videvo.mov69703.webm",
+	imageUrl: "https://farm8.staticflickr.com/7260/7025300923_c26f41a66a_b.jpg",
 	restaurant: "Wendy's",
 	# ingredients: ["salt and stuff"],
 	# instructions: [],
@@ -62,7 +62,7 @@ Meal.create([{
 {
 	name: "Two-Piece Combo",
 	description: "Someone add Popeyes!",
-	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_02_Videvo.mov63142.webm",
+	imageUrl: "https://farm5.staticflickr.com/4040/4516316564_3e656dcc07_o.jpg",
 	restaurant: "KFC",
 	# ingredients: ["salt and stuff"],
 	# instructions: [],
@@ -70,9 +70,9 @@ Meal.create([{
 },
 
 {
-	name: "Classic Buttery Jack",
+	name: "Mini Corn Dogs",
 	description: "How many times did I eat this at 12am?",
-	imageUrl: "https://www.videvo.net/videvo_files/converted/2015_04/preview/FoodPack1_03_Videvo.mov69703.webm",
+	imageUrl: "https://farm9.staticflickr.com/8422/7636094606_8ff5b0a3e0_o.jpg",
 	restaurant: "Jack In The Box",
 	# ingredients: ["salt and stuff"],
 	# instructions: [],

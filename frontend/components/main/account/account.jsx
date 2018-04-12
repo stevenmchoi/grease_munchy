@@ -5,14 +5,7 @@ const AccountMain = ({ currentUser }) => {
 	return (
 		<section className="content-header">
 			<h1>Get your fast food faster, {currentUser.username}!</h1>
-			<video
-				className="home-video"
-				preload="auto"
-				autoPlay
-				loop
-				src="https://www.videvo.net/videvo_files/converted/2013_11/preview/Clip4271013Videvo.mov90234.webm"
-				type="video/webm"
-			/>
+			<img src="https://farm3.staticflickr.com/2572/3932344564_c03b7326c1_o.jpg" />
 		</section>
 	);
 };
