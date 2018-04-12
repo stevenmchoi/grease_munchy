@@ -1,7 +1,6 @@
 import React from 'react';
-import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 
-// Might be good enough just to be a functional component
 class RecipesIndex extends React.Component {
 	componentDidMount() {
 		this.props.fetchAllMeals();
@@ -13,13 +12,15 @@ class RecipesIndex extends React.Component {
 
 		return (
 			<div>
-				<Slide>
+				<Fade bottom cascade>
 					<ul className="recipes-list">
 						{meals.map((meal, idx) => (
-							<li key={`recipe-${idx}`}>{meal.name}</li>
+							<li className="recipe-modal" key={`recipe-${idx}`}>
+								{meal.name}
+							</li>
 						))}
 					</ul>
-				</Slide>
+				</Fade>
 			</div>
 		);
 	}

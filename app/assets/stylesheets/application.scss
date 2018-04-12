@@ -23,8 +23,8 @@
 
 // 'meals'
 
-@import 'meals/meal_orders.scss'; // create/manage meal plan
-
-@import 'meals/meal_index.scss'; // /recipes "Cookbook"
+@import 'meals/meal_index.scss'; // /recipes
 
 @import 'meals/meals.scss'; // /recipes/:recipeId
+
+@import 'meals/meal_orders.scss'; // create/manage meal plan
