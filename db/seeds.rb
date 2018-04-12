@@ -21,60 +21,78 @@ User.create([{ username: 'demo', email: 'demo@demo', password: 'password' }])
 # Ideas for seeding RecipeShow
 Meal.create([{
 	name: "Big Mac",
-	description: "Tasty!",
 	imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Big_Mac_hamburger_-_Japan_%282%29.jpg",
 	restaurant: "McDonald's",
-	# ingredients: ["salt and stuff"],
+	# above: modal
+
+	# below: show page
+	description: "Tasty!",
+	ingredients: ["salt", "potatos", "magic", "etc."],
 	# instructions: [],
 	# servings: 4,
 },
 
 {
 	name: "Large Fries",
-	description: "Nowhere else!",
 	imageUrl: "https://farm4.staticflickr.com/3136/2701003490_ae17df256a_o.jpg",
 	restaurant: "McDonald's",
-	# ingredients: ["salt and stuff"],
+	# above: modal
+
+	# below: show page
+	description: "Nowhere else!",
+	ingredients: ["salt", "potatos", "magic", "etc."],
 	# instructions: [],
 	# servings: 4,
 },
 
 {
 	name: "McFlurry",
-	description: "Jason Wu!",
 	imageUrl: "https://farm8.staticflickr.com/7680/17910269142_8b6648b457_o.jpg",
 	restaurant: "McDonald's",
-	# ingredients: ["salt and stuff"],
+	# above: modal
+
+	# below: show page
+	description: "Jason Wu!",
+	ingredients: ["salt", "potatos", "magic", "etc."],
 	# instructions: [],
 	# servings: 4,
 },
 
 {
 	name: "Dave's Double",
-	description: "I'm getting hungry now...but we're in SF",
 	imageUrl: "https://farm8.staticflickr.com/7260/7025300923_c26f41a66a_b.jpg",
 	restaurant: "Wendy's",
-	# ingredients: ["salt and stuff"],
+	# above: modal
+
+	# below: show page
+	description: "I'm getting hungry now...but we're in SF",
+	ingredients: ["salt", "potatos", "magic", "etc."],
 	# instructions: [],
 	# servings: 4,
 },
 
 {
 	name: "Two-Piece Combo",
-	description: "Someone add Popeyes!",
 	imageUrl: "https://farm5.staticflickr.com/4040/4516316564_3e656dcc07_o.jpg",
 	restaurant: "KFC",
-	# ingredients: ["salt and stuff"],
+	# above: modal
+
+	# below: show page
+	description: "Someone add Popeyes!",
+	ingredients: ["salt", "potatos", "magic", "etc."],
 	# instructions: [],
 	# servings: 4,
 },
 
 {
 	name: "Mini Corn Dogs",
-	description: "How many times did I eat this at 12am?",
 	imageUrl: "https://farm9.staticflickr.com/8422/7636094606_8ff5b0a3e0_o.jpg",
 	restaurant: "Jack In The Box",
-	# ingredients: ["salt and stuff"],
+	# above: modal
+
+	# below: show page
+	description: "How many times did I eat this at 12am?",
+	ingredients: ["salt", "potatos", "magic", "etc."],
 	# instructions: [],
 	# servings: 4,
 }])
