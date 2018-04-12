@@ -1,5 +1,7 @@
 import React from 'react';
 import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
+import HeadShake from 'react-reveal/HeadShake';
 
 class Login extends React.Component {
 	constructor(props) {
@@ -8,7 +10,7 @@ class Login extends React.Component {
 			username: '',
 			password: '',
 		};
-		this.triggerErr = false;
+		this.triggerErr = 0;
 
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
@@ -22,7 +24,7 @@ class Login extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault();
-		this.triggerErr = true;
+		this.triggerErr = this.triggerErr + 1;
 		this.props.login(this.state);
 	}
 
@@ -33,13 +35,13 @@ class Login extends React.Component {
 
 	handleErrors() {
 		return (
-			<Slide left when={this.triggerErr}>
+			<Fade bottom when={this.triggerErr}>
 				<ul className="err-msg">
 					{this.props.session.map((errStr, idx) => (
 						<li key={`err-${idx}`}>{errStr}</li>
 					))}
 				</ul>
-			</Slide>
+			</Fade>
 		);
 	}
 
@@ -49,35 +51,37 @@ class Login extends React.Component {
 		return (
 			<div>
 				<Slide top>
-					<form onSubmit={this.handleDemoSubmit}>
-						<button className="button">Demo</button>
-					</form>
+					<HeadShake spy={this.triggerErr}>
+						<form onSubmit={this.handleDemoSubmit}>
+							<button className="button">Demo</button>
+						</form>
 
-					<form onSubmit={this.handleSubmit}>
-						<h1>Log In</h1>
+						<form onSubmit={this.handleSubmit}>
+							<h1>Log In</h1>
 
-						<label>
-							Username:
-							<input
-								type="text"
-								value={`${username}`}
-								onChange={this.handleChange('username')}
-							/>
-						</label>
+							<label>
+								Username:
+								<input
+									type="text"
+									value={`${username}`}
+									onChange={this.handleChange('username')}
+								/>
+							</label>
 
-						<label>
-							Password:
-							<input
-								type="password"
-								value={`${password}`}
-								onChange={this.handleChange('password')}
-							/>
-						</label>
+							<label>
+								Password:
+								<input
+									type="password"
+									value={`${password}`}
+									onChange={this.handleChange('password')}
+								/>
+							</label>
 
-						<button className="button" type="submit">
-							Log in
-						</button>
-					</form>
+							<button className="button" type="submit">
+								Log in
+							</button>
+						</form>
+					</HeadShake>
 				</Slide>
 
 				{this.handleErrors()}
