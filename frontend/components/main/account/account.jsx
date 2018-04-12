@@ -6,6 +6,7 @@ const AccountMain = ({ currentUser }) => {
 		<section className="content-header">
 			<h1>Get your fast food faster, {currentUser.username}!</h1>
 			<video
+				className="home-video"
 				preload="auto"
 				autoPlay
 				loop

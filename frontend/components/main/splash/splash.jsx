@@ -6,6 +6,7 @@ const Splash = () => (
 		<h1>Your house is the drive-thru</h1>
 		<Link to="/signup">
 			<video
+				className="home-video"
 				preload="auto"
 				autoPlay
 				loop
