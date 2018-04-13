@@ -13,6 +13,7 @@
 # 403: Forbidden: need to be logged_in
 # 404: Not Found: route doesn't exist
 # 422: Unprocessable Entity: Bad fields for signup
+require 'faker'
 
 User.create([{ username: 'user1', email: 'user1@user1', password: 'password' }])
 User.create([{ username: 'user2', email: 'user2@user2', password: 'password' }])
