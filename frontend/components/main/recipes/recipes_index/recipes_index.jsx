@@ -3,18 +3,11 @@ import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 import RecipeModal from './recipe_modal';
 
-class RecipesIndex extends React.Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		const { meals, numMeals, ownProps, fetchAllMeals } = this.props;
-
-		if (meals.length <= numMeals) {
-			fetchAllMeals();
-		}
-
+const RecipesIndex = ({ meals, numMeals, fetchAllMeals }) => {
+	if (meals.length <= numMeals) {
+		fetchAllMeals();
+		return null;
+	} else {
 		return (
 			<Fade bottom cascade>
 				<ul className="recipes-list">
@@ -27,6 +20,6 @@ class RecipesIndex extends React.Component {
 			</Fade>
 		);
 	}
-}
+};
 
 export default RecipesIndex;
