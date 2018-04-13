@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
-import { fetchAllMeals, fetchMeal } from './actions/meals_actions';
+import {
+	fetchMealOrders,
+	createMealOrder,
+	deleteMealOrder,
+} from './actions/meal_orders_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 	const root = document.getElementById('root');
@@ -18,10 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	const store = configureStore(preloadedState);
 
-	// Test fetchAllMeals after fetchMeal, replacing saved info
 	window.dispatch = store.dispatch;
-	window.fetchMeal = fetchMeal;
-	window.fetchAllMeals = fetchAllMeals;
+	window.fetchMealOrders = fetchMealOrders;
+	window.createMealOrder = createMealOrder;
+	window.deleteMealOrder = deleteMealOrder;
 
 	ReactDOM.render(<Root store={store} />, root);
 });
