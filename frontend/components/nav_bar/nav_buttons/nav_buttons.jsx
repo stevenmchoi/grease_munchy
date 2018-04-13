@@ -7,7 +7,7 @@ const NavButtons = ({ currentUser }) => {
 				<Link key="upcoming" to="/account#upcoming">
 					Upcoming
 				</Link>,
-				<Link key="create" to="/account#create">
+				<Link key="create" to="/account#mealplan">
 					Create Meal Plan
 				</Link>,
 				<Link key="recipes" to="/recipes">
