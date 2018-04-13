@@ -1,3 +1,93 @@
 // Place all the styles related to the api/meals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.recipe-show {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	text-decoration: inherit;
+	width: 900px;
+	padding: 20px;
+	border: 1px solid lightgray;
+	border-radius: 10px;
+	background-color: white;
+	line-height: 1.3em;
+
+	.back-link {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		padding: 0px 15px 5px 15px;
+		color: inherit;
+		text-decoration: none;
+		line-height: initial;
+		font-size: 50px;
+		font-family: 'Courier';
+		border-radius: 8.5px 0 8.5px 0;
+		z-index: 1;
+	}
+
+	.recipe-overview {
+		width: 49.4%;
+
+		.title {
+			// TODO: Figure out max-width later!
+			// align-self: center;
+			// max-width: 350px;
+			margin: 10px 0 20px 0;
+			font-size: 40px;
+			color: #112E61;
+		}
+
+		li {
+			text-align: left;
+			margin-bottom: 20px;
+		}
+
+		.description {
+			// padding-right: 20px;
+			padding-left: 20px;
+			text-indent: -20px;
+		}
+	}
+
+	.recipe-img {
+		display: float;
+		float: right;
+		align-self: center;
+		margin: 0;
+		width: 49.4%;
+		border: 1px solid orange;
+		border-radius: 10px;
+	}
+
+	.back-link:hover {
+		background-color: lightblue;
+	}
+
+	li {
+		text-align: left;
+		margin: 10px 0;
+	}
+
+	.recipe-ingredients,
+	.recipe-instructions {
+		margin-top: 20px;
+		padding-top: 0;
+	}
+
+	.recipe-ingredients li,
+	.recipe-instructions li {
+		display: list-item;
+		list-style-position: inside;
+	}
+
+	.recipe-ingredients {
+		width: 20%;
+	}
+
+	.recipe-instructions {
+		width: 75%;
+	}
+}

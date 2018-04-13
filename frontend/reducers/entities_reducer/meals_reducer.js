@@ -8,9 +8,8 @@ const mealsReducer = (oldEntities = {}, action) => {
 
 	switch (action.type) {
 		case RECEIVE_ALL_MEALS:
-			newEntities = merge(newEntities, { meals: action.meals });
-			console.log(newEntities);
-			return newEntities.meals;
+			newEntities = merge(newEntities, action.meals);
+			return newEntities;
 		case RECEIVE_MEAL:
 			const meal = action.meal;
 			newEntities[meal.id] = meal;
