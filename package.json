@@ -9,15 +9,14 @@
 	},
 	"private": true,
 	"engines": {
-		"node": "8.9.4",
-		"npm": "5.8.0"
+		"node": "9.11.1",
+		"npm": "5.6.0"
 	},
 	"scripts": {
 		"server": "rails s",
 		"frontend": "webpack --watch",
 		"livereload": "bundle exec guard -P livereload",
-		"dev":
-			"concurrently concurrently \"npm run server\" \"npm run frontend\" \"npm run livereload\"",
+		"dev": "concurrently concurrently \"npm run server\" \"npm run frontend\" \"npm run livereload\"",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"postinstall": "webpack"
 	},
@@ -39,8 +38,8 @@
 		"babel-preset-react": "^6.24.1",
 		"concurrently": "^3.5.1",
 		"lodash": "^4.17.5",
-		"react": "^16.3.0",
-		"react-dom": "^16.3.0",
+		"react": "^16.3.1",
+		"react-dom": "^16.3.1",
 		"react-redux": "^5.0.7",
 		"react-reveal": "^1.2.1",
 		"react-router": "^4.2.0",
