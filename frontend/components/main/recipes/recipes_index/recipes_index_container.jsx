@@ -5,6 +5,7 @@ import RecipesIndex from './recipes_index';
 
 const mapStateToProps = ({ entities: { meals } }, ownProps) => ({
 	meals: Object.values(meals),
+	numMeals: fetchAllMeals().length,
 });
 
 const mapDispatchToProps = (dispatch) => ({
