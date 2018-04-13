@@ -4,11 +4,11 @@ export const fetchMealOrders = () =>
 		url: 'api/meal_orders',
 	});
 
-export const createMealOrder = (mealOrder) =>
+export const createMealOrder = (meal_order) =>
 	$.ajax({
 		method: 'POST',
 		url: 'api/meal_orders',
-		data: { mealOrder },
+		data: { meal_order },
 	});
 
 export const deleteMealOrder = (mealOrderId) =>

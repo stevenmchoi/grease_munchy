@@ -11,11 +11,7 @@ const mealOrdersReducer = (oldState = {}, action) => {
 
 	switch (action.type) {
 		case RECEIVE_ALL_MEAL_ORDERS:
-			console.log(action.mealOrders);
-
-			newState.mealOrders = merge(newState.mealOrders, action.mealOrders);
-			// Should already be filtered out in 'view/index.json.jbuilder'
-			return newState.mealOrders;
+			return merge(newState.mealOrders, action.mealOrders);
 		case RECEIVE_MEAL_ORDER:
 			return merge(newState, {
 				[action.mealOrder.id]: action.mealOrder,

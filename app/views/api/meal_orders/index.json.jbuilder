@@ -1,6 +1,3 @@
-puts json: current_user
-
-# json.mealOrders @meal_orders do |meal_order|
 @meal_orders.each do |meal_order|
 	if meal_order.user_id == current_user.id
 		puts json: meal_order
