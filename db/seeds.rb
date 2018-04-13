@@ -26,10 +26,10 @@ Meal.create([{
 	# above: modal
 
 	# below: show page
-	description: "Tasty!",
-	ingredients: ["salt", "potatos", "magic", "etc."],
-	# instructions: [],
-	# servings: 4,
+	description: "The Big Mac is a hamburger sold by international fast food restaurant chain McDonald's. It was introduced in the Greater Pittsburgh area, United States, in 1967 and nationwide in 1968. It is one of the company's signature products.",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
 },
 
 {
@@ -39,10 +39,10 @@ Meal.create([{
 	# above: modal
 
 	# below: show page
-	description: "Nowhere else!",
-	ingredients: ["salt", "potatos", "magic", "etc."],
-	# instructions: [],
-	# servings: 4,
+	description: "Our French fries are born from premium potatoes such as the Russet Burbank and the Shepody. With zero grams of trans fat per labeled serving, these epic fries are crispy and golden on the outside and fluffy on the inside.",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
 },
 
 {
@@ -52,10 +52,10 @@ Meal.create([{
 	# above: modal
 
 	# below: show page
-	description: "Jason Wu!",
-	ingredients: ["salt", "potatos", "magic", "etc."],
-	# instructions: [],
-	# servings: 4,
+	description: "McFlurry consists of whipped, soft-serve McDonald's vanilla-flavored frozen dairy product in a cup. The McFlurry has a specially designed spoon with a hole in the handle which is attached to a blender. Sprinkles or various types of candy are added to the cup which is then blended using the spoon. The ice cream product in a McFlurry is the same product McDonald's uses for its cones and Sundaes. The ice cream product is made from UHT milk, extended with methylcellulose. Flavors vary from market to market, and new flavors are introduced regularly. The spoon used to consume a McFlurry has a hollow middle, which some will mistake as a sucking device.",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
 },
 
 {
@@ -65,10 +65,10 @@ Meal.create([{
 	# above: modal
 
 	# below: show page
-	description: "I'm getting hungry now...but we're in SF",
-	ingredients: ["salt", "potatos", "magic", "etc."],
-	# instructions: [],
-	# servings: 4,
+	description: "Oh yeah, you're seeing double. That's two fresh, never frozen beef patties with the freshest toppings on a warm toasted bun.\nFresh beef available in the contiguous U.S., Alaska and Canada. *Approximate weight before cooking",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
 },
 
 {
@@ -78,10 +78,10 @@ Meal.create([{
 	# above: modal
 
 	# below: show page
-	description: "Someone add Popeyes!",
-	ingredients: ["salt", "potatos", "magic", "etc."],
-	# instructions: [],
-	# servings: 4,
+	description: "Chow down on the Colonel’s Combos. Our KFC Combos feature a wide variety of delicious Kentucky Fried classics.\n\nTwo pieces of fried chicken, larger mashed potatoes, biscuit, medium drink and a chocolate chip cookie for just $5.",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
 },
 
 {
@@ -91,10 +91,10 @@ Meal.create([{
 	# above: modal
 
 	# below: show page
-	description: "How many times did I eat this at 12am?",
-	ingredients: ["salt", "potatos", "magic", "etc."],
-	# instructions: [],
-	# servings: 4,
+	description: "Jack in the Box® restaurants are adding a popular county fair favorite, corn dogs, to its menu. But unlike its county fair cousins, Jack’s corn dogs are served in bite-sized portions and without sticks. And being the trendy chain that it is, Jack in the Box is going “mini” with the new product and calling them Mini Corn Dogs. Now available for a limited time at participating restaurants, Jack in the Box is serving its Mini Corn Dogs in a 5-piece order, with each bite-sized pup fried to a golden brown.",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
 }])
 
 MealOrder.create([{ user_id: 1, meal_id: 1, date: "2018-04-14" }])
