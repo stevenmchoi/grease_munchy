@@ -35,12 +35,24 @@ Development tools include NPM Webpack, Guard Livereload, Faker, Redux Logger and
 
 ## Additional Resources
 
-[Component Hierarchy][component hierarchy]
-[Sample State][sample state]
-[Database Schema][database schema]
-[Original MVP List][mvp list]
+[Component Hierarchy][component-hierarchy]
+
+[Sample State][sample-state]
+
+[Database Schema][database-schema]
+
+[Original MVP List][mvp-list]
+
 [Routes][routes]
+
 [other resources][home]
+
+[component-hierarchy]: https://github.com/stevenmchoi/grease_munchy/wiki/component-hierarchy
+[sample-state]: https://github.com/stevenmchoi/grease_munchy/wiki/sample-state
+[database-schema]: https://github.com/stevenmchoi/grease_munchy/wiki/database-schema
+[mvp-list]: https://github.com/stevenmchoi/grease_munchy/wiki/mvp-list
+[routes]: https://github.com/stevenmchoi/grease_munchy/wiki/routes
+[home]: https://github.com/stevenmchoi/grease_munchy/wiki
 
 ## Future features
 
