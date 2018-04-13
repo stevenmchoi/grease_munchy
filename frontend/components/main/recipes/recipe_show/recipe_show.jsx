@@ -29,15 +29,15 @@ const RecipeShow = ({ meal, mealId, fetchMeal }) => {
 
 				<ul className="recipe-ingredients">
 					<strong>Ingredients:</strong>
-					{meal.ingredients.map((ingredient) => (
-						<li>{ingredient}</li>
+					{meal.ingredients.map((ingredient, idx) => (
+						<li key={`ingredient-${idx}`}>{ingredient}</li>
 					))}
 				</ul>
 
 				<ol className="recipe-instructions">
 					<strong>Instructions:</strong>
-					{meal.instructions.map((instruction) => (
-						<li>{instruction}</li>
+					{meal.instructions.map((instruction, idx) => (
+						<li key={`instruction-${idx}`}>{instruction}</li>
 					))}
 				</ol>
 			</div>
