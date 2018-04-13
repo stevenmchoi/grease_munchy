@@ -8,16 +8,22 @@ const RecipeShow = ({ meal, mealId, fetchMeal }) => {
 	} else {
 		return (
 			<div className="recipe-show">
-				<Link to="/recipes">{`< Back`}</Link>
+				<Link className="back-link" to="/recipes">
+					{'<'}
+				</Link>
 
-				<ul className="recipe">
-					<h3>{meal.name}</h3>
-					<li>Description: {meal.description}</li>
-					<img className="recipe-img" src={meal.imageUrl} />
+				<ul className="recipe-overview">
+					<h3 className="title">{meal.name}</h3>
 					<li>Restaurant: {meal.restaurant}</li>
+					<li>Description: {meal.description}</li>
+					<li>Servings: {meal.servings}</li>
+				</ul>
+
+				<img className="recipe-img" src={meal.imageUrl} />
+
+				<ul>
 					<li>Ingredients: {meal.ingredients}</li>
 					<li>Instructions: {meal.instructions}</li>
-					<li>Servings: {meal.servings}</li>
 				</ul>
 			</div>
 		);
