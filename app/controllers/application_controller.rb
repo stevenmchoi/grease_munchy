@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
 
+  # TODO: Use for accessing meal plan
   def redirect_logged_out
     redirect_to api_users_url if logged_in?
   end

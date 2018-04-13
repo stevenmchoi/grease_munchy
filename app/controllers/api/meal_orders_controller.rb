@@ -14,10 +14,11 @@ class Api::MealOrdersController < ApplicationController
 	end
 
 	def destroy
-		@meal_order = MealOrder.find_by(meal_order_params)
+		@meal_order = MealOrder.find(params[:id])
 
-		if @meal_order.destroy
-			render :index
+		# TODO: can delete all right, but can't handle errors well!
+		if @meal_order && @meal_order.destroy
+			render :show
 		else
 			render :show, status: 422
 		end
