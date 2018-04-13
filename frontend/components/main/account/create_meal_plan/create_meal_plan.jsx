@@ -5,4 +5,17 @@ class CreateMealPlan extends React.Component {
 		super(props);
 		this.state = {};
 	}
+
+	render() {
+		const {
+			mealOrders,
+			fetchMealOrders,
+			createMealOrder,
+			deleteMealOrder,
+		} = this.props;
+
+		return <div />;
+	}
 }
+
+export default CreateMealPlan;
