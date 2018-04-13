@@ -14,17 +14,32 @@ const RecipeShow = ({ meal, mealId, fetchMeal }) => {
 
 				<ul className="recipe-overview">
 					<h3 className="title">{meal.name}</h3>
-					<li>Restaurant: {meal.restaurant}</li>
-					<li>Description: {meal.description}</li>
-					<li>Servings: {meal.servings}</li>
+					<li className="restaurant">
+						<strong>Restaurant:</strong> {meal.restaurant}
+					</li>
+					<li className="servings">
+						<strong>Servings:</strong> {meal.servings}
+					</li>
+					<li className="description">
+						<strong>Description:</strong> {meal.description}
+					</li>
 				</ul>
 
 				<img className="recipe-img" src={meal.imageUrl} />
 
-				<ul>
-					<li>Ingredients: {meal.ingredients}</li>
-					<li>Instructions: {meal.instructions}</li>
+				<ul className="recipe-ingredients">
+					<strong>Ingredients:</strong>
+					{meal.ingredients.map((ingredient) => (
+						<li>{ingredient}</li>
+					))}
 				</ul>
+
+				<ol className="recipe-instructions">
+					<strong>Instructions:</strong>
+					{meal.instructions.map((instruction) => (
+						<li>{instruction}</li>
+					))}
+				</ol>
 			</div>
 		);
 	}
