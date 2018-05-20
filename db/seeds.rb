@@ -19,7 +19,8 @@ User.create([{ username: 'user2', email: 'user2@user2', password: 'password' }])
 User.create([{ username: 'demo', email: 'demo@demo', password: 'password' }])
 
 # Ideas for seeding RecipeShow
-Meal.create([{
+Meal.create([
+{
 	name: "Big Mac",
 	imageUrl: "https://upload.wikimedia.org/wikipedia/commons/c/c4/Big_Mac_hamburger_-_Japan_%282%29.jpg",
 	restaurant: "McDonald's",
@@ -92,6 +93,73 @@ Meal.create([{
 
 	# below: show page
 	description: "Jack in the Box® restaurants are adding a popular county fair favorite, corn dogs, to its menu. But unlike its county fair cousins, Jack’s corn dogs are served in bite-sized portions and without sticks. And being the trendy chain that it is, Jack in the Box is going “mini” with the new product and calling them Mini Corn Dogs. Now available for a limited time at participating restaurants, Jack in the Box is serving its Mini Corn Dogs in a 5-piece order, with each bite-sized pup fried to a golden brown.",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
+},
+
+# new seeds
+
+{
+	name: "Pizza",
+	imageUrl: "https://cdn.pixabay.com/photo/2017/01/22/19/20/pizza-2000615_960_720.jpg",
+	restaurant: "Round Table Pizza",
+	# above: modal
+
+	# below: show page
+	description: "A Legendary Combination: Pepperoni, Italian sausage, salami, linguica, mushrooms, green peppers, onions, black olives on zesty red sauce (shrimp* & anchovies* may be available upon request at some locations).",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
+},
+
+{
+	name: "Curly Fries",
+	imageUrl: "https://c1.staticflickr.com/6/5582/15088187957_c99af4e93f_b.jpg",
+	restaurant: "Arby's",
+	# above: modal
+
+	# below: show page
+	description: "Potatoes. The meats of the field. Sliced up curly and fried to perfection. Snack-size curly fries are delicious on their own and even better with one of our famous sauces.",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
+},
+
+{
+	name: "Hot Dog",
+	imageUrl: "https://process.filestackapi.com/AhTgLagciQByzXpFGRI0Az/resize=width:1000,fit:scale/https://www.goodfreephotos.com/albums/food/hotdog-sausage-with-the-works.jpg",
+	restaurant: "Costco",
+	# above: modal
+
+	# below: show page
+	description: "The price of a hot dog at Costco — $1.50 with a soda — has not changed since 1985. The enduring meal deal at one of the country’s largest big-box retailers is by design, according to a report from Business Insider. Like Costco’s popular $4.99 rotisserie chicken, its hot dogs — available at counters in the front (and sometimes outside) of each store — are priced to move so as to encourage shoppers to purchase other, higher margin items.",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
+},
+
+{
+	name: "Chicken Nuggets",
+	imageUrl: "https://c.pxhere.com/photos/57/a9/chicken_nuggets_fries_dip_sauce_grilled_bbq-1110920.jpg!d",
+	restaurant: "Burger King",
+	# above: modal
+
+	# below: show page
+	description: "Made with white meat, our bite-sized Chicken Nuggets are tender and juicy on the inside and crispy on the outside. Coated in a homestyle seasoned breading, they are perfect for dipping in any of our delicious dipping sauces.",
+	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
+	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
+	servings: rand(8) + 2,
+},
+
+{
+	name: "Poutine",
+	imageUrl: "https://c1.staticflickr.com/6/5604/30256597740_065c828418_b.jpg",
+	restaurant: "Canada",
+	# above: modal
+
+	# below: show page
+	description: "Poutine is a dish originating from the Canadian province of Quebec consisting of French fries and cheese curds topped with a brown gravy. The dish emerged in the late 1950s in the Centre-du-Québec area and has long been associated with the cuisine of Quebec. For many years, it was negatively perceived and mocked and even used as a means of stigmatization against Quebec society. However, since the mid-2000s, poutine has been celebrated as a symbol of Québécois cultural pride, and its rise in prominence led to popularity outside the province, especially in central Canada and the northeast United States. Annual poutine celebrations occur in Montreal, Quebec City, and Drummondville, as well as Toronto, Ottawa, Chicago, and Manchester, New Hampshire. Today, it is often identified as quintessential Canadian food and has been called \"Canada's national dish\", though some have commented that this labelling represents misappropriation of Québécois culture. Many variations on the original recipe are popular, leading some to suggest that poutine has emerged as a new dish classification in its own right, just like sandwiches, dumplings, soups, and flatbreads.",
 	ingredients: [Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient, Faker::Food.ingredient],
 	instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
 	servings: rand(8) + 2,
