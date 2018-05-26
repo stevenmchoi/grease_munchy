@@ -1,14 +1,14 @@
-import React from 'react';
-import Slide from 'react-reveal/Slide';
-import Fade from 'react-reveal/Fade';
-import HeadShake from 'react-reveal/HeadShake';
+import React from "react";
+import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
+import HeadShake from "react-reveal/HeadShake";
 
 class Login extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			username: '',
-			password: '',
+			username: "",
+			password: "",
 		};
 		this.triggerErr = 0;
 
@@ -17,7 +17,7 @@ class Login extends React.Component {
 	}
 
 	handleChange(field) {
-		return (e) => {
+		return e => {
 			this.setState({ [field]: e.target.value });
 		};
 	}
@@ -30,7 +30,7 @@ class Login extends React.Component {
 
 	handleDemoSubmit(e) {
 		e.preventDefault();
-		this.props.login({ username: 'demo', password: 'password' });
+		this.props.login({ username: "demo", password: "password" });
 	}
 
 	handleErrors() {
@@ -64,7 +64,7 @@ class Login extends React.Component {
 								<input
 									type="text"
 									value={`${username}`}
-									onChange={this.handleChange('username')}
+									onChange={this.handleChange("username")}
 								/>
 							</label>
 
@@ -73,7 +73,7 @@ class Login extends React.Component {
 								<input
 									type="password"
 									value={`${password}`}
-									onChange={this.handleChange('password')}
+									onChange={this.handleChange("password")}
 								/>
 							</label>
 

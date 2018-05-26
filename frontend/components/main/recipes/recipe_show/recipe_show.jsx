@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const RecipeShow = ({ meal, mealId, fetchMeal }) => {
 	if (!meal || meal.instructions === undefined) {
@@ -9,7 +9,7 @@ const RecipeShow = ({ meal, mealId, fetchMeal }) => {
 		return (
 			<div className="recipe-show">
 				<Link className="back-link" to="/recipes">
-					{'<'}
+					{"<"}
 				</Link>
 
 				<ul className="recipe-overview">

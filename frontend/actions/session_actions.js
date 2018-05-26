@@ -1,33 +1,33 @@
-import * as SessionApiUtil from '../util/session_api_util';
+import * as SessionApiUtil from "../util/session_api_util";
 
-export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
+export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 
-export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 
-const receiveCurrentUser = (currentUser) => ({
+const receiveCurrentUser = currentUser => ({
 	type: RECEIVE_CURRENT_USER,
 	currentUser,
 });
 
-const receiveErrors = (errors) => ({
+const receiveErrors = errors => ({
 	type: RECEIVE_SESSION_ERRORS,
 	errors,
 });
 
-export const signup = (newUser) => (dispatch) =>
+export const signup = newUser => dispatch =>
 	SessionApiUtil.signup(newUser).then(
-		(user) => dispatch(receiveCurrentUser(user)),
-		(errors) => dispatch(receiveErrors(errors.responseJSON))
+		user => dispatch(receiveCurrentUser(user)),
+		errors => dispatch(receiveErrors(errors.responseJSON))
 	);
 
-export const login = (existingUser) => (dispatch) =>
+export const login = existingUser => dispatch =>
 	SessionApiUtil.login(existingUser).then(
-		(user) => dispatch(receiveCurrentUser(user)),
-		(errors) => dispatch(receiveErrors(errors.responseJSON))
+		user => dispatch(receiveCurrentUser(user)),
+		errors => dispatch(receiveErrors(errors.responseJSON))
 	);
 
-export const logout = () => (dispatch) =>
+export const logout = () => dispatch =>
 	SessionApiUtil.logout().then(
-		(user) => dispatch(receiveCurrentUser(null)),
-		(errors) => dispatch(receiveErrors(errors.responseJSON))
+		user => dispatch(receiveCurrentUser(null)),
+		errors => dispatch(receiveErrors(errors.responseJSON))
 	);

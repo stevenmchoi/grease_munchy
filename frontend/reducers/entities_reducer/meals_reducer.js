@@ -1,5 +1,5 @@
-import { RECEIVE_ALL_MEALS, RECEIVE_MEAL } from '../../actions/meals_actions';
-import merge from 'lodash/merge';
+import { RECEIVE_ALL_MEALS, RECEIVE_MEAL } from "../../actions/meals_actions";
+import merge from "lodash/merge";
 
 const mealsReducer = (oldEntities = {}, action) => {
 	Object.freeze(oldEntities);

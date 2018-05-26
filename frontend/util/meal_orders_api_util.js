@@ -1,18 +1,18 @@
 export const fetchMealOrders = () =>
 	$.ajax({
-		method: 'GET',
-		url: 'api/meal_orders',
+		method: "GET",
+		url: "api/meal_orders",
 	});
 
-export const createMealOrder = (meal_order) =>
+export const createMealOrder = meal_order =>
 	$.ajax({
-		method: 'POST',
-		url: 'api/meal_orders',
+		method: "POST",
+		url: "api/meal_orders",
 		data: { meal_order },
 	});
 
-export const deleteMealOrder = (mealOrderId) =>
+export const deleteMealOrder = mealOrderId =>
 	$.ajax({
-		method: 'DELETE',
+		method: "DELETE",
 		url: `api/meal_orders/${mealOrderId}`,
 	});

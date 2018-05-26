@@ -2,8 +2,8 @@ import {
 	RECEIVE_ALL_MEAL_ORDERS,
 	RECEIVE_MEAL_ORDER,
 	REMOVE_MEAL_ORDER,
-} from '../../actions/meal_orders_actions';
-import merge from 'lodash/merge';
+} from "../../actions/meal_orders_actions";
+import merge from "lodash/merge";
 
 const mealOrdersReducer = (oldState = {}, action) => {
 	Object.freeze(oldState);
