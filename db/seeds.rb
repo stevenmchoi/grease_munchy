@@ -100,7 +100,7 @@ Meal.create([
 
 	{
 		name: "Pizza",
-		imageUrl: "https://cdn.pixabay.com/photo/2017/01/22/19/20/pizza-2000615_960_720.jpg",
+		imageUrl: "https://c1.staticflickr.com/2/1145/1326663872_d7c0c0d725_b.jpg",
 		restaurant: "Round Table Pizza",
 		# above: modal
 
