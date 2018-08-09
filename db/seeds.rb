@@ -14,9 +14,11 @@
 # 404: Not Found: route doesn't exist
 # 422: Unprocessable Entity: Bad fields for signup
 
-User.create([{ username: 'user1', email: 'user1@user1', password: 'password' }])
-User.create([{ username: 'user2', email: 'user2@user2', password: 'password' }])
-User.create([{ username: 'demo', email: 'demo@demo', password: 'password' }])
+User.create([
+	{ username: 'user1', email: 'user1@user1', password: 'password' },
+	{ username: 'user2', email: 'user2@user2', password: 'password' },
+	{ username: 'demo', email: 'demo@demo', password: 'password' }
+])
 
 # Ideas for seeding RecipeShow
 Meal.create([
@@ -188,6 +190,29 @@ Meal.create([
 		instructions: [Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact, Faker::ChuckNorris.fact],
 		servings: rand(8) + 2,
 	}
+])
+
+past_sunday = Date.parse('sunday')
+num_meals = Meal.count
+
+# TODO: Employ for loop to evenly create a number of Menu Items each week
+MenuItem.create([
+	{ date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
+	{ date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 }
 ])
 
 # MealOrder.create([{ user_id: 1, meal_id: 1, date: "2018-04-14" }])
