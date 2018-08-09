@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'menu_items/index'
+
   root to: 'static_pages#root'
 
   namespace :api, defaults: { format: :json } do
@@ -7,6 +9,6 @@ Rails.application.routes.draw do
 
     resources :meals, only: [:index, :show]
     resources :meal_orders, only: [:index, :create, :destroy]
-    resources :menu_items, only: [:index, :create]
+    resources :menu_items, only: [:index]
   end
 end
