@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'menu_items/index'
-
   root to: 'static_pages#root'
 
   namespace :api, defaults: { format: :json } do

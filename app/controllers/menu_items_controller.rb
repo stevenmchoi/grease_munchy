@@ -1,4 +1,4 @@
-class MenuItemsController < ApplicationController
+class Api::MenuItemsController < ApplicationController
   def index
     @menu_items = MenuItem.all.group_by(&:date)
   end
