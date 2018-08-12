@@ -13,30 +13,31 @@ const MenuIndex = ({
     fetchAllMenuItems();
     return null;
   } else {
+    console.log("menuItems: ");
+    console.log(menuItems);
+
     return (
       <Fade bottom cascade>
         {menuItems.map(menuItemsByWeek => {
-          let weekOf = menuItemsByWeek[0];
-          // console.log("weekOf: ", weekOf);
-          // console.log("numItems: ", menuItemsByWeek[1]);
-
-          // if (condition) {
-          // } else {
-          // }
+          let menuWeekItems = Object.values(menuItemsByWeek);
+          let weekOf = menuWeekItems[0].date;
+          console.log("weekOf: ", weekOf);
+          console.log("menuWeekItems: ", menuWeekItems);
 
           return (
             <ul>
               <h1>Week of {weekOf}</h1>
               <ul className="menu-list">
-                {menuItemsByWeek.map(menuItem => {
-                  let meal = fetchMeal(menuItem.meal_id);
-
-                  return (
-                    <li key={`meal-${menuItem.meal_id}`}>
-                      <RecipeModal meal={meal} id={menuItem.meal_id} />
-                    </li>
-                  );
-                })}
+                {
+                  //menuItemsByWeek.map(menuItem => {
+                  // let meal = fetchMeal(menuItem.meal_id);
+                  // return (
+                  //   <li key={`meal-${menuItem.meal_id}`}>
+                  //     <RecipeModal meal={meal} id={menuItem.meal_id} />
+                  //   </li>
+                  // );
+                  // })
+                }
               </ul>
             </ul>
           );
