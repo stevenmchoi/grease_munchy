@@ -1,10 +1,11 @@
-.recipes-list {
+.recipes-list,
+.menu-list {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.recipe-modal {
+.modal {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -18,11 +19,10 @@
 	border-radius: 10px;
 	padding: 10px;
 	background-color: white;
-
-	h3, p {
+	h3,
+	p {
 		margin: 5px;
 	}
-
 	img {
 		align-self: center;
 		border-radius: 10px;
