@@ -16,7 +16,7 @@ const menuItemsReducer = (oldState = {}, action) => {
                 [action.meal.id]: action.meal
             };
             merge(newState.meals, meal);
-            return newState.menuItems;
+            return newState;
         default:
             return oldState;
     }
