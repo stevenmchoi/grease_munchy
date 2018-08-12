@@ -16,7 +16,13 @@ const MenuIndex = ({
     return (
       <Fade bottom cascade>
         {menuItems.map(menuItemsByWeek => {
-          let weekOf = menuItemsByWeek[0].date;
+          let weekOf = menuItemsByWeek[0];
+          // console.log("weekOf: ", weekOf);
+          // console.log("numItems: ", menuItemsByWeek[1]);
+
+          // if (condition) {
+          // } else {
+          // }
 
           return (
             <ul>
