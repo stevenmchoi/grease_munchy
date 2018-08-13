@@ -1,5 +1,4 @@
 import React from "react";
-import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
 import MenuItemModal from "./menu_item_modal";
 
@@ -15,16 +14,16 @@ const MenuIndex = ({
     return null;
   } else {
     return (
-      <Fade bottom cascade>
+      <Fade right cascade>
         {menuItems.map(menuItemsByWeek => {
           let menuWeekItems = Object.values(menuItemsByWeek);
           let numMenuWeek = menuWeekItems.length;
           let weekOf = menuWeekItems[0].date;
 
           return (
-            <ul>
+            <ul className="menu-week" key={`week-${weekOf}`}>
               <h1>Week of {weekOf}</h1>
-              <ul className="menu-list">
+              <ul className="menu-list" key={`menu-on-${weekOf}`}>
                 {menuWeekItems.map(menuItem => {
                   const meal = meals[menuItem.meal_id];
 
@@ -33,7 +32,7 @@ const MenuIndex = ({
                     return null;
                   } else {
                     return (
-                      <li key={`meal-${menuItem.meal_id}`}>
+                      <li key={`menu-item-${menuItem.meal_id}`}>
                         <MenuItemModal meal={meal} id={menuItem.meal_id} />
                       </li>
                     );
