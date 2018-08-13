@@ -9,7 +9,7 @@ const mapStateToProps = ({ entities: { meals } }, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
   fetchAllMeals: () => dispatch(fetchAllMeals()),
-  numMeals: fetchAllMeals().length
+  // numMeals: fetchAllMeals().length
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecipesIndex);
