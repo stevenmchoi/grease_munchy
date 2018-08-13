@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NavButtons = ({ currentUser }) => {
   return currentUser
     ? [
-        <Link key="upcoming" to="/account#upcoming">
+        <Link key="upcoming" to="/account/upcoming">
           Upcoming
         </Link>,
         <Link key="recipes" to="/recipes">

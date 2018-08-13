@@ -11,11 +11,14 @@ const RecipesIndex = ({ meals, numMeals, fetchAllMeals }) => {
   console.log("meals.length <= numMeals");
   console.log(meals.length <= numMeals);
 
+  // TODO: Add live search bar
+  // TODO: When loading from "On The Menu", fetch remaining meals
   if (meals.length <= numMeals) {
     fetchAllMeals();
     return null;
   } else {
     return (
+      // TODO: 
       <Fade bottom cascade>
         <ul className="recipes-list">
           {meals.map(meal => (
