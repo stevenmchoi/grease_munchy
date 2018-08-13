@@ -5,12 +5,12 @@ export const RECEIVE_MEAL = "RECEIVE_MEAL";
 
 const receiveAllMeals = meals => ({
 	type: RECEIVE_ALL_MEALS,
-	meals,
+	meals
 });
 
 const receiveMeal = meal => ({
 	type: RECEIVE_MEAL,
-	meal,
+	meal
 });
 
 export const fetchAllMeals = () => dispatch =>
