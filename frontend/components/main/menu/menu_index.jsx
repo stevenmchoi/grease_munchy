@@ -3,6 +3,7 @@ import Fade from "react-reveal/Fade";
 import MenuItemModal from "./menu_item_modal";
 
 const MenuIndex = ({
+  currentUser,
   meals,
   menuItems,
   numMenuItems,
@@ -33,7 +34,11 @@ const MenuIndex = ({
                   } else {
                     return (
                       <li key={`menu-item-${menuItem.meal_id}`}>
-                        <MenuItemModal meal={meal} id={menuItem.meal_id} />
+                        <MenuItemModal
+                          currentUser={currentUser}
+                          meal={meal}
+                          meal_id={menuItem.meal_id}
+                        />
                       </li>
                     );
                   }

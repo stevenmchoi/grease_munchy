@@ -214,14 +214,3 @@ MenuItem.create([
 	{ date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
 	{ date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 }
 ])
-
-# MealOrder.create([{ user_id: 1, meal_id: 1, date: "2018-04-14" }])
-# MealOrder.create([{ user_id: 1, meal_id: 6, date: "2018-04-14" }])
-# MealOrder.create([{ user_id: 1, meal_id: 1, date: "2018-04-21" }])
-# MealOrder.create([{ user_id: 2, meal_id: 1, date: "2018-04-12" }])
-# MealOrder.create([{ user_id: 2, meal_id: 5, date: "2018-04-12" }])
-# MealOrder.create([{ user_id: 2, meal_id: 1, date: "2018-04-14" }])
-# MealOrder.create([{ user_id: 2, meal_id: 5, date: "2018-04-14" }])
-# MealOrder.create([{ user_id: 2, meal_id: 2, date: "2018-04-19" }])
-# MealOrder.create([{ user_id: 2, meal_id: 1, date: "2018-04-19" }])
-# MealOrder.create([{ user_id: 2, meal_id: 1, date: "2018-04-26" }])

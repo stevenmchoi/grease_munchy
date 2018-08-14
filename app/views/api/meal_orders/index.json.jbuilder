@@ -1,10 +1,11 @@
 @meal_orders.each do |meal_order|
-	if meal_order.user_id == current_user.id
+	p current_user
+
+	if current_user && current_user.id == meal_order.user_id
 		puts json: meal_order
 
 		json.set! meal_order.id do
 			json.partial! 'api/meal_orders/meal_order', meal_order: meal_order
-			# json.partial! 'api/meal_orders/meal_order'
 		end
 	end
 end

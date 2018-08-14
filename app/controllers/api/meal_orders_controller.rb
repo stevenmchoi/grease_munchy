@@ -27,6 +27,6 @@ class Api::MealOrdersController < ApplicationController
 	private
 
 	def meal_order_params
-		params.require(:meal_order).permit(:user_id, :meal_id, :date)
+		params.require(:meal_order).permit(:user_id, :menu_item_id)
 	end
 end
