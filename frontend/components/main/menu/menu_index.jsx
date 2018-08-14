@@ -8,7 +8,10 @@ const MenuIndex = ({
   menuItems,
   numMenuItems,
   fetchMeal,
-  fetchAllMenuItems
+  fetchAllMenuItems,
+  fetchMealOrders,
+  createMealOrder,
+  deleteMealOrder
 }) => {
   if (menuItems.length <= numMenuItems) {
     fetchAllMenuItems();
@@ -35,9 +38,12 @@ const MenuIndex = ({
                     return (
                       <li key={`menu-item-${menuItem.meal_id}`}>
                         <MenuItemModal
+                          fetchMealOrders={fetchMealOrders}
+                          createMealOrder={createMealOrder}
+                          deleteMealOrder={deleteMealOrder}
                           currentUser={currentUser}
                           meal={meal}
-                          meal_id={menuItem.meal_id}
+                          menuItem={menuItem}
                         />
                       </li>
                     );

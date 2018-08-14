@@ -1,21 +1,30 @@
 import React from "react";
 
-const MenuItemModal = ({ currentUser, meal, meal_id }) => {
-  console.log(currentUser);
+function handleClick(createMealOrder, menu_item_id, user_id) {
+  return e => {
+    console.log(user_id);
+    console.log(menu_item_id);
+    createMealOrder({ user_id, menu_item_id });
+  };
+}
 
+const MenuItemModal = ({
+  fetchMealOrders,
+  createMealOrder,
+  deleteMealOrder,
+  currentUser,
+  meal,
+  menuItem
+}) => {
   return currentUser ? (
-      <button className="modal">
-        <h3>{meal.name}</h3>
-        <img className="recipe-index-img" src={meal.imageUrl} />
-        <p>{meal.restaurant}</p>
-      </button>
-    // <button>
-    //   <div className="modal">
-    //     <h3>{meal.name}</h3>
-    //     <img className="recipe-index-img" src={meal.imageUrl} />
-    //     <p>{meal.restaurant}</p>
-    //   </div>
-    // </button>
+    <button
+      className="modal"
+      onClick={handleClick(createMealOrder, menuItem.id, currentUser.id)}
+    >
+      <h3>{meal.name}</h3>
+      <img className="recipe-index-img" src={meal.imageUrl} />
+      <p>{meal.restaurant}</p>
+    </button>
   ) : (
     <div className="modal">
       <h3>{meal.name}</h3>
