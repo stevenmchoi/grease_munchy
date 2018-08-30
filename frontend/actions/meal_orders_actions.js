@@ -21,15 +21,15 @@ const removeMealOrder = mealOrderId => ({
 
 export const fetchMealOrders = () => dispatch =>
 	MealOrdersApiUtil.fetchMealOrders().then(mealOrders =>
-		dispatch(receiveAllMealOrders(mealOrders))
+		dispatch(receiveAllMealOrders(mealOrders)),
 	);
 
 export const createMealOrder = newMealOrder => dispatch =>
 	MealOrdersApiUtil.createMealOrder(newMealOrder).then(mealOrder =>
-		dispatch(receiveMealOrder(mealOrder))
+		dispatch(receiveMealOrder(mealOrder)),
 	);
 
 export const deleteMealOrder = mealOrderId => dispatch =>
 	MealOrdersApiUtil.deleteMealOrder(mealOrderId).then(mealOrder =>
-		dispatch(removeMealOrder(mealOrderId))
+		dispatch(removeMealOrder(mealOrderId)),
 	);
