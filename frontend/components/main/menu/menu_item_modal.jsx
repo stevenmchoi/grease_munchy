@@ -23,8 +23,7 @@ const MenuItemModal = ({
 			<p>{meal.restaurant}</p>
 			<div className="modal-buttons">
 				<button>
-					<p>Add /</p>
-					<p>Remove</p>
+					<p>Add / Remove</p>
 				</button>
 				<button>
 					<p>Details</p>
