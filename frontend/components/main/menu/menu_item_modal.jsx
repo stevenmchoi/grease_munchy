@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 function handleClick(createMealOrder, menu_item_id, user_id) {
 	return e => {
@@ -22,12 +23,14 @@ const MenuItemModal = ({
 			<img className="recipe-index-img" src={meal.imageUrl} />
 			<p>{meal.restaurant}</p>
 			<div className="modal-buttons">
-				<button>
+				<button className="add-remove-button">
 					<p>Add / Remove</p>
 				</button>
-				<button>
+				<Link
+					className="details-button"
+					to={`/recipes/${meal.name}-${meal.id}`}>
 					<p>Details</p>
-				</button>
+				</Link>
 			</div>
 		</div>
 	);
