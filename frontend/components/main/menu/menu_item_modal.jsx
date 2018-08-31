@@ -18,7 +18,7 @@ const MenuItemModal = ({
 	menuItem,
 }) => {
 	return (
-		<div className="modal">
+		<div className="menu-modal">
 			<h3>{meal.name}</h3>
 			<img className="recipe-index-img" src={meal.imageUrl} />
 			<p>{meal.restaurant}</p>
