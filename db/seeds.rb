@@ -128,7 +128,7 @@ Meal.create([
 
 	{
 		name: "Hot Dog",
-		imageUrl: "https://process.filestackapi.com/AhTgLagciQByzXpFGRI0Az/resize=width:1000,fit:scale/https://www.goodfreephotos.com/albums/food/hotdog-sausage-with-the-works.jpg",
+		imageUrl: "https://www.goodfreephotos.com/albums/food/hotdog-sausage-with-the-works.jpg",
 		restaurant: "Costco",
 		# above: modal
 
