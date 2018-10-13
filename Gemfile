@@ -33,6 +33,8 @@ gem 'jquery-rails'
 gem 'rails_12factor'
 gem 'faker'
 
+gem 'whenever', require: false
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
