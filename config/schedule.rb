@@ -20,6 +20,6 @@
 # Learn more: http://github.com/javan/whenever
 set :output, '/log/cron_log.log'
 
-every :week_start, at: '12am' do
+every :sunday, at: '12am' do
   rake 'menu:create_menu_items'
 end
