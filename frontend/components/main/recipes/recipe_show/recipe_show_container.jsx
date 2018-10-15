@@ -14,4 +14,7 @@ const mapDispatchToProps = (dispatch) => ({
 	fetchMeal: (mealId) => dispatch(fetchMeal(mealId)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(RecipeShow);
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(RecipeShow);

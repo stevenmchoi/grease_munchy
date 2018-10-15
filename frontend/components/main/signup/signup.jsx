@@ -32,7 +32,9 @@ class Signup extends React.Component {
 		return (
 			<Fade bottom when={this.triggerErr}>
 				<ul className="err-msg">
-					{this.props.session.map((errStr, idx) => <li key={`err-${idx}`}>{errStr}</li>)}
+					{this.props.session.map((errStr, idx) => (
+						<li key={`err-${idx}`}>{errStr}</li>
+					))}
 				</ul>
 			</Fade>
 		);

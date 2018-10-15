@@ -7,6 +7,7 @@ const NavButtons = ({ currentUser }) => {
 				<Link key="upcoming" to="/account/upcoming">
 					Upcoming
 				</Link>,
+
 				<Link key="recipes" to="/recipes">
 					Recipes
 				</Link>,
@@ -15,6 +16,7 @@ const NavButtons = ({ currentUser }) => {
 				<Link key="menu" to="/menu">
 					On The Menu
 				</Link>,
+
 				<Link key="recipes" to="/recipes">
 					Recipes
 				</Link>,

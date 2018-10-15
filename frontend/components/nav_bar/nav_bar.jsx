@@ -8,6 +8,7 @@ const NavBar = ({ currentUser, logout }) => {
 	const sessionButtons = currentUser ? (
 		<span className="session-buttons">
 			<p className="welcome-user">{`Welcome, ${currentUser.username}!`}</p>
+
 			<button className="button" onClick={logout}>
 				Log Out
 			</button>
@@ -17,6 +18,7 @@ const NavBar = ({ currentUser, logout }) => {
 			<Link className="nav-link" to="/login">
 				Log In
 			</Link>
+
 			<Link className="button" to="/signup">
 				Sign Up
 			</Link>
@@ -29,7 +31,9 @@ const NavBar = ({ currentUser, logout }) => {
 				<Link to="/">
 					<Logo />
 				</Link>
+
 				<Route component={NavButtonsContainer} />
+
 				{sessionButtons}
 			</nav>
 		</header>

@@ -20,18 +20,23 @@ const MenuItemModal = ({
 	return (
 		<div className="menu-modal">
 			<h3>{meal.name}</h3>
+
 			<img className="recipe-index-img" src={meal.imageUrl} />
+
 			<p>{meal.restaurant}</p>
+
 			<div className="modal-buttons">
 				<button className="add-remove-button">
 					<p>Add / Remove</p>
 				</button>
+
 				<Link className="details-button" to={`/recipes/${meal.name}-${meal.id}`}>
 					<p>Details</p>
 				</Link>
 			</div>
 		</div>
 	);
+
 	// return currentUser ? (
 	// 	<button
 	// 		className="modal"

@@ -27,4 +27,7 @@ const mapDispatchToProps = (dispatch) => ({
 	deleteMealOrder: (mealOrderId) => dispatch(deleteMealOrder(mealOrderId)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(MenuIndex);
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(MenuIndex);

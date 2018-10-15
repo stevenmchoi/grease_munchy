@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 import RecipeModal from './recipe_modal';
 
