@@ -1,12 +1,12 @@
-import { combineReducers } from "redux";
-import mealsReducer from "./meals_reducer";
-import mealOrdersReducer from "./meal_orders_reducer";
-import menuItemsReducer from "./menu_items_reducer";
+import { combineReducers } from 'redux';
+import mealsReducer from './meals_reducer';
+import mealOrdersReducer from './meal_orders_reducer';
+import menuItemsReducer from './menu_items_reducer';
 
 const entitiesReducer = combineReducers({
 	meals: mealsReducer,
 	mealOrders: mealOrdersReducer,
-	menuItems: menuItemsReducer
+	menuItems: menuItemsReducer,
 });
 
 export default entitiesReducer;

@@ -1,6 +1,6 @@
-import React from "react";
-import { connect } from "react-redux";
-import AccountMain from "./account";
+import React from 'react';
+import { connect } from 'react-redux';
+import AccountMain from './account';
 
 const mapStateToProps = ({ session: { currentUser } }) => ({
 	currentUser,

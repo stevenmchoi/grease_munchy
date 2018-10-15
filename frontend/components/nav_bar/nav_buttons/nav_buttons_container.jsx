@@ -1,6 +1,6 @@
-import React from "react";
-import { connect } from "react-redux";
-import NavButtons from "./nav_buttons";
+import React from 'react';
+import { connect } from 'react-redux';
+import NavButtons from './nav_buttons';
 
 const mapStateToProps = ({ session: { currentUser } }) => ({
 	currentUser,

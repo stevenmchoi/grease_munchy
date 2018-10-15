@@ -1,38 +1,38 @@
-import React from "react";
-import { Switch, Route } from "react-router-dom";
-import { AuthRoute, ProtectedRoute } from "../../util/route_util";
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 
-import SignupContainer from "./signup/signup_container";
-import LoginContainer from "./login/login_container";
+import SignupContainer from './signup/signup_container';
+import LoginContainer from './login/login_container';
 
-import MenuContainer from "./menu/menu_index_container";
+import MenuContainer from './menu/menu_index_container';
 
-import RecipesIndexContainer from "./recipes/recipes_index/recipes_index_container";
-import RecipeShowContainer from "./recipes/recipe_show/recipe_show_container";
+import RecipesIndexContainer from './recipes/recipes_index/recipes_index_container';
+import RecipeShowContainer from './recipes/recipe_show/recipe_show_container';
 
-import AccountContainer from "./account/account_container";
-import SplashContainer from "./splash/splash_container";
+import AccountContainer from './account/account_container';
+import SplashContainer from './splash/splash_container';
 
 const Main = () => {
-  return (
-    <div className="main-wrapper">
-      <div className="spacer-behind-nav" />
+	return (
+		<div className="main-wrapper">
+			<div className="spacer-behind-nav" />
 
-      <Switch>
-        <AuthRoute path="/signup" component={SignupContainer} />
-        <AuthRoute path="/login" component={LoginContainer} />
+			<Switch>
+				<AuthRoute path="/signup" component={SignupContainer} />
+				<AuthRoute path="/login" component={LoginContainer} />
 
-        <ProtectedRoute path="/account/upcoming" component={MenuContainer} />
-        <AuthRoute path="/menu" component={MenuContainer} />
+				<ProtectedRoute path="/account/upcoming" component={MenuContainer} />
+				<AuthRoute path="/menu" component={MenuContainer} />
 
-        <Route path="/recipes/:recipeNameId" component={RecipeShowContainer} />
-        <Route path="/recipes" component={RecipesIndexContainer} />
+				<Route path="/recipes/:recipeNameId" component={RecipeShowContainer} />
+				<Route path="/recipes" component={RecipesIndexContainer} />
 
-        <ProtectedRoute path="/account" component={AccountContainer} />
-        <AuthRoute path="/" component={SplashContainer} />
-      </Switch>
-    </div>
-  );
+				<ProtectedRoute path="/account" component={AccountContainer} />
+				<AuthRoute path="/" component={SplashContainer} />
+			</Switch>
+		</div>
+	);
 };
 
 export default Main;

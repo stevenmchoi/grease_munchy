@@ -1,8 +1,8 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 function handleClick(createMealOrder, menu_item_id, user_id) {
-	return e => {
+	return (e) => {
 		console.log(user_id);
 		console.log(menu_item_id);
 		createMealOrder({ user_id, menu_item_id });
@@ -26,9 +26,7 @@ const MenuItemModal = ({
 				<button className="add-remove-button">
 					<p>Add / Remove</p>
 				</button>
-				<Link
-					className="details-button"
-					to={`/recipes/${meal.name}-${meal.id}`}>
+				<Link className="details-button" to={`/recipes/${meal.name}-${meal.id}`}>
 					<p>Details</p>
 				</Link>
 			</div>
