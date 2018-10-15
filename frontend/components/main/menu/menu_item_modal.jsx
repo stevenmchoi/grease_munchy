@@ -30,7 +30,13 @@ const MenuItemModal = ({
 					<p>Add / Remove</p>
 				</button>
 
-				<Link className="details-button" to={`/recipes/${meal.name}-${meal.id}`}>
+				<Link
+					className="details-button"
+					to={{
+						pathname: `/recipes/${meal.name}-${meal.id}`,
+						state: { hash: location.hash },
+					}}
+				>
 					<p>Details</p>
 				</Link>
 			</div>

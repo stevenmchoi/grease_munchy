@@ -1,8 +1,23 @@
 import React, { Component } from 'react';
 
 class RecipeShow extends Component {
+	constructor(props) {
+		super(props);
+		this.renderBackButton = this.renderBackButton.bind(this);
+	}
+
 	componentDidMount() {
 		this.props.fetchMeal(this.props.mealId);
+	}
+
+	renderBackButton() {
+		if (this.props.location.state) {
+			return (
+				<button className="back-button" onClick={this.props.history.goBack}>
+					{'<'}
+				</button>
+			);
+		}
 	}
 
 	render() {
@@ -14,9 +29,7 @@ class RecipeShow extends Component {
 		} else {
 			return (
 				<div className="recipe-show">
-					<button className="back-button" onClick={this.props.history.goBack}>
-						{'<'}
-					</button>
+					{this.renderBackButton()}
 
 					<ul className="recipe-overview">
 						<h3 className="title">{meal.name}</h3>
