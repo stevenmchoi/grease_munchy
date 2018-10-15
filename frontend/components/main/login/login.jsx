@@ -61,11 +61,7 @@ class Login extends React.Component {
 
 							<label>
 								Username:
-								<input
-									type="text"
-									value={`${username}`}
-									onChange={this.handleChange('username')}
-								/>
+								<input type="text" value={`${username}`} onChange={this.handleChange('username')} />
 							</label>
 
 							<label>

@@ -1,47 +1,71 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-function handleClick(createMealOrder, menu_item_id, user_id) {
-	return (e) => {
-		console.log(user_id);
-		console.log(menu_item_id);
-		createMealOrder({ user_id, menu_item_id });
-	};
-}
+class MenuItemModal extends Component {
+	constructor(props) {
+		super(props);
 
-const MenuItemModal = ({
-	fetchMealOrders,
-	createMealOrder,
-	deleteMealOrder,
-	currentUser,
-	meal,
-	menuItem,
-}) => {
-	return (
-		<div className="menu-modal">
-			<h3>{meal.name}</h3>
+		this.fetchMealOrders = props.fetchMealOrders;
+		this.createMealOrder = props.createMealOrder;
+		this.deleteMealOrder = props.deleteMealOrder;
+		this.currentUser = props.currentUser;
+		this.meal = props.meal;
+		this.menuItem = props.menuItem;
 
-			<img className="recipe-index-img" src={meal.imageUrl} />
+		this.handleClick = this.handleClick.bind(this);
+	}
 
-			<p>{meal.restaurant}</p>
+	handleClick(menuItemId) {
+		console.log('menuItemId:');
+		console.log(menuItemId);
 
-			<div className="modal-buttons">
-				<button className="add-remove-button">
-					<p>Add / Remove</p>
-				</button>
+		if (this.currentUser) {
+			const userId = this.currentUser.id;
+			console.log('userId:');
+			console.log(userId);
 
-				<Link
-					className="details-button"
-					to={{
-						pathname: `/recipes/${meal.name}-${meal.id}`,
-						state: { hash: location.hash },
-					}}
-				>
-					<p>Details</p>
-				</Link>
+			return (e) => {
+				e.preventDefault();
+
+				this.createMealOrder({ userId, menuItemId });
+			};
+		} else {
+			this.props.history.push('/login');
+		}
+	}
+
+	render() {
+		console.log('this.props.history:');
+		console.log(this.props.history);
+
+		const menuItemId = this.menuItem.id;
+
+		return (
+			<div className="menu-modal">
+				<h3>{this.meal.name}</h3>
+
+				<img className="recipe-index-img" src={this.meal.imageUrl} />
+
+				<p>{this.meal.restaurant}</p>
+
+				<div className="modal-buttons">
+					<button className="add-remove-button" onClick={() => this.handleClick(menuItemId)}>
+						<p>Add / Remove</p>
+					</button>
+
+					<Link
+						className="details-button"
+						to={{
+							pathname: `/recipes/${this.meal.name}-${this.meal.id}`,
+							state: { hash: location.hash },
+						}}
+					>
+						<p>Details</p>
+					</Link>
+				</div>
 			</div>
-		</div>
-	);
+		);
+	}
 
 	// return currentUser ? (
 	// 	<button
@@ -58,18 +82,6 @@ const MenuItemModal = ({
 	// 		<p>{meal.restaurant}</p>
 	// 	</div>
 	// );
-};
-
-class MenuItemModal2 extends Component {
-	constructor() {
-		super();
-		this.createMealOrder = this.props.createMealOrder;
-		this.deleteMealOrder = this.props.deleteMealOrder;
-	}
-
-	componentDidMount() {
-		this.props.fetchMealOrders();
-	}
 }
 
 export default MenuItemModal;

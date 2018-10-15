@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { connect } from 'react-redux';
 import { fetchAllMenuItems } from '../../../actions/menu_items_actions';
 import { fetchMeal } from '../../../actions/meals_actions';
@@ -23,7 +23,7 @@ const mapDispatchToProps = (dispatch) => ({
 	fetchMeal: (mealId) => dispatch(fetchMeal(mealId)),
 	fetchAllMenuItems: () => dispatch(fetchAllMenuItems()),
 	fetchMealOrders: () => dispatch(fetchMealOrders()),
-	createMealOrder: (meal_order) => dispatch(createMealOrder(meal_order)),
+	createMealOrder: (mealOrder) => dispatch(createMealOrder(mealOrder)),
 	deleteMealOrder: (mealOrderId) => dispatch(deleteMealOrder(mealOrderId)),
 });
 

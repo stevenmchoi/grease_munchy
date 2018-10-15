@@ -52,20 +52,12 @@ class Signup extends React.Component {
 
 							<label>
 								Email:
-								<input
-									type="email"
-									value={`${email}`}
-									onChange={this.handleChange('email')}
-								/>
+								<input type="email" value={`${email}`} onChange={this.handleChange('email')} />
 							</label>
 
 							<label>
 								Username:
-								<input
-									type="text"
-									value={`${username}`}
-									onChange={this.handleChange('username')}
-								/>
+								<input type="text" value={`${username}`} onChange={this.handleChange('username')} />
 							</label>
 
 							<label>
