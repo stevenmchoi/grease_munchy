@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Fade from 'react-reveal/Fade';
 import MenuItemModal from './menu_item_modal';
 
 class MenuIndex extends Component {
@@ -8,42 +7,49 @@ class MenuIndex extends Component {
 	}
 
 	render() {
-		return this.props.menuItems.map((menuItemsByWeek) => {
-			let menuWeekItems = Object.values(menuItemsByWeek);
-			let numMenuWeek = menuWeekItems.length;
-			let weekOf = menuWeekItems[0].date;
+		console.log('this.props.menuItems:');
+		console.log(this.props.menuItems);
 
-			return (
-				<ul className="menu-week" key={`week-${weekOf}`}>
-					<h1>Week of {weekOf}</h1>
+		if (this.props.menuItems) {
+			return this.props.menuItems.map((menuItemsByWeek) => {
+				console.log('menuItemsByWeek:');
+				console.log(menuItemsByWeek);
 
-					<ul className="menu-list" key={`menu-on-${weekOf}`}>
-						{menuWeekItems.map((menuItem) => {
-							const meal = this.props.meals[menuItem.meal_id];
+				let menuWeekItems = Object.values(menuItemsByWeek);
+				let numMenuWeek = menuWeekItems.length;
+				let weekOf = menuWeekItems[0].date;
 
-							if (!this.props.meals[menuItem.meal_id]) {
-								this.props.fetchMeal(menuItem.meal_id);
+				return (
+					<ul className="menu-week" key={`week-${weekOf}`}>
+						<h1>Week of {weekOf}</h1>
 
-								return null;
-							} else {
+						<ul className="menu-list" key={`menu-on-${weekOf}`}>
+							{menuWeekItems.map((menuItem) => {
+								console.log('menuItem:');
+								console.log(menuItem);
+
 								return (
 									<li key={`menu-item-${menuItem.meal_id}`}>
 										<MenuItemModal
+											menuItem={menuItem}
+											fetchMeal={this.props.fetchMeal}
 											fetchMealOrders={this.props.fetchMealOrders}
 											createMealOrder={this.props.createMealOrder}
 											deleteMealOrder={this.props.deleteMealOrder}
 											currentUser={this.props.currentUser}
-											meal={this.props.meal}
+											meals={this.props.meals}
 											menuItem={this.props.menuItem}
 										/>
 									</li>
 								);
-							}
-						})}
+							})}
+						</ul>
 					</ul>
-				</ul>
-			);
-		});
+				);
+			});
+		} else {
+			return null;
+		}
 	}
 }
 

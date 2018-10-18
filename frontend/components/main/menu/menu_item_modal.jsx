@@ -8,6 +8,10 @@ class MenuItemModal extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
+	componentDidMount() {
+		this.props.fetchMeal(this.props.mealId);
+	}
+
 	handleClick(menuItemId) {
 		console.log('menuItemId:');
 		console.log(menuItemId);
@@ -31,33 +35,45 @@ class MenuItemModal extends Component {
 		console.log('this.props.history:');
 		console.log(this.props.history);
 
-		const menuItemId = this.props.menuItem.id;
+		if (this.props.menuItem) {
+			console.log('this.props.menuItem:');
+			console.log(this.props.menuItem);
 
-		return (
-			<div className="menu-modal">
-				<h3>{this.props.meal.name}</h3>
+			const meal = this.props.meals[this.props.mealId];
 
-				<img className="recipe-index-img" src={this.props.meal.imageUrl} />
+			const menuItemId = this.props.menuItem.id;
 
-				<p>{this.props.meal.restaurant}</p>
+			return (
+				<div className="menu-modal">
+					<h3>{meal.name}</h3>
 
-				<div className="modal-buttons">
-					<button className="add-remove-button" onClick={() => this.handleClick(menuItemId)}>
+					<img className="recipe-index-img" src={meal.imageUrl} />
+
+					<p>{meal.restaurant}</p>
+
+					<div className="modal-buttons">
+						<button className="add-remove-button">
+							<p>Add / Remove</p>
+						</button>
+						{/* <button className="add-remove-button" onClick={() => this.handleClick(menuItemId)}>
 						<p>Add / Remove</p>
-					</button>
+					</button> */}
 
-					<Link
-						className="details-button"
-						to={{
-							pathname: `/recipes/${this.props.meal.name}-${this.props.meal.id}`,
-							state: { hash: location.hash },
-						}}
-					>
-						<p>Details</p>
-					</Link>
+						<Link
+							className="details-button"
+							to={{
+								pathname: `/recipes/${meal.name}-${meal.id}`,
+								state: { hash: location.hash },
+							}}
+						>
+							<p>Details</p>
+						</Link>
+					</div>
 				</div>
-			</div>
-		);
+			);
+		} else {
+			return null;
+		}
 	}
 
 	// return currentUser ? (
