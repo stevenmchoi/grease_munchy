@@ -5,13 +5,6 @@ class MenuItemModal extends Component {
 	constructor(props) {
 		super(props);
 
-		this.fetchMealOrders = props.fetchMealOrders;
-		this.createMealOrder = props.createMealOrder;
-		this.deleteMealOrder = props.deleteMealOrder;
-		this.currentUser = props.currentUser;
-		this.meal = props.meal;
-		this.menuItem = props.menuItem;
-
 		this.handleClick = this.handleClick.bind(this);
 	}
 
@@ -19,15 +12,15 @@ class MenuItemModal extends Component {
 		console.log('menuItemId:');
 		console.log(menuItemId);
 
-		if (this.currentUser) {
-			const userId = this.currentUser.id;
+		if (this.props.currentUser) {
+			const userId = this.props.currentUser.id;
 			console.log('userId:');
 			console.log(userId);
 
 			return (e) => {
 				e.preventDefault();
 
-				this.createMealOrder({ userId, menuItemId });
+				this.props.createMealOrder({ userId, menuItemId });
 			};
 		} else {
 			this.props.history.push('/login');
@@ -38,15 +31,15 @@ class MenuItemModal extends Component {
 		console.log('this.props.history:');
 		console.log(this.props.history);
 
-		const menuItemId = this.menuItem.id;
+		const menuItemId = this.props.menuItem.id;
 
 		return (
 			<div className="menu-modal">
-				<h3>{this.meal.name}</h3>
+				<h3>{this.props.meal.name}</h3>
 
-				<img className="recipe-index-img" src={this.meal.imageUrl} />
+				<img className="recipe-index-img" src={this.props.meal.imageUrl} />
 
-				<p>{this.meal.restaurant}</p>
+				<p>{this.props.meal.restaurant}</p>
 
 				<div className="modal-buttons">
 					<button className="add-remove-button" onClick={() => this.handleClick(menuItemId)}>
@@ -56,7 +49,7 @@ class MenuItemModal extends Component {
 					<Link
 						className="details-button"
 						to={{
-							pathname: `/recipes/${this.meal.name}-${this.meal.id}`,
+							pathname: `/recipes/${this.props.meal.name}-${this.props.meal.id}`,
 							state: { hash: location.hash },
 						}}
 					>
@@ -70,8 +63,8 @@ class MenuItemModal extends Component {
 	// return currentUser ? (
 	// 	<button
 	// 		className="modal"
-	// 		onClick={handleClick(createMealOrder, menuItem.id, currentUser.id)}>
-	// 		<h3>{meal.name}</h3>
+	// 		onClick={handleClick(createMealOrder, props.menuItem.id, currentUser.id)}>
+	// 		<h3>{props.meal.name}</h3>
 	// 		<img className="recipe-index-img" src={meal.imageUrl} />
 	// 		<p>{meal.restaurant}</p>
 	// 	</button>

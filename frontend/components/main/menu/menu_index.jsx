@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Fade from 'react-reveal/Fade';
 import MenuItemModal from './menu_item_modal';
 

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
 import HeadShake from 'react-reveal/HeadShake';
 
-class Signup extends React.Component {
+class Signup extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
