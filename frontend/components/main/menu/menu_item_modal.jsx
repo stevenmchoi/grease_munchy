@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 class MenuItemModal extends Component {
 	constructor(props) {
 		super(props);
 
+		console.log('props: ', props);
+
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	componentDidMount() {
-		this.props.fetchMeal(this.props.mealId);
-	}
+	// componentDidMount() {
+	// 	this.props.fetchMeal(1);
+	// }
 
 	handleClick(menuItemId) {
 		console.log('menuItemId:');
@@ -32,16 +34,16 @@ class MenuItemModal extends Component {
 	}
 
 	render() {
-		console.log('this.props.history:');
-		console.log(this.props.history);
+		// console.log('this.props.history:');
+		// console.log(this.props.history);
+
+		// console.log('this.props.menuItem:');
+		// console.log(this.props.menuItem);
 
 		if (this.props.menuItem) {
-			console.log('this.props.menuItem:');
-			console.log(this.props.menuItem);
-
 			const meal = this.props.meals[this.props.mealId];
 
-			const menuItemId = this.props.menuItem.id;
+			// const menuItemId = this.props.menuItem.id;
 
 			return (
 				<div className="menu-modal">
@@ -93,4 +95,4 @@ class MenuItemModal extends Component {
 	// );
 }
 
-export default MenuItemModal;
+export default withRouter(MenuItemModal);
