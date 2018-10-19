@@ -11,13 +11,13 @@ class MenuIndex extends Component {
 	// componentDidUpdate() {}
 
 	render() {
-		console.log('render');
+		// console.log('render');
 
-		console.log('this.props.menuItems:');
-		console.log(this.props.menuItems);
+		// console.log('this.props.menuItems:');
+		// console.log(this.props.menuItems);
 
-		console.log('this.props.meals:');
-		console.log(this.props.meals);
+		// console.log('this.props.meals:');
+		// console.log(this.props.meals);
 
 		if (this.props.menuItems && this.props.meals) {
 			return this.props.menuItems.map((menuItemsByWeek) => {

@@ -40,12 +40,20 @@ class MenuItemModal extends Component {
 		// console.log('this.props.menuItems:');
 		// console.log(this.props.menuItems);
 
-		if (this.props.menuItems && this.props.meals) {
+		if (this.props.menuItems && this.props.meals && this.props.meals[this.props.mealId]) {
+			console.log('menu_item_modal');
+
+			console.log('this.props.menuItems:');
+			console.log(this.props.menuItems);
+
+			console.log('this.props.meals:');
+			console.log(this.props.meals);
+
 			const meal = this.props.meals[this.props.mealId];
 
 			console.log('meal:', meal);
 
-			// const menuItemId = this.props.menuItems.id;
+			const menuItemId = this.props.menuItems.id;
 
 			return (
 				<div className="menu-modal">
@@ -56,12 +64,12 @@ class MenuItemModal extends Component {
 					<p>{meal.restaurant}</p>
 
 					<div className="modal-buttons">
-						<button className="add-remove-button">
+						{/* <button className="add-remove-button">
+							<p>Add / Remove</p>
+						</button> */}
+						<button className="add-remove-button" onClick={() => this.handleClick(menuItemId)}>
 							<p>Add / Remove</p>
 						</button>
-						{/* <button className="add-remove-button" onClick={() => this.handleClick(menuItemId)}>
-						<p>Add / Remove</p>
-					</button> */}
 
 						<Link
 							className="details-button"
