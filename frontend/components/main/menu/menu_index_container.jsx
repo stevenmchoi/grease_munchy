@@ -1,4 +1,3 @@
-// import React from 'react';
 import { connect } from 'react-redux';
 import { fetchAllMenuItems } from '../../../actions/menu_items_actions';
 import { fetchMeal, fetchAllMeals } from '../../../actions/meals_actions';
@@ -16,16 +15,12 @@ const mapStateToProps = (
 	currentUser,
 	meals,
 	menuItems: Object.values(menuItems),
-	numMenuItems: fetchAllMenuItems().length,
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	fetchMeal: (mealId) => dispatch(fetchMeal(mealId)),
 	fetchAllMeals: () => dispatch(fetchAllMeals()),
 	fetchAllMenuItems: () => dispatch(fetchAllMenuItems()),
 	fetchMealOrders: () => dispatch(fetchMealOrders()),
-	createMealOrder: (mealOrder) => dispatch(createMealOrder(mealOrder)),
-	deleteMealOrder: (mealOrderId) => dispatch(deleteMealOrder(mealOrderId)),
 });
 
 export default connect(

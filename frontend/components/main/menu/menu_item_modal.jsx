@@ -37,13 +37,15 @@ class MenuItemModal extends Component {
 		// console.log('this.props.history:');
 		// console.log(this.props.history);
 
-		// console.log('this.props.menuItem:');
-		// console.log(this.props.menuItem);
+		// console.log('this.props.menuItems:');
+		// console.log(this.props.menuItems);
 
-		if (this.props.menuItem) {
+		if (this.props.menuItems && this.props.meals) {
 			const meal = this.props.meals[this.props.mealId];
 
-			// const menuItemId = this.props.menuItem.id;
+			console.log('meal:', meal);
+
+			// const menuItemId = this.props.menuItems.id;
 
 			return (
 				<div className="menu-modal">
@@ -81,7 +83,7 @@ class MenuItemModal extends Component {
 	// return currentUser ? (
 	// 	<button
 	// 		className="modal"
-	// 		onClick={handleClick(createMealOrder, props.menuItem.id, currentUser.id)}>
+	// 		onClick={handleClick(createMealOrder, props.menuItems.id, currentUser.id)}>
 	// 		<h3>{props.meal.name}</h3>
 	// 		<img className="recipe-index-img" src={meal.imageUrl} />
 	// 		<p>{meal.restaurant}</p>
