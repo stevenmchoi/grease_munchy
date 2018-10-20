@@ -6,6 +6,10 @@ class MenuIndex extends Component {
 	componentDidMount() {
 		this.props.fetchAllMeals();
 		this.props.fetchAllMenuItems();
+
+		if (this.props.currentUser) {
+			this.props.fetchMealOrders();
+		}
 	}
 
 	// componentDidUpdate() {}

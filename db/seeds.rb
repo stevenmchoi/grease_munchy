@@ -197,26 +197,35 @@ Meal.create(
 )
 
 past_sunday = Date.parse('sunday')
+current_sunday = Date.parse('sunday')
 num_meals = Meal.count
 
 # TODO: Employ for loop to evenly create a number of Menu Items each week
-MenuItem.create(
-  [
-    { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
-    { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 }
-  ]
-)
+4.times do
+  current_sunday += 7
+
+  until MenuItem.where(date: current_sunday.to_s).count == 4
+    MenuItem.create(date: current_sunday.to_s, meal_id: rand(num_meals) + 1)
+  end
+end
+
+# MenuItem.create(
+#   [
+#     { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
+#     { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 }
+#   ]
+# )
