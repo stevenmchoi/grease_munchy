@@ -209,23 +209,4 @@ num_meals = Meal.count
   end
 end
 
-# MenuItem.create(
-#   [
-#     { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 7).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 14).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 21).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 },
-#     { date: (past_sunday + 28).to_s, meal_id: rand(num_meals) + 1 }
-#   ]
-# )
+# MealOrder.create()

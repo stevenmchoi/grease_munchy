@@ -17,6 +17,12 @@ class RecipeShow extends Component {
 					{'<'}
 				</button>
 			);
+		} else {
+			return (
+				<button className="back-button" onClick={() => this.props.history.push('/recipes')}>
+					{'<'}
+				</button>
+			);
 		}
 	}
 
