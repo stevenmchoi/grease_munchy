@@ -196,11 +196,9 @@ Meal.create(
   ]
 )
 
-past_sunday = Date.parse('sunday')
 current_sunday = Date.parse('sunday')
 num_meals = Meal.count
 
-# TODO: Employ for loop to evenly create a number of Menu Items each week
 4.times do
   current_sunday += 7
 
