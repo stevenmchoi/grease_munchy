@@ -12,8 +12,12 @@ class MenuIndex extends Component {
 	}
 
 	render() {
-		if (this.props.menuItems && this.props.meals) {
-			return this.props.menuItems.map((menuItemsByWeek) => {
+		const menuItems = this.props.menuItems;
+		const meals = this.props.meals;
+		const mealOrders = this.props.mealOrders;
+
+		if (Object.keys(menuItems).length !== 0 && Object.keys(meals).length !== 0) {
+			return menuItems.map((menuItemsByWeek) => {
 				let menuWeekItems = Object.values(menuItemsByWeek);
 				let weekOf = menuWeekItems[0].date;
 
@@ -25,10 +29,11 @@ class MenuIndex extends Component {
 							{menuWeekItems.map((menuItem) => (
 								<li key={`menu-item-${menuItem.id}`}>
 									<MenuItemModal
+										currentUser={this.props.currentUser}
 										menuItem={menuItem}
-										mealId={menuItem.meal_id}
-										menuItems={this.props.menuItems}
-										meals={this.props.meals}
+										meal={meals[menuItem.meal_id]}
+										createMealOrder={this.props.createMealOrder}
+										deleteMealOrder={this.props.deleteMealOrder}
 									/>
 								</li>
 							))}

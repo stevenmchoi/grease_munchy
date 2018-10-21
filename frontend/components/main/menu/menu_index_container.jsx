@@ -9,12 +9,13 @@ import {
 import MenuIndex from './menu_index';
 
 const mapStateToProps = (
-	{ entities: { menuItems, meals }, session: { currentUser } },
+	{ entities: { menuItems, meals, mealOrders }, session: { currentUser } },
 	ownProps
 ) => ({
 	currentUser,
 	meals,
 	menuItems: Object.values(menuItems),
+	mealOrders,
 });
 
 const mapDispatchToProps = (dispatch) => ({

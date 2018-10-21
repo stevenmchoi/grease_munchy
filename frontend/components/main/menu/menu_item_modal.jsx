@@ -7,6 +7,8 @@ class MenuItemModal extends Component {
 
 		console.log('MenuItemModal props: ', props);
 
+		this.state = {};
+
 		this.handleClick = this.handleClick.bind(this);
 	}
 
@@ -19,9 +21,12 @@ class MenuItemModal extends Component {
 			const userId = this.props.currentUser.id;
 
 			return (e) => {
+				console.log('this.props.currentUser:');
+				console.log(this.props.currentUser);
+
 				e.preventDefault();
 
-				this.props.createMealOrder({ userId, menuItemId });
+				console.log(this.props.createMealOrder({ userId, menuItemId }));
 			};
 		} else {
 			this.props.history.push('/login');
@@ -29,10 +34,10 @@ class MenuItemModal extends Component {
 	}
 
 	render() {
-		if (this.props.menuItems && this.props.meals && this.props.meals[this.props.mealId]) {
-			const meal = this.props.meals[this.props.mealId];
-			const menuItemId = this.props.menuItems.id;
+		const menuItemId = this.props.menuItem.id;
+		const meal = this.props.meal;
 
+		if (meal) {
 			return (
 				<div className="menu-modal">
 					<h3>{meal.name}</h3>
@@ -42,7 +47,7 @@ class MenuItemModal extends Component {
 					<p>{meal.restaurant}</p>
 
 					<div className="modal-buttons">
-						<button className="add-remove-button" onClick={() => this.handleClick(menuItemId)}>
+						<button className="add-remove-button" onClick={this.handleClick(menuItemId)}>
 							<p>Add / Remove</p>
 						</button>
 
