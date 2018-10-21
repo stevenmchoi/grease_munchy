@@ -18,9 +18,12 @@ const mapStateToProps = (
 });
 
 const mapDispatchToProps = (dispatch) => ({
+	fetchMeal: (mealId) => dispatch(fetchMeal(mealId)),
 	fetchAllMeals: () => dispatch(fetchAllMeals()),
 	fetchAllMenuItems: () => dispatch(fetchAllMenuItems()),
 	fetchMealOrders: () => dispatch(fetchMealOrders()),
+	createMealOrder: (mealOrder) => dispatch(createMealOrder(mealOrder)),
+	deleteMealOrder: (mealOrderId) => dispatch(deleteMealOrder(mealOrderId)),
 });
 
 export default connect(

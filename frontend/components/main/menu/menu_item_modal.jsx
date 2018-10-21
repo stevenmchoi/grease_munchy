@@ -5,7 +5,7 @@ class MenuItemModal extends Component {
 	constructor(props) {
 		super(props);
 
-		console.log('props: ', props);
+		console.log('MenuItemModal props: ', props);
 
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -15,13 +15,8 @@ class MenuItemModal extends Component {
 	// }
 
 	handleClick(menuItemId) {
-		console.log('menuItemId:');
-		console.log(menuItemId);
-
 		if (this.props.currentUser) {
 			const userId = this.props.currentUser.id;
-			console.log('userId:');
-			console.log(userId);
 
 			return (e) => {
 				e.preventDefault();
@@ -34,25 +29,8 @@ class MenuItemModal extends Component {
 	}
 
 	render() {
-		// console.log('this.props.history:');
-		// console.log(this.props.history);
-
-		// console.log('this.props.menuItems:');
-		// console.log(this.props.menuItems);
-
 		if (this.props.menuItems && this.props.meals && this.props.meals[this.props.mealId]) {
-			console.log('menu_item_modal');
-
-			console.log('this.props.menuItems:');
-			console.log(this.props.menuItems);
-
-			console.log('this.props.meals:');
-			console.log(this.props.meals);
-
 			const meal = this.props.meals[this.props.mealId];
-
-			console.log('meal:', meal);
-
 			const menuItemId = this.props.menuItems.id;
 
 			return (
@@ -64,9 +42,6 @@ class MenuItemModal extends Component {
 					<p>{meal.restaurant}</p>
 
 					<div className="modal-buttons">
-						{/* <button className="add-remove-button">
-							<p>Add / Remove</p>
-						</button> */}
 						<button className="add-remove-button" onClick={() => this.handleClick(menuItemId)}>
 							<p>Add / Remove</p>
 						</button>
@@ -87,22 +62,6 @@ class MenuItemModal extends Component {
 			return null;
 		}
 	}
-
-	// return currentUser ? (
-	// 	<button
-	// 		className="modal"
-	// 		onClick={handleClick(createMealOrder, props.menuItems.id, currentUser.id)}>
-	// 		<h3>{props.meal.name}</h3>
-	// 		<img className="recipe-index-img" src={meal.imageUrl} />
-	// 		<p>{meal.restaurant}</p>
-	// 	</button>
-	// ) : (
-	// 	<div className="modal">
-	// 		<h3>{meal.name}</h3>
-	// 		<img className="recipe-index-img" src={meal.imageUrl} />
-	// 		<p>{meal.restaurant}</p>
-	// 	</div>
-	// );
 }
 
 export default withRouter(MenuItemModal);

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
 import MenuItemModal from './menu_item_modal';
 
 class MenuIndex extends Component {
@@ -12,17 +11,7 @@ class MenuIndex extends Component {
 		}
 	}
 
-	// componentDidUpdate() {}
-
 	render() {
-		// console.log('render');
-
-		// console.log('this.props.menuItems:');
-		// console.log(this.props.menuItems);
-
-		// console.log('this.props.meals:');
-		// console.log(this.props.meals);
-
 		if (this.props.menuItems && this.props.meals) {
 			return this.props.menuItems.map((menuItemsByWeek) => {
 				let menuWeekItems = Object.values(menuItemsByWeek);
@@ -53,4 +42,4 @@ class MenuIndex extends Component {
 	}
 }
 
-export default withRouter(MenuIndex);
+export default MenuIndex;
