@@ -16,9 +16,9 @@ class MenuItemModal extends Component {
 	// 	this.props.fetchMeal(1);
 	// }
 
-	handleClick(menuItemId) {
+	handleClick(menu_item_id) {
 		if (this.props.currentUser) {
-			const userId = this.props.currentUser.id;
+			const user_id = this.props.currentUser.id;
 
 			return (e) => {
 				console.log('this.props.currentUser:');
@@ -26,7 +26,7 @@ class MenuItemModal extends Component {
 
 				e.preventDefault();
 
-				console.log(this.props.createMealOrder({ userId, menuItemId }));
+				console.log(this.props.createMealOrder({ user_id, menu_item_id }));
 			};
 		} else {
 			this.props.history.push('/login');
