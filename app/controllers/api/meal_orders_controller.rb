@@ -3,6 +3,10 @@ class Api::MealOrdersController < ApplicationController
 		@meal_orders = MealOrder.all
 	end
 
+	def show
+		@meal_order = MealOrder.find(params[:id])
+	end
+
 	def create
 		@meal_order = MealOrder.new(meal_order_params)
 
