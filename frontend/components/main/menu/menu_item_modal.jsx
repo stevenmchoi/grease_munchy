@@ -5,8 +5,6 @@ class MenuItemModal extends Component {
 	constructor(props) {
 		super(props);
 
-		console.log('MenuItemModal props: ', props);
-
 		this.state = {};
 
 		this.handleClick = this.handleClick.bind(this);
@@ -18,15 +16,12 @@ class MenuItemModal extends Component {
 
 	handleClick(menu_item_id) {
 		return (e) => {
+			e.preventDefault();
+
 			if (this.props.currentUser) {
 				const user_id = this.props.currentUser.id;
 
-				console.log('this.props.currentUser:');
-				console.log(this.props.currentUser);
-
-				e.preventDefault();
-
-				console.log(this.props.createMealOrder({ user_id, menu_item_id }));
+				this.props.createMealOrder({ user_id, menu_item_id });
 			} else {
 				this.props.history.push('/login');
 			}
