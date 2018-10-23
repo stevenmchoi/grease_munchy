@@ -17,20 +17,20 @@ class MenuItemModal extends Component {
 	// }
 
 	handleClick(menu_item_id) {
-		if (this.props.currentUser) {
-			const user_id = this.props.currentUser.id;
+		return (e) => {
+			if (this.props.currentUser) {
+				const user_id = this.props.currentUser.id;
 
-			return (e) => {
 				console.log('this.props.currentUser:');
 				console.log(this.props.currentUser);
 
 				e.preventDefault();
 
 				console.log(this.props.createMealOrder({ user_id, menu_item_id }));
-			};
-		} else {
-			this.props.history.push('/login');
-		}
+			} else {
+				this.props.history.push('/login');
+			}
+		};
 	}
 
 	render() {
