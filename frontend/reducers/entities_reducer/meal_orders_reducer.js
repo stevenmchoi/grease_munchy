@@ -14,7 +14,7 @@ const mealOrdersReducer = (oldState = {}, action) => {
 			return merge(newState.mealOrders, action.mealOrders);
 		case RECEIVE_MEAL_ORDER:
 			return merge(newState, {
-				[action.mealOrder.id]: action.mealOrder,
+				[action.mealOrder.menu_item_id]: action.mealOrder,
 			});
 		case REMOVE_MEAL_ORDER:
 			delete newState[action.mealOrderId];
