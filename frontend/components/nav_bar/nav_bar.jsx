@@ -4,12 +4,18 @@ import Logo from './logo';
 import { AuthRoute, ProtectedRoute } from '../../util/route_util';
 import NavButtonsContainer from './nav_buttons/nav_buttons_container';
 
-const NavBar = ({ currentUser, logout }) => {
+const NavBar = ({ currentUser, logout, clearMealOrders }) => {
 	const sessionButtons = currentUser ? (
 		<span className="session-buttons">
 			<p className="welcome-user">{`Welcome, ${currentUser.username}!`}</p>
 
-			<button className="button" onClick={logout}>
+			<button
+				className="button"
+				onClick={() => {
+					logout();
+					clearMealOrders();
+				}}
+			>
 				Log Out
 			</button>
 		</span>

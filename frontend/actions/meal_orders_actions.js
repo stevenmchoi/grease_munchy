@@ -33,3 +33,6 @@ export const deleteMealOrder = (mealOrderId) => (dispatch) =>
 	MealOrdersApiUtil.deleteMealOrder(mealOrderId).then((mealOrder) =>
 		dispatch(removeMealOrder(mealOrderId))
 	);
+
+export const clearMealOrders = () => (dispatch) =>
+	MealOrdersApiUtil.fetchMealOrders().then((mealOrders) => dispatch(receiveAllMealOrders({})));
