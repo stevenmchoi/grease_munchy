@@ -5,8 +5,8 @@ class MenuItemModal extends Component {
 	constructor(props) {
 		super(props);
 
-		console.log('props.mealOrders:');
-		console.log(props.mealOrders);
+		// console.log('props.mealOrders:');
+		// console.log(props.mealOrders);
 
 		this.state = {
 			mealOrder: props.mealOrders[props.menuItemId],
@@ -16,13 +16,9 @@ class MenuItemModal extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	componentDidMount() {
-		// 	this.props.fetchMeal(1);
-
-		if (this.props.currentUser) {
-			this.props.fetchMealOrders();
-		}
-	}
+	// componentDidMount() {
+	// 	this.props.fetchMeal(1);
+	// }
 
 	handleClick(menu_item_id) {
 		return (e) => {

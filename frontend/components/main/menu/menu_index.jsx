@@ -4,8 +4,13 @@ import MenuItemModalContainer from './menu_item_modal_container';
 
 class MenuIndex extends Component {
 	componentDidMount() {
-		this.props.fetchAllMeals();
-		this.props.fetchAllMenuItems();
+		this.props.fetchAllMeals().then(() => {
+			if (this.props.currentUser) {
+				this.props.fetchMealOrders().then(() => {
+					this.props.fetchAllMenuItems();
+				});
+			}
+		});
 	}
 
 	render() {
