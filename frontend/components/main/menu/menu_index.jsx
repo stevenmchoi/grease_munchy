@@ -1,20 +1,16 @@
 import React, { Component } from 'react';
-import MenuItemModal from './menu_item_modal';
+// import MenuItemModal from './menu_item_modal';
+import MenuItemModalContainer from './menu_item_modal_container';
 
 class MenuIndex extends Component {
 	componentDidMount() {
 		this.props.fetchAllMeals();
 		this.props.fetchAllMenuItems();
-
-		if (this.props.currentUser) {
-			this.props.fetchMealOrders();
-		}
 	}
 
 	render() {
 		const menuItems = this.props.menuItems;
 		const meals = this.props.meals;
-		const mealOrders = this.props.mealOrders;
 
 		if (Object.keys(menuItems).length !== 0 && Object.keys(meals).length !== 0) {
 			return menuItems.map((menuItemsByWeek) => {
@@ -28,14 +24,7 @@ class MenuIndex extends Component {
 						<ul className="menu-list" key={`menu-on-${weekOf}`}>
 							{menuWeekItems.map((menuItem) => (
 								<li key={`menu-item-${menuItem.id}`}>
-									<MenuItemModal
-										currentUser={this.props.currentUser}
-										menuItem={menuItem}
-										meal={meals[menuItem.meal_id]}
-										mealOrder={mealOrders[menuItem.id]}
-										createMealOrder={this.props.createMealOrder}
-										deleteMealOrder={this.props.deleteMealOrder}
-									/>
+									<MenuItemModalContainer meal={meals[menuItem.meal_id]} menuItemId={menuItem.id} />
 								</li>
 							))}
 						</ul>
