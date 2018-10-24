@@ -32,6 +32,7 @@ class MenuIndex extends Component {
 										currentUser={this.props.currentUser}
 										menuItem={menuItem}
 										meal={meals[menuItem.meal_id]}
+										mealOrder={mealOrders[menuItem.id]}
 										createMealOrder={this.props.createMealOrder}
 										deleteMealOrder={this.props.deleteMealOrder}
 									/>

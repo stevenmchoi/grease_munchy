@@ -5,7 +5,9 @@ class MenuItemModal extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {};
+		this.state = {
+			ordered: !!this.props.mealOrder,
+		};
 
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -21,7 +23,13 @@ class MenuItemModal extends Component {
 			if (this.props.currentUser) {
 				const user_id = this.props.currentUser.id;
 
-				this.props.createMealOrder({ user_id, menu_item_id });
+				if (this.state.ordered) {
+					this.props.deleteMealOrder(this.props.mealOrder.id);
+				} else {
+					this.props.createMealOrder({ user_id, menu_item_id });
+				}
+
+				this.setState({ ordered: !!this.state.ordered });
 			} else {
 				this.props.history.push('/login');
 			}
@@ -31,10 +39,11 @@ class MenuItemModal extends Component {
 	render() {
 		const menuItemId = this.props.menuItem.id;
 		const meal = this.props.meal;
+		const orderedClassBool = this.state.ordered ? ' ordered' : '';
 
 		if (meal) {
 			return (
-				<div className="menu-modal">
+				<div className={`menu-modal${orderedClassBool}`}>
 					<h3>{meal.name}</h3>
 
 					<img className="recipe-index-img" src={meal.imageUrl} />
