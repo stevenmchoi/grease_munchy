@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import MenuItemModal from './menu_item_modal';
 import MenuItemModalContainer from './menu_item_modal_container';
 
 class MenuIndex extends Component {
@@ -9,6 +8,8 @@ class MenuIndex extends Component {
 				this.props.fetchMealOrders().then(() => {
 					this.props.fetchAllMenuItems();
 				});
+			} else {
+				this.props.fetchAllMenuItems();
 			}
 		});
 	}
