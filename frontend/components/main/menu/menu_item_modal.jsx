@@ -18,7 +18,7 @@ class MenuItemModal extends Component {
 			if (this.props.currentUser) {
 				const user_id = this.props.currentUser.id;
 
-				if (this.ordered) {
+				if (this.orderedBool) {
 					this.props.deleteMealOrder(this.mealOrder.id).then(() => this.props.fetchMealOrders());
 				} else {
 					this.props
@@ -33,12 +33,12 @@ class MenuItemModal extends Component {
 
 	render() {
 		this.mealOrder = this.props.mealOrders[this.menuItemId];
-		this.ordered = !!this.mealOrder;
-		const orderedClassBool = this.ordered ? ' ordered' : '';
+		this.orderedBool = !!this.mealOrder;
+		const orderedClass = this.orderedBool ? ' ordered' : '';
 
 		if (this.meal) {
 			return (
-				<div className={`menu-modal${orderedClassBool}`}>
+				<div className={`menu-modal${orderedClass}`}>
 					<h3>{this.meal.name}</h3>
 
 					<img className="recipe-index-img" src={this.meal.imageUrl} />
@@ -47,7 +47,7 @@ class MenuItemModal extends Component {
 
 					<div className="modal-buttons">
 						<button className="add-remove-button" onClick={this.handleClick(this.menuItemId)}>
-							<p>{orderedClassBool ? 'Remove' : 'Add'}</p>
+							<p>{this.orderedBool ? 'Remove' : 'Add'}</p>
 						</button>
 
 						<Link

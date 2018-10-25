@@ -1,7 +1,6 @@
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchAllMenuItems } from '../../../actions/menu_items_actions';
-import { fetchMeal, fetchAllMeals } from '../../../actions/meals_actions';
+import { fetchMeal } from '../../../actions/meals_actions';
 import {
 	fetchMealOrders,
 	createMealOrder,

@@ -11,8 +11,8 @@ class MenuIndex extends Component {
 	}
 
 	render() {
-		const menuItems = this.props.menuItems;
 		const meals = this.props.meals;
+		const menuItems = this.props.menuItems;
 
 		if (Object.keys(menuItems).length !== 0 && Object.keys(meals).length !== 0) {
 			return menuItems.map((menuItemsByWeek) => {
