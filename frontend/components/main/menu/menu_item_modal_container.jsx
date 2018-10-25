@@ -16,8 +16,6 @@ const mapStateToProps = ({ entities: { mealOrders }, session: { currentUser } },
 
 const mapDispatchToProps = (dispatch) => ({
 	fetchMeal: (mealId) => dispatch(fetchMeal(mealId)),
-	fetchAllMeals: () => dispatch(fetchAllMeals()),
-	fetchAllMenuItems: () => dispatch(fetchAllMenuItems()),
 	fetchMealOrders: () => dispatch(fetchMealOrders()),
 	createMealOrder: (mealOrder) => dispatch(createMealOrder(mealOrder)),
 	deleteMealOrder: (mealOrderId) => dispatch(deleteMealOrder(mealOrderId)),

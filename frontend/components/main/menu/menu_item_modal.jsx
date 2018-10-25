@@ -5,20 +5,11 @@ class MenuItemModal extends Component {
 	constructor(props) {
 		super(props);
 
-		// console.log('props.mealOrders:');
-		// console.log(props.mealOrders);
-
-		this.state = {
-			mealOrder: props.mealOrders[props.menuItemId],
-			ordered: !!props.mealOrders[props.menuItemId],
-		};
+		this.meal = this.props.meal;
+		this.menuItemId = this.props.menuItemId;
 
 		this.handleClick = this.handleClick.bind(this);
 	}
-
-	// componentDidMount() {
-	// 	this.props.fetchMeal(1);
-	// }
 
 	handleClick(menu_item_id) {
 		return (e) => {
@@ -27,23 +18,13 @@ class MenuItemModal extends Component {
 			if (this.props.currentUser) {
 				const user_id = this.props.currentUser.id;
 
-				if (this.state.ordered) {
-					this.props.deleteMealOrder(this.state.mealOrder.id).then(
-						this.setState({
-							mealOrder: undefined,
-						})
-					);
+				if (this.ordered) {
+					this.props.deleteMealOrder(this.mealOrder.id).then(() => this.props.fetchMealOrders());
 				} else {
-					this.props.createMealOrder({ user_id, menu_item_id }).then(
-						this.setState({
-							mealOrder: this.props.mealOrders[this.props.menuItemId],
-						})
-					);
+					this.props
+						.createMealOrder({ user_id, menu_item_id })
+						.then(() => this.props.fetchMealOrders());
 				}
-
-				this.setState({
-					ordered: !this.state.ordered,
-				});
 			} else {
 				this.props.history.push('/login');
 			}
@@ -51,31 +32,28 @@ class MenuItemModal extends Component {
 	}
 
 	render() {
-		const menuItemId = this.props.menuItemId;
-		const meal = this.props.meal;
-		const orderedClassBool = this.state.ordered ? ' ordered' : '';
+		this.mealOrder = this.props.mealOrders[this.menuItemId];
+		this.ordered = !!this.mealOrder;
+		const orderedClassBool = this.ordered ? ' ordered' : '';
 
-		// console.log('this.props.mealOrders:');
-		// console.log(this.props.mealOrders);
-
-		if (meal) {
+		if (this.meal) {
 			return (
 				<div className={`menu-modal${orderedClassBool}`}>
-					<h3>{meal.name}</h3>
+					<h3>{this.meal.name}</h3>
 
-					<img className="recipe-index-img" src={meal.imageUrl} />
+					<img className="recipe-index-img" src={this.meal.imageUrl} />
 
-					<p>{meal.restaurant}</p>
+					<p>{this.meal.restaurant}</p>
 
 					<div className="modal-buttons">
-						<button className="add-remove-button" onClick={this.handleClick(menuItemId)}>
-							<p>Add / Remove</p>
+						<button className="add-remove-button" onClick={this.handleClick(this.menuItemId)}>
+							<p>{orderedClassBool ? 'Remove' : 'Add'}</p>
 						</button>
 
 						<Link
 							className="details-button"
 							to={{
-								pathname: `/recipes/${meal.name}-${meal.id}`,
+								pathname: `/recipes/${this.meal.name}-${this.meal.id}`,
 								state: { hash: location.hash },
 							}}
 						>

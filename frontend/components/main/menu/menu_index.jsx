@@ -3,14 +3,10 @@ import MenuItemModalContainer from './menu_item_modal_container';
 
 class MenuIndex extends Component {
 	componentDidMount() {
-		this.props.fetchAllMeals().then(() => {
-			if (this.props.currentUser) {
-				this.props.fetchMealOrders().then(() => {
-					this.props.fetchAllMenuItems();
-				});
-			} else {
-				this.props.fetchAllMenuItems();
-			}
+		this.props.fetchMealOrders().then(() => {
+			this.props.fetchAllMenuItems().then(() => {
+				this.props.fetchAllMeals();
+			});
 		});
 	}
 
