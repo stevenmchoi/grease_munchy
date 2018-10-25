@@ -5,10 +5,13 @@ class MenuItemModal extends Component {
 	constructor(props) {
 		super(props);
 
-		this.meal = this.props.meal;
 		this.menuItemId = this.props.menuItemId;
 
 		this.handleClick = this.handleClick.bind(this);
+	}
+
+	componentDidMount() {
+		this.props.fetchMeal(this.props.mealId);
 	}
 
 	handleClick(menu_item_id) {
@@ -32,6 +35,7 @@ class MenuItemModal extends Component {
 	}
 
 	render() {
+		this.meal = this.props.meals[this.props.mealId];
 		this.mealOrder = this.props.mealOrders[this.menuItemId];
 		this.orderedBool = !!this.mealOrder;
 		const orderedClass = this.orderedBool ? ' ordered' : '';

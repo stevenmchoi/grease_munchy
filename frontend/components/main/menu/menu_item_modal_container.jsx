@@ -8,8 +8,12 @@ import {
 } from '../../../actions/meal_orders_actions';
 import MenuModal from './menu_item_modal';
 
-const mapStateToProps = ({ entities: { mealOrders }, session: { currentUser } }, ownProps) => ({
+const mapStateToProps = (
+	{ entities: { meals, mealOrders }, session: { currentUser } },
+	ownProps
+) => ({
 	currentUser,
+	meals,
 	mealOrders,
 });
 
