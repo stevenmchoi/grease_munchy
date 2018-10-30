@@ -1,7 +1,7 @@
 html, body, header, footer, main, nav, div,
 span, article, p, h1, h2, a, img, i, ul, li,
 button, section, form, fieldset, label, input,
-textarea {
+textarea, video {
 	padding: 0px;
 	margin: 0px;
 	height: auto;
@@ -17,6 +17,12 @@ body {
 	flex-direction: column;
 
 	background-color: #f9f9fc;
+}
+
+img {
+	height: auto;
+	width: 100%;
+	border-radius: 10px;
 }
 
 .app-wrapper {
