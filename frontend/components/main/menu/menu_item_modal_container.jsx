@@ -1,4 +1,3 @@
-import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { fetchMeal } from '../../../actions/meals_actions';
 import {
@@ -24,9 +23,7 @@ const mapDispatchToProps = (dispatch) => ({
 	deleteMealOrder: (mealOrderId) => dispatch(deleteMealOrder(mealOrderId)),
 });
 
-export default withRouter(
-	connect(
-		mapStateToProps,
-		mapDispatchToProps
-	)(MenuModal)
-);
+export default connect(
+	mapStateToProps,
+	mapDispatchToProps
+)(MenuModal);
