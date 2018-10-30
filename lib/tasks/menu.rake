@@ -1,17 +1,17 @@
-require File.expand_path('../../../app/models/application_record.rb', __FILE__)
-require File.expand_path('../../../app/models/meal.rb', __FILE__)
-require File.expand_path('../../../app/models/menu_item.rb', __FILE__)
-require File.expand_path('../../../config/environment.rb', __FILE__)
-require 'rake'
+# require File.expand_path('../../../app/models/application_record.rb', __FILE__)
+# require File.expand_path('../../../app/models/meal.rb', __FILE__)
+# require File.expand_path('../../../app/models/menu_item.rb', __FILE__)
+# require File.expand_path('../../../config/environment.rb', __FILE__)
+# require 'rake'
 
-new_sunday = Date.parse('sunday') + 28
-num_meals = Meal.count
+# new_sunday = Date.parse('sunday') + 28
+# num_meals = Meal.count
 
-namespace :menu do
-  desc 'Create new week of menu items'
-  task create_menu_items: :environment do
-    until MenuItem.where(date: new_sunday.to_s).count == 4
-      MenuItem.create(date: new_sunday.to_s, meal_id: rand(num_meals) + 1)
-    end
-  end
-end
+# namespace :menu do
+#   desc 'Create new week of menu items'
+#   task create_menu_items: :environment do
+#     until MenuItem.where(date: new_sunday.to_s).count == 4
+#       MenuItem.create(date: new_sunday.to_s, meal_id: rand(num_meals) + 1)
+#     end
+#   end
+# end
