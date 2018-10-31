@@ -25,7 +25,7 @@ const NavBar = ({ currentUser, logout, clearMealOrders }) => {
 				Log In
 			</Link>
 
-			<Link className="button" to="/signup">
+			<Link className="signup-btn" to="/signup">
 				Sign Up
 			</Link>
 		</span>

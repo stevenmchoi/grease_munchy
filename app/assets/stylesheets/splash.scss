@@ -1,7 +1,6 @@
 .splash-header {
 	position: relative;
 	width: 100vw;
-	// max-width: 800px;
 	padding: 0;
 	margin: auto;
 
@@ -34,5 +33,13 @@
 	.home-video {
 		height: auto;
 		width: 100%;
+	}
+
+	.signup-btn {
+		// font-size: 16px;
+		line-height: 54.72px;
+		height: 54.72px;
+		margin-top: 35px;
+		text-decoration: none;
 	}
 }
