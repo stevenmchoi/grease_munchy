@@ -2,7 +2,7 @@ require File.expand_path('../../../app/models/application_record.rb', __FILE__)
 require File.expand_path('../../../app/models/meal.rb', __FILE__)
 require File.expand_path('../../../app/models/menu_item.rb', __FILE__)
 require File.expand_path('../../../config/environment.rb', __FILE__)
-require 'rake'
+# require 'rake'
 
 desc "Create new week of menu items with the Heroku scheduler add-on"
 
