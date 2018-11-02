@@ -15,7 +15,7 @@ const Splash = () => (
 		<div className="splash-header-container">
 			<h2 className="splash-header-text">Your house is the drive-thru!</h2>
 			<Link className="signup-btn" to="/signup">
-				Sign Up
+				GET STARTED
 			</Link>
 		</div>
 	</div>

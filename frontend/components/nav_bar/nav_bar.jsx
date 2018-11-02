@@ -22,11 +22,11 @@ const NavBar = ({ currentUser, logout, clearMealOrders }) => {
 	) : (
 		<span className="session-buttons">
 			<Link className="nav-link" to="/login">
-				Log In
+				LOG IN
 			</Link>
 
 			<Link className="signup-btn" to="/signup">
-				Sign Up
+				SIGN UP
 			</Link>
 		</span>
 	);
