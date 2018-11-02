@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 const Splash = () => (
 	<div className="splash-header">
+		<div className="spacer-behind-nav-splash" />
+
 		<video
 			className="home-video"
 			preload="auto"

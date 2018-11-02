@@ -45,6 +45,8 @@ class Signup extends Component {
 
 		return (
 			<div>
+				<div className="spacer-behind-nav" />
+
 				<Slide top>
 					<HeadShake spy={this.triggerErr}>
 						<form onSubmit={this.handleSubmit}>

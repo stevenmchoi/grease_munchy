@@ -34,42 +34,46 @@ class RecipeShow extends Component {
 			return null;
 		} else {
 			return (
-				<div className="recipe-show">
-					{this.renderBackButton()}
+				<div>
+					<div className="spacer-behind-nav" />
 
-					<ul className="recipe-overview">
-						<h3 className="title">{meal.name}</h3>
+					<div className="recipe-show">
+						{this.renderBackButton()}
 
-						<li className="restaurant">
-							<strong>Restaurant:</strong> {meal.restaurant}
-						</li>
+						<ul className="recipe-overview">
+							<h3 className="title">{meal.name}</h3>
 
-						<li className="servings">
-							<strong>Servings:</strong> {meal.servings}
-						</li>
+							<li className="restaurant">
+								<strong>Restaurant:</strong> {meal.restaurant}
+							</li>
 
-						<li className="description">
-							<strong>Description:</strong> {meal.description}
-						</li>
-					</ul>
+							<li className="servings">
+								<strong>Servings:</strong> {meal.servings}
+							</li>
 
-					<img className="recipe-img" src={meal.imageUrl} />
+							<li className="description">
+								<strong>Description:</strong> {meal.description}
+							</li>
+						</ul>
 
-					<ul className="recipe-ingredients">
-						<strong>Ingredients:</strong>
+						<img className="recipe-img" src={meal.imageUrl} />
 
-						{meal.ingredients.map((ingredient, idx) => (
-							<li key={`ingredient-${idx}`}>{ingredient}</li>
-						))}
-					</ul>
+						<ul className="recipe-ingredients">
+							<strong>Ingredients:</strong>
 
-					<ol className="recipe-instructions">
-						<strong>Instructions:</strong>
+							{meal.ingredients.map((ingredient, idx) => (
+								<li key={`ingredient-${idx}`}>{ingredient}</li>
+							))}
+						</ul>
 
-						{meal.instructions.map((instruction, idx) => (
-							<li key={`instruction-${idx}`}>{instruction}</li>
-						))}
-					</ol>
+						<ol className="recipe-instructions">
+							<strong>Instructions:</strong>
+
+							{meal.instructions.map((instruction, idx) => (
+								<li key={`instruction-${idx}`}>{instruction}</li>
+							))}
+						</ol>
+					</div>
 				</div>
 			);
 		}

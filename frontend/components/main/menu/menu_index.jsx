@@ -13,24 +13,30 @@ class MenuIndex extends Component {
 		const menuItems = this.props.menuItems;
 
 		if (Object.keys(menuItems).length !== 0) {
-			return menuItems.map((menuItemsByWeek) => {
-				let menuWeekItems = Object.values(menuItemsByWeek);
-				let weekOf = menuWeekItems[0].date;
+			return (
+				<div>
+					<div className="spacer-behind-nav" />
 
-				return (
-					<ul className="menu-week" key={`week-${weekOf}`}>
-						<h1>Week of {weekOf}</h1>
+					{menuItems.map((menuItemsByWeek) => {
+						let menuWeekItems = Object.values(menuItemsByWeek);
+						let weekOf = menuWeekItems[0].date;
 
-						<ul className="menu-list" key={`menu-on-${weekOf}`}>
-							{menuWeekItems.map((menuItem) => (
-								<li key={`menu-item-${menuItem.id}`}>
-									<MenuItemModalContainer mealId={menuItem.meal_id} menuItemId={menuItem.id} />
-								</li>
-							))}
-						</ul>
-					</ul>
-				);
-			});
+						return (
+							<ul className="menu-week" key={`week-${weekOf}`}>
+								<h1>Week of {weekOf}</h1>
+
+								<ul className="menu-list" key={`menu-on-${weekOf}`}>
+									{menuWeekItems.map((menuItem) => (
+										<li key={`menu-item-${menuItem.id}`}>
+											<MenuItemModalContainer mealId={menuItem.meal_id} menuItemId={menuItem.id} />
+										</li>
+									))}
+								</ul>
+							</ul>
+						);
+					})}
+				</div>
+			);
 		} else {
 			return null;
 		}

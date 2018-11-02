@@ -16,8 +16,6 @@ import SplashContainer from './splash/splash_container';
 const Main = () => {
 	return (
 		<div className="main-wrapper">
-			<div className="spacer-behind-nav" />
-
 			<Switch>
 				<AuthRoute path="/signup" component={SignupContainer} />
 				<AuthRoute path="/login" component={LoginContainer} />

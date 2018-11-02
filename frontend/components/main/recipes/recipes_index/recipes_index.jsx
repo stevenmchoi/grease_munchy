@@ -13,6 +13,8 @@ class RecipesIndex extends Component {
 
 		return (
 			<Fade bottom cascade>
+				<div className="spacer-behind-nav" />
+
 				<ul className="recipes-list">
 					{meals.map((meal) => (
 						<li key={`recipe-${meal.id}`}>
