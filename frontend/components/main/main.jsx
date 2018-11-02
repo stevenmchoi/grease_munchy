@@ -20,8 +20,7 @@ const Main = () => {
 				<AuthRoute path="/signup" component={SignupContainer} />
 				<AuthRoute path="/login" component={LoginContainer} />
 
-				<ProtectedRoute path="/account/upcoming" component={MenuContainer} />
-				<AuthRoute path="/menu" component={MenuContainer} />
+				<Route path="/menu" component={MenuContainer} />
 
 				<Route path="/recipes/:recipeNameId" component={RecipeShowContainer} />
 				<Route path="/recipes" component={RecipesIndexContainer} />
