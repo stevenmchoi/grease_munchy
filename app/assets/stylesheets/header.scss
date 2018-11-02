@@ -64,11 +64,16 @@ header {
 			}
 		}
 
-		.signup-btn {
+		.logout-btn, .signup-btn {
 			color: white;
 			margin: 5px 10px;
 			margin-right: 0px;
 			padding: 10px 20px;
+
+			&:hover {
+				color: white;
+				font-weight: bold;
+			}
 		}
 	}
 }

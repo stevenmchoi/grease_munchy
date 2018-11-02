@@ -9,15 +9,15 @@ const NavBar = ({ currentUser, logout, clearMealOrders }) => {
 		<span className="session-buttons">
 			<p className="welcome-user">{`Welcome, ${currentUser.username}!`}</p>
 
-			<button
-				className="button"
+			<a
+				className="logout-btn"
 				onClick={() => {
 					logout();
 					clearMealOrders();
 				}}
 			>
 				Log Out
-			</button>
+			</a>
 		</span>
 	) : (
 		<span className="session-buttons">
