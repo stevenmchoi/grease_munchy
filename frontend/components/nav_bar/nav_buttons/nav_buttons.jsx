@@ -5,20 +5,20 @@ const NavButtons = ({ currentUser }) => {
 	return currentUser
 		? [
 				<Link key="upcoming" to="/account/upcoming">
-					Upcoming
+					UPCOMING
 				</Link>,
 
 				<Link key="recipes" to="/recipes">
-					Recipes
+					RECIPES
 				</Link>,
 		  ]
 		: [
 				<Link key="menu" to="/menu">
-					On The Menu
+					ON THE MENU
 				</Link>,
 
 				<Link key="recipes" to="/recipes">
-					Recipes
+					RECIPES
 				</Link>,
 		  ];
 };
