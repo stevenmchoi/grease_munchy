@@ -15,6 +15,7 @@ const Splash = () => (
 				type="video/webm"
 				muted
 			/>
+
 			<div className="splash-header-container">
 				<h2 className="splash-header-text">Your house is the drive-thru!</h2>
 				<Link className="signup-btn" to="/signup">
@@ -23,7 +24,9 @@ const Splash = () => (
 			</div>
 		</section>
 
-		<section className="splash-easy-steps" />
+		<section className="splash-easy-steps">
+			<div />
+		</section>
 
 		<section className="splash-look-inside" />
 
