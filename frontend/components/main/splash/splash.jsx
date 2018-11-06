@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import EasySteps1 from '../../../../app/assets/images/easysteps1.svg';
 
 const Splash = () => (
 	<div className="splash">
@@ -25,7 +26,7 @@ const Splash = () => (
 		</section>
 
 		<section className="splash-easy-steps">
-			<div />
+			<EasySteps1 width="320" height="329" />
 		</section>
 
 		<section className="splash-look-inside" />
