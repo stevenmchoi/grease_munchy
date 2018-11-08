@@ -14,6 +14,7 @@
 	},
 	"scripts": {
 		"server": "rails s",
+		"webpack": "webpack",
 		"frontend": "webpack --watch",
 		"livereload": "bundle exec guard -P livereload",
 		"dev": "concurrently concurrently \"npm run server\" \"npm run frontend\" \"npm run livereload\"",
@@ -45,6 +46,7 @@
 		"react-reveal": "^1.2.2",
 		"react-router": "^4.3.1",
 		"react-router-dom": "^4.3.1",
+		"react-svg-loader": "^2.1.0",
 		"redux": "^3.7.2",
 		"redux-thunk": "^2.3.0",
 		"webpack": "3.4.1"
@@ -53,7 +55,6 @@
 		"prettier": "^1.14.3",
 		"prettier-eslint": "^8.8.2",
 		"prettier-eslint-cli": "^4.7.1",
-		"react-svg-loader": "^2.1.0",
 		"redux-logger": "^3.0.6"
 	}
 }
