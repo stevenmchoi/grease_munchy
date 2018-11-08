@@ -50,6 +50,9 @@ module.exports = {
 				test: /\.svg$/,
 				use: [
 					{
+						loader: 'babel',
+					},
+					{
 						loader: 'babel-loader',
 					},
 					{
@@ -61,6 +64,6 @@ module.exports = {
 	},
 	devtool: 'source-map',
 	resolve: {
-		extensions: ['.js', '.jsx', '*'],
+		extensions: ['.js', '.jsx', '.svg', '*'],
 	},
 };

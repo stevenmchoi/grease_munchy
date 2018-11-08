@@ -1,6 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import EasySteps1 from '../../../../app/assets/images/easysteps1.svg';
+
+import EasySteps1 from '../../../../app/assets/images/easysteps/easysteps1.svg';
+import EasySteps2 from '../../../../app/assets/images/easysteps/easysteps2.svg';
+import EasySteps3 from '../../../../app/assets/images/easysteps/easysteps3.svg';
+
+import LookInside1 from '../../../../app/assets/images/lookinside/lookinside1.svg';
+import LookInside2 from '../../../../app/assets/images/lookinside/lookinside2.svg';
+import LookInside3 from '../../../../app/assets/images/lookinside/lookinside3.svg';
+import LookInside4 from '../../../../app/assets/images/lookinside/lookinside4.svg';
+
+import SimplePitchImg from '../../../../app/assets/images/simplepitch.svg';
 
 const Splash = () => (
 	<div className="splash">
@@ -26,7 +36,50 @@ const Splash = () => (
 		</section>
 
 		<section className="splash-easy-steps">
-			<EasySteps1 width="320" height="329" />
+			<section className="step1">
+				<div className="svg-img">
+					<EasySteps1 width="320" height="329" />
+				</div>
+
+				<div className="splash-body-text">
+					<h2>Choose your meals</h2>
+
+					<p>
+						Our chef-designed recipes include balanced Mediterranean meals, quick one-pan dinners,
+						and top-rated customer favorites.
+					</p>
+				</div>
+			</section>
+
+			<section className="step2">
+				<div className="splash-body-text">
+					<h2>Unpack your box</h2>
+
+					<p>
+						We guarantee the freshness of all our ingredients and deliver them in an insulated box
+						right to your door.
+					</p>
+				</div>
+
+				<div className="svg-img">
+					<EasySteps2 width="320" height="329" />
+				</div>
+			</section>
+
+			<section className="step3">
+				<div className="svg-img">
+					<EasySteps3 width="320" height="329" />
+				</div>
+
+				<div className="splash-body-text">
+					<h2>Create magic</h2>
+
+					<p>
+						Following our step-by-step instructions you’ll experience the magic of cooking recipes
+						that our chefs create with your family’s tastes in mind.
+					</p>
+				</div>
+			</section>
 		</section>
 
 		<section className="splash-look-inside" />

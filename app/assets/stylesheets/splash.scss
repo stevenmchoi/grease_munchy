@@ -1,43 +1,79 @@
-.splash-header {
-	position: relative;
-	width: 100vw;
-	padding: 0;
-	margin: auto;
+.splash {
+    display: flex;
+		flex-direction: column;
 
-	h1 {
-		margin-bottom: 20px;
-	}
+    &-header {
+        position: relative;
+        width: 100vw;
+        padding: 0;
+        margin: auto;
 
-	.splash-header-container {
-		display: block;
-		position: absolute;
-		width: 520px;
-		text-align: center;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-		padding: 0;
-		margin: auto;
-		height: 205px;
-		overflow: hidden;
+        h1 {
+            margin-bottom: 20px;
+        }
 
-		.splash-header-text {
-			color: #ffffff;
-			font-size: 48px;
-			margin: 0 auto;
+        &-container {
+            display: block;
+            position: absolute;
+            width: 520px;
+            text-align: center;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            padding: 0;
+            margin: auto;
+            height: 205px;
+            overflow: hidden;
+
+            .splash-header-text {
+                color: #ffffff;
+                font-size: 48px;
+                margin: 0 auto;
+            }
+
+            .signup-btn {
+                font-size: 16px;
+                margin: 20px 150px;
+                padding: 15px 30px;
+                text-decoration: none;
+            }
+        }
+
+        .home-video {
+            height: auto;
+            width: 100%;
+        }
+    }
+
+    .splash-easy-steps {
+				margin: 0 auto;
+				width: 600px;
+			
+        .step1, .step2, .step3 {
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						align-items: center;
+
+						// .svg-img {
+						// 	flex-grow: .5;
+						// 	width: 50%;
+						// 	margin-right: 20px;
+						// }
+					}
+
+				.splash-body-text {
+						width: 300px;
+						// flex-grow: 1;
+						
+						* {
+								text-align: left;
+						}
+
+						h2 {
+								margin-bottom: 20px;
+						}
+				}
 		}
-
-		.signup-btn {
-			font-size: 16px;
-			margin: 20px 150px;
-			padding: 15px 30px;
-			text-decoration: none;
-		}
-	}
-
-	.home-video {
-		height: auto;
-		width: 100%;
-	}
 }
