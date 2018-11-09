@@ -17,7 +17,7 @@ let prodPlugins = [
 	// 	},
 	// }),
 
-	new UglifyJSPlugin(), // Replaced the reference to webpack.optimize.UglifyJsPlugin
+	new UglifyJsPlugin(), // Replaced the reference to webpack.optimize.UglifyJsPlugin
 
 	new CompressionPlugin({
 		asset: '[path].gz[query]',
