@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 
 const preventScroll = (e) => e.preventDefault();
 
+const linkList = [
+	['On The Menu', 'Pricing', 'Our Vision', 'Wine', 'Market', 'Gifts'],
+	['Blog', 'Cookbook', 'Suppliers', 'Affiliates', 'Supply Chains Act', 'Food Safety'],
+	['Careers', 'Press', 'Our Team', 'Investor Relations'],
+];
+
 const Footer = () => (
 	<footer>
 		<ul className="link-col-1">
