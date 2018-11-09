@@ -19,11 +19,11 @@ let prodPlugins = [
 
 	new UglifyJsPlugin(), // Replaced the reference to webpack.optimize.UglifyJsPlugin
 
-	new CompressionPlugin({
-		asset: '[path].gz[query]',
-		algorithm: 'gzip',
-		test: /\.(js|css|html|json|ico|svg|eot|otf|ttf)$/,
-	}),
+	// new CompressionPlugin({
+	// 	asset: '[path].gz[query]',
+	// 	algorithm: 'gzip',
+	// 	test: /\.(js|css|html|json|ico|svg|eot|otf|ttf)$/,
+	// }),
 ];
 
 plugins = plugins.concat(process.env.NODE_ENV === 'production' ? prodPlugins : devPlugins);
