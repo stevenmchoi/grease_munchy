@@ -37,9 +37,7 @@ const Splash = () => (
 
 		<section className="splash-easy-steps">
 			<section className="step1">
-				<div className="svg-img">
-					<EasySteps1 width="320" height="329" />
-				</div>
+				<EasySteps1 width="225" height="230" />
 
 				<div className="splash-body-text">
 					<h2>Choose your meals</h2>
@@ -61,15 +59,11 @@ const Splash = () => (
 					</p>
 				</div>
 
-				<div className="svg-img">
-					<EasySteps2 width="320" height="329" />
-				</div>
+				<EasySteps2 width="225" height="230" />
 			</section>
 
 			<section className="step3">
-				<div className="svg-img">
-					<EasySteps3 width="320" height="329" />
-				</div>
+				<EasySteps3 width="225" height="230" />
 
 				<div className="splash-body-text">
 					<h2>Create magic</h2>
