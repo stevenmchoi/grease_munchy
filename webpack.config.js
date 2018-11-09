@@ -30,6 +30,7 @@ plugins = plugins.concat(process.env.NODE_ENV === 'production' ? prodPlugins : d
 
 // include plugins config
 module.exports = {
+	mode: 'production',
 	context: __dirname,
 	entry: './frontend/entry.jsx',
 	output: {
@@ -38,7 +39,7 @@ module.exports = {
 	},
 	plugins: plugins,
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: [/\.jsx?$/, /\.js?$/],
 				exclude: /node_modules/,
