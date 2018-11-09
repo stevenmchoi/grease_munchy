@@ -36,44 +36,38 @@ const Splash = () => (
 		</section>
 
 		<section className="splash-easy-steps">
-			<section className="step1">
-				<EasySteps1 width="225" height="230" />
+			<EasySteps1 className="step1-pic" width="225" height="230" />
 
-				<div className="splash-body-text">
-					<h2>Choose your meals</h2>
+			<div className="splash-easy-steps-text-1">
+				<h2>Choose your meals</h2>
 
-					<p>
-						Our chef-designed recipes include balanced Mediterranean meals, quick one-pan dinners,
-						and top-rated customer favorites.
-					</p>
-				</div>
-			</section>
+				<p>
+					Our chef-designed recipes include balanced Mediterranean meals, quick one-pan dinners, and
+					top-rated customer favorites.
+				</p>
+			</div>
 
-			<section className="step2">
-				<div className="splash-body-text">
-					<h2>Unpack your box</h2>
+			<div className="splash-easy-steps-text-2">
+				<h2>Unpack your box</h2>
 
-					<p>
-						We guarantee the freshness of all our ingredients and deliver them in an insulated box
-						right to your door.
-					</p>
-				</div>
+				<p>
+					We guarantee the freshness of all our ingredients and deliver them in an insulated box
+					right to your door.
+				</p>
+			</div>
 
-				<EasySteps2 width="225" height="230" />
-			</section>
+			<EasySteps2 className="step2-pic" width="225" height="230" />
 
-			<section className="step3">
-				<EasySteps3 width="225" height="230" />
+			<EasySteps3 className="step3-pic" width="225" height="230" />
 
-				<div className="splash-body-text">
-					<h2>Create magic</h2>
+			<div className="splash-easy-steps-text-3">
+				<h2>Create magic</h2>
 
-					<p>
-						Following our step-by-step instructions you’ll experience the magic of cooking recipes
-						that our chefs create with your family’s tastes in mind.
-					</p>
-				</div>
-			</section>
+				<p>
+					Following our step-by-step instructions you’ll experience the magic of cooking recipes
+					that our chefs create with your family’s tastes in mind.
+				</p>
+			</div>
 		</section>
 
 		<section className="splash-look-inside">
