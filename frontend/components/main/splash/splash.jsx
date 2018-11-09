@@ -113,13 +113,23 @@ const Splash = () => (
 					</div>
 				</div>
 
-				<a href="#" onClick={(e) => e.preventDefault()}>
+				<a className="splash-choose-plan-btn" href="#" onClick={(e) => e.preventDefault()}>
 					<span>CHOOSE YOUR PLAN</span>
 				</a>
 			</div>
 		</section>
 
-		<section className="splash-simple-pitch" />
+		<section className="splash-simple-pitch">
+			<SimplePitchImg className="splash-simple-pitch-img" width="225" height="230" />
+
+			<h2>Starting at $7.49 per serving</h2>
+
+			<p>No commitment. You can skip or cancel anytime.</p>
+
+			<a className="splash-choose-plan-btn" href="#" onClick={(e) => e.preventDefault()}>
+				CHOOSE YOUR PLAN
+			</a>
+		</section>
 	</div>
 );
 
