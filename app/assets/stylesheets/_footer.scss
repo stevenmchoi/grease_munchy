@@ -4,6 +4,8 @@
   color: #6a6d75;
 
   &-content {
+    display: flex;
+    flex-direction: row;
     padding-top: 40px;
   }
 

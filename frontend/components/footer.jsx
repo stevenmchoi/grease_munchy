@@ -39,7 +39,7 @@ const Footer = () => (
 
 				<form className="newsletter-form">
 					<input type="text" placeholder="Email Address" />
-					<button className="btn footer-dead-link" value="submit" onSubmit={preventScroll}>
+					<button type="button" className="btn footer-dead-link" onSubmit={preventScroll}>
 						GO
 					</button>
 				</form>
@@ -72,37 +72,27 @@ const Footer = () => (
 			{footerLinkLists.map((list) => (
 				<ul className="link-col">
 					{list.map((link) => {
-						return (
-							<li>
-								<a className="footer-dead-link" href="#" onClick={preventScroll}>
-									{link}
-								</a>
-							</li>
-						);
+						switch (link) {
+							case 'On The Menu':
+								return (
+									<li>
+										<Link to="/menu">{link}</Link>
+									</li>
+								);
+							default:
+								return (
+									<li>
+										<a className="footer-dead-link" href="#" onClick={preventScroll}>
+											{link}
+										</a>
+									</li>
+								);
+						}
 					})}
 				</ul>
 			))}
 		</div>
 	</footer>
 );
-
-// const Footer = () => (
-// 	<footer>
-// 		<ul className="link-col-1">
-// 			<li>
-// 				<Link to="/menu">On The Menu</Link>
-// 			</li>
-// 			<li>
-// 				<a href="#" onClick={preventScroll}>
-// 					Pricing
-// 				</a>
-// 			</li>
-// 			<li>Our Vision</li>
-// 			<li>Wine</li>
-// 			<li>Market</li>
-// 			<li>Gifts</li>
-// 		</ul>
-// 	</footer>
-// );
 
 export default Footer;
