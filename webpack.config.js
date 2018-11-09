@@ -11,10 +11,18 @@ let prodPlugins = [
 			NODE_ENV: JSON.stringify('production'),
 		},
 	}),
-	new webpack.optimize.UglifyJsPlugin({
-		compress: {
-			warnings: true,
-		},
+	// new webpack.optimize.UglifyJsPlugin({
+	// 	compress: {
+	// 		warnings: true,
+	// 	},
+	// }),
+
+	new UglifyJSPlugin(), // Replaced the reference to webpack.optimize.UglifyJsPlugin
+
+	new CompressionPlugin({
+		asset: '[path].gz[query]',
+		algorithm: 'gzip',
+		test: /\.(js|css|html|json|ico|svg|eot|otf|ttf)$/,
 	}),
 ];
 
