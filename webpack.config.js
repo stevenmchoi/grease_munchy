@@ -72,7 +72,7 @@ module.exports = {
 	resolve: {
 		extensions: ['.js', '.jsx', '.svg', '*'],
 	},
-	optimization: {
-		minimizer: [new UglifyJsPlugin()],
-	},
+	// optimization: {
+	// 	minimizer: [new UglifyJsPlugin()],
+	// },
 };
