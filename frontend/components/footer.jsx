@@ -17,19 +17,19 @@ const Footer = () => (
 
 				<ul className="social-icons">
 					<li>
-						<a className="fb footer-dead-link" href="#" onClick={preventScroll} />
+						<a className="social-icon fb footer-dead-link" href="#" onClick={preventScroll} />
 					</li>
 
 					<li>
-						<a className="tw footer-dead-link" href="#" onClick={preventScroll} />
+						<a className="social-icon tw footer-dead-link" href="#" onClick={preventScroll} />
 					</li>
 
 					<li>
-						<a className="ig footer-dead-link" href="#" onClick={preventScroll} />
+						<a className="social-icon ig footer-dead-link" href="#" onClick={preventScroll} />
 					</li>
 
 					<li>
-						<a className="pin footer-dead-link" href="#" onClick={preventScroll} />
+						<a className="social-icon pin footer-dead-link" href="#" onClick={preventScroll} />
 					</li>
 				</ul>
 			</div>

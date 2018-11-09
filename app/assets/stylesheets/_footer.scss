@@ -3,10 +3,56 @@
   box-shadow: inset 0 1px 0 0 #eceef2;
   color: #6a6d75;
 
+  h3 {
+    font-size: 14px;
+  }
+
   &-content {
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(10, 10%);
+    grid-template-rows: 140px;
     padding-top: 40px;
+
+    .social {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      margin: auto;
+      width: 200px;
+      
+      &-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px auto;
+
+        .social-icon {
+          height: 24px;
+          width: 24px;
+          background-image: url(https://scontent-sea1-1.cdninstagram.com/vp/59ccdbfa89f28e8ad0ee40e364aa8423/5C053144/t51.2885-15/e35/s480x480/31076377_2089673424622137_7863665805613858816_n.jpg?ig_cache_key=MTc3NDMwNjA1NDI2MjE3Mzg2OQ%3D%3D.2);
+          background-size: 120px 120px;
+          background-position: -30px -30px;
+          background-repeat: no-repeat;
+        }
+
+        .fb {
+          background-position: -7px -5px;
+        }
+
+        .tw {
+          background-position: -34px -34px;
+        }
+
+        .ig {
+          background-position: -91px -34px;
+        }
+
+        .pin {
+          background-position: -62px -92px;
+        }
+      }
+    }
   }
 
   &-dead-link {
