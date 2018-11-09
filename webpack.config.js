@@ -47,33 +47,6 @@ module.exports = {
 					},
 				],
 			},
-
-			{
-				test: /\.(jpe?g|png|gif)$/i,
-				loaders: [
-					'file-loader?name=[path][name].[ext]',
-					{
-						loader: 'image-webpack-loader',
-						query: {
-							mozjpeg: {
-								progressive: true,
-							},
-							gifsicle: {
-								interlaced: false,
-							},
-							optipng: {
-								optimizationLevel: 4,
-							},
-							pngquant: {
-								quality: '75-90',
-								speed: 3,
-							},
-						},
-					},
-				],
-				exclude: /node_modules/,
-				include: __dirname,
-			},
 		],
 	},
 	devtool: 'source-map',

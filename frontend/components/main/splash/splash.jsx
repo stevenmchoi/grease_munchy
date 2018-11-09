@@ -5,7 +5,6 @@ import EasySteps1 from '../../../../app/assets/images/easysteps/easysteps1.svg';
 import EasySteps2 from '../../../../app/assets/images/easysteps/easysteps2.svg';
 import EasySteps3 from '../../../../app/assets/images/easysteps/easysteps3.svg';
 
-import LookInsideBkgd from '../../../../app/assets/images/lookinside/lookinside_bkgd.jpg';
 import LookInside1 from '../../../../app/assets/images/lookinside/lookinside1.svg';
 import LookInside2 from '../../../../app/assets/images/lookinside/lookinside2.svg';
 import LookInside3 from '../../../../app/assets/images/lookinside/lookinside3.svg';
@@ -77,7 +76,53 @@ const Splash = () => (
 			</section>
 		</section>
 
-		<section className="splash-look-inside" />
+		<section className="splash-look-inside">
+			<img
+				className="splash-look-inside-bkgd-img"
+				src="https://pixnio.com/free-images/2017/04/28/2017-04-28-07-42-15-e1493372325546-900x646.jpg"
+			/>
+			<div className="splash-look-inside-content">
+				<h3>WHAT'S INSIDE A BLUE APRON BOX</h3>
+
+				<div className="splash-look-inside-content-container">
+					<div className="splash-look-inside-content-item-1 item">
+						<LookInside1 width="50" height="50" />
+
+						<h2>Delicious, chef-designed recipes</h2>
+
+						<p>With step-by-step instructions so you never miss a beat (or beet)</p>
+					</div>
+
+					<div className="splash-look-inside-content-item-2 item">
+						<LookInside2 width="50" height="50" />
+
+						<h2>Responsibly-sourced, quality ingredients</h2>
+
+						<p>Like fresh produce, sustainable seafood and exclusive spice blends</p>
+					</div>
+
+					<div className="splash-look-inside-content-item-3 item">
+						<LookInside3 width="50" height="50" />
+
+						<h2>Perfectly-portioned amounts</h2>
+
+						<p>So no morsels or dollops go to waste</p>
+					</div>
+
+					<div className="splash-look-inside-content-item-4 item">
+						<LookInside4 width="50" height="50" />
+
+						<h2>Recyclable ice packs and packaging</h2>
+
+						<p>To ensure your ingredients stay fresh until you’re home and ready</p>
+					</div>
+				</div>
+
+				<a href="#" onClick={(e) => e.preventDefault()}>
+					<span>CHOOSE YOUR PLAN</span>
+				</a>
+			</div>
+		</section>
 
 		<section className="splash-simple-pitch" />
 	</div>
