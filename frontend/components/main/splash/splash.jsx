@@ -5,6 +5,8 @@ import EasySteps1 from '../../../../app/assets/images/easysteps/easysteps1.svg';
 import EasySteps2 from '../../../../app/assets/images/easysteps/easysteps2.svg';
 import EasySteps3 from '../../../../app/assets/images/easysteps/easysteps3.svg';
 
+// import LookInsideBkgd from '../../../../app/assets/images/lookinside/lookinside_bkgd.jpg';
+// const LookInsideBkgd = require('../../../../app/assets/images/lookinside/lookinside_bkgd.jpg');
 import LookInside1 from '../../../../app/assets/images/lookinside/lookinside1.svg';
 import LookInside2 from '../../../../app/assets/images/lookinside/lookinside2.svg';
 import LookInside3 from '../../../../app/assets/images/lookinside/lookinside3.svg';

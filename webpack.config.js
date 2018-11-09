@@ -41,7 +41,7 @@ module.exports = {
 			{
 				test: /\.es6$/,
 				exclude: /node_modules/,
-				loader: 'babel',
+				loader: 'babel-loader',
 				query: {
 					presets: ['es2015'],
 				},
@@ -49,9 +49,6 @@ module.exports = {
 			{
 				test: /\.svg$/,
 				use: [
-					{
-						loader: 'babel',
-					},
 					{
 						loader: 'babel-loader',
 					},
