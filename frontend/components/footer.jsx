@@ -12,7 +12,7 @@ const footerLinkLists = [
 		'\u00a0\u00a0\u00a0\u00a0Help Center & FAQ',
 		'\u00a0\u00a0\u00a0(555) 555 - 5555',
 	],
-	['Grease Munchy', 'Privacy', 'Terms', '\u00A9 Steven Choi', 'GitHub'],
+	['Grease Munchy', 'Privacy', 'Terms', '\u00A9 Steven Choi', 'GitHub', 'LinkedIn'],
 ];
 
 const Footer = () => (
@@ -103,6 +103,19 @@ const Footer = () => (
 									</li>
 								);
 
+							case '\u00a0\u00a0\u00a0(555) 555 - 5555':
+								return (
+									<li>
+										<a
+											className={`footer-bottom-link telephone footer-dead-link link-row-${rowIdx}`}
+											href="#"
+											onClick={preventScroll}
+										>
+											{link}
+										</a>
+									</li>
+								);
+
 							case 'Grease Munchy':
 								return (
 									<li>
@@ -129,13 +142,12 @@ const Footer = () => (
 									</li>
 								);
 
-							case '\u00a0\u00a0\u00a0(555) 555 - 5555':
+							case 'LinkedIn':
 								return (
 									<li>
 										<a
-											className={`footer-bottom-link telephone footer-dead-link link-row-${rowIdx}`}
-											href="#"
-											onClick={preventScroll}
+											className={`footer-bottom-link link-row-${rowIdx}`}
+											href="https://www.linkedin.com/in/stevenmchoi"
 										>
 											{link}
 										</a>

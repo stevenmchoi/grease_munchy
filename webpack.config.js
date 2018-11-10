@@ -6,10 +6,11 @@ let devPlugins = []; // if using any plugins for development
 let prodPlugins = [];
 
 plugins = plugins.concat(process.env.NODE_ENV === 'production' ? prodPlugins : devPlugins);
+const mode = process.env.NODE_ENV === 'production' ? 'production' : 'development';
 
 // include plugins config
 module.exports = {
-	mode: 'development',
+	mode,
 	context: __dirname,
 	entry: './frontend/entry.jsx',
 	output: {
