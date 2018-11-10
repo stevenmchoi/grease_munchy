@@ -22,6 +22,9 @@ web application allows users to view recipes for meals and create/manage a weekl
 *   Animation of modals for better user engagement
     *   Session forms and recipes index
 *   Logged-in user is bootstrapped to browser window, preventing logout from refreshing
+*   "Upcoming" page, detailing next week's orders
+*   Meal plan creation/management
+    *   Meal plan data will be saved in the database
 
 ## Technologies
 
@@ -58,12 +61,8 @@ Development tools include NPM Webpack, Guard Livereload, Faker, Redux Logger and
 
 In the future I would like to add:
 
-*   Meal plan creation/management
-    *   Meal plan data will be saved in the database
 *   Dynamic recipe search indexing
 *   Allergy tags for filtering
     *   Users with specified allergies will be alerted to recipes they might be allergic to
-*   "Upcoming" page, detailing next week's orders
 *   Prevent auth-only actions from the backend, as well as the front end
 *   Ensure session token uniqueness
-*   More appealing homepages
