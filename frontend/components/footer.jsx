@@ -7,6 +7,12 @@ const footerLinkLists = [
 	['On The Menu', 'Pricing', 'Our Vision', 'Wine', 'Market', 'Gifts'],
 	['Blog', 'Cookbook', 'Suppliers', 'Affiliates', 'Supply Chains Act', 'Food Safety'],
 	['Careers', 'Press', 'Our Team', 'Investor Relations'],
+	[
+		'Customer Support',
+		'\u00a0\u00a0\u00a0\u00a0Help Center & FAQ',
+		'\u00a0\u00a0\u00a0(555) 555 - 5555',
+	],
+	['Grease Munchy', 'Privacy', 'Terms', '\u00A9 Steven Choi', 'GitHub'],
 ];
 
 const Footer = () => (
@@ -89,6 +95,53 @@ const Footer = () => (
 										</Link>
 									</li>
 								);
+
+							case 'Customer Support':
+								return (
+									<li>
+										<p>{link}</p>
+									</li>
+								);
+
+							case 'Grease Munchy':
+								return (
+									<li>
+										<p>{link}</p>
+									</li>
+								);
+
+							case '\u00A9 Steven Choi':
+								return (
+									<li>
+										<p>{link}</p>
+									</li>
+								);
+
+							case 'GitHub':
+								return (
+									<li>
+										<a
+											className={`link-row-${rowIdx}`}
+											href="https://github.com/stevenmchoi/grease_munchy"
+										>
+											{link}
+										</a>
+									</li>
+								);
+
+							case '\u00a0\u00a0\u00a0(555) 555 - 5555':
+								return (
+									<li>
+										<a
+											className={`telephone footer-dead-link link-row-${rowIdx}`}
+											href="#"
+											onClick={preventScroll}
+										>
+											{link}
+										</a>
+									</li>
+								);
+
 							default:
 								return (
 									<li>
@@ -105,6 +158,11 @@ const Footer = () => (
 					})}
 				</ul>
 			))}
+
+			<p className="disclaimer">
+				If you are using a screen reader and are having problems using this website, sorry, this is
+				just a clone of Blue Apron.
+			</p>
 		</div>
 	</footer>
 );

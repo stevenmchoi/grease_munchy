@@ -4,6 +4,7 @@
   color: #6a6d75;
 
   h3 {
+    color: #303236;
     margin: 0 auto 20px;
     font-size: 14px;
   }
@@ -107,6 +108,11 @@
       grid-column-end: 11;
       margin: 0 auto;
 
+      &-header {
+        color: #303236;
+        text-decoration: none;
+      }
+
       &-content {
         display: flex;
 
@@ -114,12 +120,14 @@
         img {
           width: 100px;
           height: 100px;
-          margin-right: 10px;
+          margin-right: 20px;
         }
 
         &-text,
         &-text-link {
+          width: 180px;
           text-decoration: none;
+          color: black;
           text-align: left;
         }
       }
@@ -127,13 +135,79 @@
   }
 
   &-bottom {
+    display: grid;
+    grid-template-columns: 50px 150px 20px 150px 20px 150px 20px 200px auto 150px 50px;
+    grid-template-rows: auto 200px 40px;
+    height: auto;
+    line-height: 32px;
+    padding: 32px 0;
+    margin-top: 32px;
+    color: white;
+    font-size: 14px;
+    text-align: left;
     background-color: #0f346c;
 
+    p {
+      text-align: left;
+    }
+
     a {
+      margin: 0;
       text-decoration: none;
       color: #a1bce6;
       font-size: 14px;
       text-align: left;
+    }
+
+    .link-col-0,
+    .link-col-1,
+    .link-col-2,
+    .link-col-3 {
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    .link-col-0 {
+      grid-column-start: 2;
+      grid-column-end: 3;
+    }
+
+    .link-col-1 {
+      grid-column-start: 4;
+      grid-column-end: 5;
+    }
+
+    .link-col-2 {
+      grid-column-start: 6;
+      grid-column-end: 7;
+    }
+
+    .link-col-3 {
+      grid-column-start: 8;
+      grid-column-end: 9;
+    }
+
+    .link-col-4 {
+      grid-column-start: 10;
+      grid-column-end: 11;
+      grid-row-start: 2;
+      grid-row-end: 3;
+
+      * {
+        text-align: right;
+      }
+    }
+
+    .disclaimer {
+      grid-column-start: 2;
+      grid-column-end: 12;
+      grid-row-start: 3;
+      grid-row-end: 4;
+    }
+
+    .telephone {
+      font-size: 20px;
+      font-weight: 500;
     }
   }
 
