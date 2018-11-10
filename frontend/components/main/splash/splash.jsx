@@ -73,11 +73,11 @@ const Splash = () => (
 		<section className="splash-look-inside">
 			<img
 				className="splash-look-inside-bkgd-img"
-				src="https://pixnio.com/free-images/2017/04/28/2017-04-28-07-42-15-e1493372325546-900x646.jpg"
+				src="https://images.pexels.com/photos/1400172/pexels-photo-1400172.jpeg"
 			/>
 
 			<div className="splash-look-inside-content">
-				<h3>WHAT'S INSIDE A BLUE APRON BOX</h3>
+				<h3>WHAT'S INSIDE A GREASE MUNCHY BOX</h3>
 
 				<div className="splash-look-inside-content-container container">
 					<div className="splash-look-inside-content-item-1 item">

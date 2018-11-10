@@ -38,8 +38,12 @@ const Footer = () => (
 				<h3>DISCOVER WHAT'S COOKIN'</h3>
 
 				<form className="newsletter-form">
-					<input type="text" placeholder="Email Address" />
-					<button type="button" className="btn footer-dead-link" onSubmit={preventScroll}>
+					<input className="newsletter-form-input" type="text" placeholder="Email Address" />
+					<button
+						type="button"
+						className="newsletter-form-btn footer-dead-link"
+						onSubmit={preventScroll}
+					>
 						GO
 					</button>
 				</form>
@@ -69,20 +73,30 @@ const Footer = () => (
 		</div>
 
 		<div className="footer-bottom">
-			{footerLinkLists.map((list) => (
-				<ul className="link-col">
-					{list.map((link) => {
+			{footerLinkLists.map((list, colIdx) => (
+				<ul className={`link-col-${colIdx}`}>
+					{list.map((link, rowIdx) => {
 						switch (link) {
 							case 'On The Menu':
 								return (
 									<li>
-										<Link to="/menu">{link}</Link>
+										<Link
+											className={`link-row-${rowIdx}`}
+											to="/menu"
+											onClick={() => window.scrollTo(0, 0)}
+										>
+											{link}
+										</Link>
 									</li>
 								);
 							default:
 								return (
 									<li>
-										<a className="footer-dead-link" href="#" onClick={preventScroll}>
+										<a
+											className={`footer-dead-link link-row-${rowIdx}`}
+											href="#"
+											onClick={preventScroll}
+										>
 											{link}
 										</a>
 									</li>
