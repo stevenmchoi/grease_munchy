@@ -10,8 +10,6 @@ const mealsReducer = (oldEntities = {}, action) => {
 		case RECEIVE_ALL_MEALS:
 			newEntities = merge(newEntities, action.meals);
 			return newEntities;
-		// const newObject = Object.assign({}, newEntities);
-		// return newObject;
 		case RECEIVE_MEAL:
 			const meal = action.meal;
 			newEntities[meal.id] = meal;

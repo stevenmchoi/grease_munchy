@@ -87,7 +87,7 @@ const Footer = () => (
 								return (
 									<li>
 										<Link
-											className={`link-row-${rowIdx}`}
+											className={`footer-bottom-link link-row-${rowIdx}`}
 											to="/menu"
 											onClick={() => window.scrollTo(0, 0)}
 										>
@@ -121,7 +121,7 @@ const Footer = () => (
 								return (
 									<li>
 										<a
-											className={`link-row-${rowIdx}`}
+											className={`footer-bottom-link link-row-${rowIdx}`}
 											href="https://github.com/stevenmchoi/grease_munchy"
 										>
 											{link}
@@ -133,7 +133,7 @@ const Footer = () => (
 								return (
 									<li>
 										<a
-											className={`telephone footer-dead-link link-row-${rowIdx}`}
+											className={`footer-bottom-link telephone footer-dead-link link-row-${rowIdx}`}
 											href="#"
 											onClick={preventScroll}
 										>
@@ -146,7 +146,7 @@ const Footer = () => (
 								return (
 									<li>
 										<a
-											className={`footer-dead-link link-row-${rowIdx}`}
+											className={`footer-bottom-link footer-dead-link link-row-${rowIdx}`}
 											href="#"
 											onClick={preventScroll}
 										>
@@ -161,7 +161,11 @@ const Footer = () => (
 
 			<p className="disclaimer">
 				If you are using a screen reader and are having problems using this website, sorry, this is
-				just a clone of Blue Apron.
+				just a clone of{' '}
+				<a className="footer-bottom-link footer-bottom-link-orig" href="https://www.blueapron.com/">
+					Blue Apron
+				</a>
+				.
 			</p>
 		</div>
 	</footer>
