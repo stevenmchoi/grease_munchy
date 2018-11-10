@@ -1,4 +1,4 @@
-# Grease Munchy (WIP)
+# Grease Munchy
 
 [Live Demo][heroku]
 
