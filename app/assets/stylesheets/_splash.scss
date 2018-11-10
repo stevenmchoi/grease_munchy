@@ -213,5 +213,9 @@
     text-decoration: none;
     border-radius: 2em;
     cursor: no-drop;
+
+    &:hover {
+      background-color: #0f346c;
+    }
   }
 }

@@ -20,11 +20,11 @@ const NavBar = ({ currentUser, logout, clearMealOrders }) => {
 		</span>
 	) : (
 		<span className="session-buttons">
-			<Link className="nav-link" to="/login">
+			<Link className="nav-link" to="/login" onClick={() => window.scrollTo(0, 0)}>
 				LOG IN
 			</Link>
 
-			<Link className="signup-btn" to="/signup">
+			<Link className="signup-btn" to="/signup" onClick={() => window.scrollTo(0, 0)}>
 				SIGN UP
 			</Link>
 		</span>
@@ -33,7 +33,7 @@ const NavBar = ({ currentUser, logout, clearMealOrders }) => {
 	return (
 		<header>
 			<nav className="nav-bar">
-				<Link to="/">
+				<Link to="/" onClick={() => window.scrollTo(0, 0)}>
 					<Logo />
 				</Link>
 

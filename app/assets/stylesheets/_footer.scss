@@ -99,6 +99,10 @@
           font-size: 15px;
           border: 0 none transparent;
           background-color: #245091;
+
+          &:hover {
+            background-color: #0f346c;
+          }
         }
       }
     }
