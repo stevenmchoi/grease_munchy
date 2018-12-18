@@ -42,8 +42,8 @@ const Splash = () => (
 				<h2>Choose your meals</h2>
 
 				<p>
-					Our chef-designed recipes include balanced Mediterranean meals, quick one-pan dinners, and
-					top-rated customer favorites.
+					Our chef-designed recipes include balanced Mediterranean meals, quick
+					one-pan dinners, and top-rated customer favorites.
 				</p>
 			</div>
 
@@ -51,8 +51,8 @@ const Splash = () => (
 				<h2>Unpack your box</h2>
 
 				<p>
-					We guarantee the freshness of all our ingredients and deliver them in an insulated box
-					right to your door.
+					We guarantee the freshness of all our ingredients and deliver them in
+					an insulated box right to your door.
 				</p>
 			</div>
 
@@ -64,8 +64,9 @@ const Splash = () => (
 				<h2>Create magic</h2>
 
 				<p>
-					Following our step-by-step instructions you’ll experience the magic of cooking recipes
-					that our chefs create with your family’s tastes in mind.
+					Following our step-by-step instructions you’ll experience the magic of
+					cooking recipes that our chefs create with your family’s tastes in
+					mind.
 				</p>
 			</div>
 		</section>
@@ -73,7 +74,7 @@ const Splash = () => (
 		<section className="splash-look-inside">
 			<img
 				className="splash-look-inside-bkgd-img"
-				src="https://images.pexels.com/photos/1400172/pexels-photo-1400172.jpeg"
+				src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
 			/>
 
 			<div className="splash-look-inside-content">
@@ -85,7 +86,9 @@ const Splash = () => (
 
 						<h2>Delicious, chef-designed recipes</h2>
 
-						<p>With step-by-step instructions so you never miss a beat (or beet)</p>
+						<p>
+							With step-by-step instructions so you never miss a beat (or beet)
+						</p>
 					</div>
 
 					<div className="splash-look-inside-content-item-2 item">
@@ -93,7 +96,9 @@ const Splash = () => (
 
 						<h2>Responsibly-sourced, quality ingredients</h2>
 
-						<p>Like fresh produce, sustainable seafood and exclusive spice blends</p>
+						<p>
+							Like fresh produce, sustainable seafood and exclusive spice blends
+						</p>
 					</div>
 
 					<div className="splash-look-inside-content-item-3 item">
@@ -109,24 +114,38 @@ const Splash = () => (
 
 						<h2>Recyclable ice packs and packaging</h2>
 
-						<p>To ensure your ingredients stay fresh until you’re home and ready</p>
+						<p>
+							To ensure your ingredients stay fresh until you’re home and ready
+						</p>
 					</div>
 				</div>
 
-				<a className="splash-choose-plan-btn" href="#" onClick={(e) => e.preventDefault()}>
+				<a
+					className="splash-choose-plan-btn"
+					href="#"
+					onClick={(e) => e.preventDefault()}
+				>
 					<span>CHOOSE YOUR PLAN</span>
 				</a>
 			</div>
 		</section>
 
 		<section className="splash-simple-pitch">
-			<SimplePitchImg className="splash-simple-pitch-img" width="225" height="230" />
+			<SimplePitchImg
+				className="splash-simple-pitch-img"
+				width="225"
+				height="230"
+			/>
 
 			<h2>Starting at $7.49 per serving</h2>
 
 			<p>No commitment. You can skip or cancel anytime.</p>
 
-			<a className="splash-choose-plan-btn" href="#" onClick={(e) => e.preventDefault()}>
+			<a
+				className="splash-choose-plan-btn"
+				href="#"
+				onClick={(e) => e.preventDefault()}
+			>
 				CHOOSE YOUR PLAN
 			</a>
 		</section>
