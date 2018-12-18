@@ -12,7 +12,9 @@ class MenuIndex extends Component {
 	render() {
 		const meals = this.props.meals;
 		const menuItems = this.props.menuItems;
+
 		let loading;
+
 		if (
 			Object.keys(menuItems).length === 0 ||
 			Object.keys(meals).length === 0
@@ -23,6 +25,7 @@ class MenuIndex extends Component {
 		return (
 			<div>
 				{loading}
+
 				<div className="spacer-behind-nav" />
 
 				{menuItems.map((menuItemsByWeek) => {
